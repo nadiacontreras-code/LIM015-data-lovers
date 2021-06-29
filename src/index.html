@@ -2,18 +2,77 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokédex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <select name="select-example">
-      <option value="value1">Primera opción</option>
-      <option value="value2" selected>Segunda opción</option>
-      <option value="value3">Tercera opción</option>
-    </select>
+    <div id="root"></div> 
+
+    <header>
+      <section> Bienvenido al mundo Pokémon </section>
+      <section hidden > Explorando nivel: Principiante </section>
+      <section hidden > Explorando nivel: Intermedio </section>
+      <section hidden > Explorando nivel: Avanzado </section>
+    </header>
+
+    <main>
+
+      <nav>
+        <a href ="index.html">
+          <img src ="src/pic/inicio.png"; alt="Inicio">Inicio
+        </a>
+          
+        <select name="player">
+          <option value="Beginner" href="index.html">Principiante</option>
+          <option value="Intermediate">Intermedio</option>
+          <option value="Advanced">Avanzado</option>
+        </select>
+      
+        <a href ="/colocarHipervinculo/">Redes sociales</a>
+      </nav>
+      
+      <section>
+        <h1>Busca a tu Pokémon por número o nombre</h1>
+        <input type ="search"; placeholder = "Ejm: Escribe 025 o Pikachu">
+        <button type ="button" id = "buttonSearch">
+          <img src ="src/pic/buscar.png"; alt = "Buscar">
+        </button>
+      </section>
+
+      <section>
+        <h1>Cómo te identificas?</h1>
+        <button type = "button" id = "buttonBeginner">Principiante</button>
+        <button type = "button" id = "buttonIntermediate">Intermedio</button>
+        <button type = "button" id = "buttonAdvanced">Avanzado</button>
+      
+        <h2>Top 4 de Pokémones más pesados:</h2>
+
+        <section >
+          <p id = "pokemonNumberTop"></p>
+          <p id = "picTop"></p>
+          <p id = "pokemonNameTop">Pikachu</p>
+          <p id = "weightTop"></p>
+        </section>
+      </section>
+
+      <section hidden id = "BeginnerSection">
+        <p id = "pokemonName">Bulbasur</p>
+        <p id = "pokemonNumber"></p>
+        <p id = "pic"></p>
+        <p id = "about"></p>
+        
+        <button type = "button" id = "buttonBack">Atras</button>
+      </section>
+
+      
+    </main>
+
+
+    <footer>© Copyright 2021 - Todos los derechos reservados
+    </footer>
     
-    <div id="root"></div>
+    
     <script src="main.js" type="module"></script>
   </body>
 </html>
