@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+header {
+  background-color: #FFBE0B;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header img {
+  width: 500px;
+  margin-top: 10px;
+}
+
+main{
+  background-image: url(pic/fondoPokebola.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-position: center bottom;*/
+
+}
+
+.navigation { 
+  background: #084ab4;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation ul{
+  list-style: none; 
+}
+
+.menu > li{ /*solo accede al "hijo" li, no a li de subMenu*/
+  display: inline-block; /*para que se ordenen uno despues del otro horizontal*/
+  position: relative;/*para que la sublista no se distorsione*/
+  padding: 0px 100px; 
+}
+
+.menu > li > a { /*solo accede a la etiqueta a, del "hijo" li*/
+  display: block;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none; /*no muestra la linea de hipervinc*/
+  background: #084ab4;
+}
+
+.menu li a:hover{ /*accede a todos los li y a en clase menu*/
+  color: #FB5607; /*color cuando se pasa mouse*/
+  transition: all .3s; /*tiempo que demora en colorearse*/
+}
+
+.subMenu {
+  position: absolute; /*para que la sub-lista se vaya hacia abajo*/
+  background-color: #8338EC;
+  display: none;
+  text-align: center;
+  width: 100px;
+  padding: 5px;
+  /*margin-left: 110px;*/ /*al reducir no se crucen las listas*/
+}
+
+.subMenu li a{
+  display: block;
+  text-decoration: none;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.menu li:hover .subMenu{
+  display: block;
+}
+
+
+
+
+
+
+
+
+footer {
+  background-color: #FB5607;
+  display: flex;
+  padding-top: 20px;
+  height: 40px;
+  justify-content: center; /*alineamiento horizontal*/
+  color: white;
+  font-size: 12px;
+}
