@@ -43,8 +43,12 @@ Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias de
 
 Creación de nuestros prototipos:
 1. Diseño en papel
+ ![Prototipo papel](/src/pic/prototipopapel.jpg)
+
 2. Diseño lineal en figma
-3. Diseño final en figma
+![Prototipo lineal Figma](/src/pic/PrototipoLinealFigma.JPG)
+
+1. Diseño final en figma
 
 
 ## 5. Testeos de usabilidad: (describir la experiencia de el uso de la pagina en DEMO de tres compañeras)
