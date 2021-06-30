@@ -43,10 +43,10 @@ Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias de
 
 Creación de nuestros prototipos:
 1. Diseño en papel
- ![Prototipo papel](/src/pic/prototipopapel.jpg)
+![Prototipo papel](/src/pic/prototipoPapel.PNG)
 
 2. Diseño lineal en figma
-![Prototipo lineal Figma](/src/pic/PrototipoLinealFigma.JPG)
+![Prototipo lineal Figma](/src/pic/PrototipoLinealFigma.PNG)
 
 1. Diseño final en figma
 
