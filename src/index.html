@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pokédex</title>
+  <title>Pokedex</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,61 +11,91 @@
   <div id="root"></div>
 
   <header>
-    <img src="pic/bienvenido.png" ; alt="Bienvenido"/>
-    <img hidden src="pic/principiante.png" ; alt="Principiante"/>
-    <img hidden src="pic/intermedio.png" ; alt="Intermedio"/>
-    <img hidden src="pic/avanzado.png" ; alt="Avanzado"/>
+    <img src="pic/welcome.png" ; alt="Welcome" />
+    <img hidden src="pic/exploring.png" ; alt="Exploring" />
   </header>
 
   <main>
 
-    <nav class = "navigation">
-      <ul class = "menu">
-        <li><a href="index.html">
-          <img src="pic/....png" ; alt="Inicio">Inicio
-        </a></li>
-        <li><a href="">Jugador</a>
-          <ul class = "subMenu">
-            <li><a href="">Principiante</a></li>
-            <li><a href="">Intermedio</a></li>
-            <li><a href="">Avanzado</a></li>
-          </ul>
+    <nav class="navigation">
+      <ul class="menu">
+        <li>
+          <a href="index.html">
+            <img src="" ; alt="Home">Home
+          </a>
         </li>
-        <li><a href="">Redes sociales</a></li>
+        <li><a href="">Statistics</a></li>
+        <li><a href="">Follow us</a></li>
       </ul>
     </nav>
-  
+
     <section>
-      <h1>Busca a tu Pokémon por número o nombre</h1>
-      <input type="search" ; placeholder="Ejm: Escribe 025 o Pikachu">
-      <button type="button" id="buttonSearch">
-        <img src="pic/....png" ; alt="Buscar">
+      <h1>Search your Pokemon by number or name</h1>
+      <input type="search" ; placeholder="Example: Write 025 or Pikachu">
+      <button type="button" ; id="buttonSearch">
+        <img src="" ; alt="search">
       </button>
     </section>
 
     <section>
-      <h1>Cómo te identificas?</h1>
-      <button type="button" id="buttonBeginner">Principiante</button>
-      <button type="button" id="buttonIntermediate">Intermedio</button>
-      <button type="button" id="buttonAdvanced">Avanzado</button>
+      <h1>Advanced Search</h1>
 
-      <h2>Top 4 de Pokémones más pesados:</h2>
+      <ul>
+        <ul>Number:
+          <select name="searchByNumber" id="searchByNumber">
+            <optgroup label="Sort by:">
+              <option value="lowerNumber" ; href="">Lower Number</option>
+              <option value="topNumber" ; href="">Top Number</option>
+            </optgroup>
+          </select>
+        </ul>
+
+        <ul>Name:
+          <select name="searchByName" id="searchByName">
+            <optgroup label="Sort by:">
+              <option value="az" ; href="">A-Z</option>
+              <option value="za" ; href="">Z-A</option>
+            </optgroup>
+          </select>
+        </ul>
+
+        <ul>Type:
+          <select name="searchByType" id="searchByType">
+            <optgroup label="Choose type:">
+              <option value="water" href="">Water</option>
+              <option value="fire" href="">Fire</option>
+            </optgroup>
+          </select>
+        </ul>
+
+      </ul>
+    </section>
+
+    <section>
+      <h1>Pokemons</h1>
 
       <section>
-        <p id="pokemonNumberTop"></p>
-        <p id="picTop"></p>
-        <p id="pokemonNameTop">Pikachu</p>
-        <p id="weightTop"></p>
+        <p id="pokemonNumber">(Number)</p>
+        <p id="pokemonPic">(Pic)</p>
+        <p id="pokemonName">(Pikachu)</p>
       </section>
+
+      <button type="button" id="buttonBack1">Back 1</button>
+      <button type="button" id="buttonNext">Next 1</button>
+
     </section>
+
+
 
     <section hidden id="BeginnerSection">
       <p id="pokemonName">Bulbasur</p>
       <p id="pokemonNumber"></p>
-      <p id="pic"></p>
-      <p id="about"></p>
+      <p id="pokemonPic"></p>
+      <p id="pokemonAbout"></p>
+      <p id="pokemonType"></p>
 
-      <button type="button" id="buttonBack">Atras</button>
+
+      <button type="button" id="buttonBack">Back</button>
     </section>
 
   </main>
