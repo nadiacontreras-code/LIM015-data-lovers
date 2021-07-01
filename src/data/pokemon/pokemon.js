@@ -1,3 +1,4 @@
+// Export default es un objeto //
 export default {
   "pokemon": [{
     "num": "001",
