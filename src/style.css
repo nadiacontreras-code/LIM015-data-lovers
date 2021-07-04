@@ -22,7 +22,20 @@ header img {
   background-size: cover;
 
 }*/
-.navigation { 
+.flex {
+ /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;*/
+  display: flex;
+  /*fácil adaptación*/
+  align-items: center;
+  /*alineamiento vertical*/
+  flex-direction: column;
+  /*ordena contenido de arriba hacia abajo*/
+
+}
+.navigation {
   background: #084ab4;
   height: 35px;
   display: flex;
@@ -30,7 +43,7 @@ header img {
 }
 
 .navigation ul{
-  list-style: none; 
+  list-style: none;
 }
 
 .menu li{ /*accede al "hijo" li*/
@@ -54,6 +67,9 @@ header img {
 .menu :hover { /*accede a todos los li y a en clase menu*/
   color: #FFBE0B; /*color cuando se pasa mouse*/
   transition: all .2s; /*tiempo que demora en colorearse*/
+}
+.cards{
+  display: flex;
 }
 
 
