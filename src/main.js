@@ -13,23 +13,24 @@ data.pokemon.map(function(elem){
 //Extrayendo num, name, img (en base a num)
 
 const sectionName = document.querySelector('section.cards');
-      const nameSection = document.createElement('p');
-      sectionName.appendChild(nameSection);
-      const names = document.createTextNode(pokemonName)
-      nameSection.appendChild(names)
+const nameSection = document.createElement('p');
+sectionName.appendChild(nameSection);
+const names = document.createTextNode(pokemonName)
+nameSection.appendChild(names)
       
-      const sectionNumber = document.querySelector('section.cards');
-      const numberSection = document.createElement('p1');
-      sectionNumber.appendChild(numberSection);
-      const number = document.createTextNode(pokemonNumber)
-      numberSection.appendChild(number)
-      const sectionPic = document.querySelector('section.cards');
-      const picSection = document.createElement('section');
-      sectionPic.appendChild(picSection);
-      const pic = document.createElement('section');
-      pic.innerHTML = '<img src=\'http://www.serebii.net/pokemongo/pokemon/'+ pokemonNumber+'.png\'>';
-      picSection.appendChild(pic)
-    });
+const sectionNumber = document.querySelector('section.cards');
+const numberSection = document.createElement('p1');
+sectionNumber.appendChild(numberSection);
+const number = document.createTextNode(pokemonNumber)
+numberSection.appendChild(number)
+
+const sectionPic = document.querySelector('section.cards');
+const picSection = document.createElement('section');
+sectionPic.appendChild(picSection);
+const pic = document.createElement('section');
+pic.innerHTML = '<img src=\'http://www.serebii.net/pokemongo/pokemon/'+ pokemonNumber+'.png\'>';
+picSection.appendChild(pic)
+});
   
 let prueba = "auxilio";
 
