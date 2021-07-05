@@ -6,15 +6,18 @@ import { anotherExample } from './data.js';
 import data from './data/pokemon/pokemon.js';
 let pokemonNumber = "";
 let pokemonName = "";
+
 data.pokemon.map(function(elem){
   pokemonNumber = elem.num;
   pokemonName = elem.name;
 //Extrayendo num, name, img (en base a num)
-      const sectionName = document.querySelector('section.cards');
+
+const sectionName = document.querySelector('section.cards');
       const nameSection = document.createElement('p');
       sectionName.appendChild(nameSection);
       const names = document.createTextNode(pokemonName)
       nameSection.appendChild(names)
+      
       const sectionNumber = document.querySelector('section.cards');
       const numberSection = document.createElement('p1');
       sectionNumber.appendChild(numberSection);
@@ -27,18 +30,27 @@ data.pokemon.map(function(elem){
       pic.innerHTML = '<img src=\'http://www.serebii.net/pokemongo/pokemon/'+ pokemonNumber+'.png\'>';
       picSection.appendChild(pic)
     });
+  
 let prueba = "auxilio";
+
+
+
 /*let pokemonNumber = "";
 let pokemonName ="";
 //Extrayendo num, name, img (en base a num)
   data.pokemon.map(function(elem){
+ 
+
     pokemonNumber = elem.num ;
     pokemonName = elem.name;
+
     /*const sectionName = document.querySelector('section.allNames');
     const nameSection = document.createElement('section');
     sectionName.appendChild(nameSection);
     const names = document.createTextNode(pokemonName)
     nameSection.appendChild(names);*/
+    
+
   /* let newEl = document.createElement('p');
     let newText = document.createTextNode(pokemonNumber);
     newEl.appendChild(newText);
@@ -55,11 +67,15 @@ let pokemonName ="";
     image.appendChild(imageText);
     let imagePosition = document.getElementsByTagName('section')[4];
     imagePosition.appendChild(image);
+    
   });*/
   //document.getElementsByClassName('cardNumber').appendChild(number);
+
+
   /*let name = document.createElement('section');
   name.innerHTML = pokemonName;
   document.getElementsByClassName('cards').appendChild(name);
+
   let image = document.createElement('section');
   image.innerHTML = '<img src=\'http://www.serebii.net/pokemongo/pokemon/'+ pokemonNumber+'.png\'>';
   document.getElementsByClassName('cards').appendChild(image);
