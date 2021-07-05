@@ -36,7 +36,7 @@ data.pokemon.map(function(elem){
       picSection.appendChild(pic)
     });
   
-
+let prueba = "auxilio";
 
 
 
