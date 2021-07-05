@@ -1,9 +1,53 @@
 //DOM
 //Importando de data.js
-import { example } from './data.js';
-import { anotherExample } from './data.js';
+//import { pokeCard } from './data.js';
+//import { anotherExample } from './data.js';
+
 //BASE DE DATOS, carpeta DATA
 import data from './data/pokemon/pokemon.js';
+//import * as data from './data.js';
+
+
+//Para guardar los items dentro de array
+const allPokemons = [];
+
+//Para ubicar items dentro de una sec
+const card = document.querySelector('#card')
+
+data.pokemon.forEach(item =>{
+//Creando nodos numero
+const number = document.createElement('p')
+number.textContent = item.num;
+number.className = "pokemonNumber"; //clase, para dar estilos css
+
+//Creando nodos imagen
+const pic = document.createElement('img')
+pic.src = item.img; //src: source (link)
+pic.className = "pokemonPic";
+
+//Creando nodos nombre
+const name = document.createElement('p')
+name.textContent = item.name.toUpperCase();
+name.className = "pokemonName"; //clase, para dar estilos css
+
+//Creando section (parent) para num, pic, name (append)
+const section = document.createElement('section');
+section.className = "pokemonCard"
+  //section agrega  num, pic, name
+  //append: para agregar mas de una característica
+  section.append(number, pic, name); //*appendChild solo acepta uno
+//Incluimos los items dentro de array
+  allPokemons.push(section); 
+});
+//Direccionando items para ubicar en section cards:
+//operador spread (...), genera una lista de valores a partir de un array
+card.append(...allPokemons); //verificar en Elementos <- Consola
+
+
+
+
+
+/**************
 let pokemonNumber = "";
 let pokemonName = "";
 
@@ -33,7 +77,7 @@ picSection.appendChild(pic)
 });
   
 let prueba = "auxilio";
-
+*/
 
 
 /*let pokemonNumber = "";
@@ -113,6 +157,7 @@ function createPokemonCard() {
 //Importando de data.js
 import { example } from './data.js';
 import { anotherExample } from './data.js';
+
 //BASE DE DATOS, carpeta DATA
 import data from './data/pokemon/pokemon.js';
 let pokemonNumber = "";
@@ -126,11 +171,13 @@ data.pokemon.map(function(elem){
       sectionName.appendChild(nameSection);
       const names = document.createTextNode(pokemonName)
       nameSection.appendChild(names)
+
       const sectionNumber = document.querySelector('section.cards');
       const numberSection = document.createElement('p1');
       sectionNumber.appendChild(numberSection);
       const number = document.createTextNode(pokemonNumber)
       numberSection.appendChild(number)
+      
       const sectionPic = document.querySelector('section.cards');
       const picSection = document.createElement('section');
       sectionPic.appendChild(picSection);

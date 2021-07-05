@@ -1,5 +1,7 @@
 //FUNCIONALIDAD
 
+
+/*
 export const example = () => {
   let pokemonNumber = "";
   data.pokemon.map(function(elem){
@@ -28,3 +30,4 @@ export const pokemon = () => {
 
 };
 
+*/
