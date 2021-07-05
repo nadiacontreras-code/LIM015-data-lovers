@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Pokedex</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <div id="root"></div>
-
   <header>
     <img src="pic/welcome.png" ; alt="Welcome" />
     <img hidden src="pic/exploring.png" ; alt="Exploring" />
   </header>
-
       <nav class="navigation">
       <ul class="menu">
         <li>
@@ -34,10 +30,8 @@
         <img src="" ; alt="search">
       </button>
     </section>
-
     <section>
       <h1>Advanced Search</h1>
-
       <ul>
         <ul>Number:
           <select name="searchByNumber" id="searchByNumber">
@@ -47,7 +41,6 @@
             </optgroup>
           </select>
         </ul>
-
         <ul>Name:
           <select name="searchByName" id="searchByName">
             <optgroup label="Sort by:">
@@ -56,7 +49,6 @@
             </optgroup>
           </select>
         </ul>
-
         <ul>Type:
           <select name="searchByType" id="searchByType">
             <optgroup label="Choose type:">
@@ -65,53 +57,47 @@
             </optgroup>
           </select>
         </ul>
-
       </ul>
     </section>
-<!-- Otra técnica <section id="pokemonContainer" class="pokemon"></section>-->
-
+<!-- Otra técnica <section id="pokemonContainer"pclass="pokemon"></section>-->
     <section>
       <h1>Pokemons</h1>
-
-      <section class="cards"></section>
-      <section class="cards"></section>
-      <section class="cards"></section>
-      <section >
-
-        
-
-
-        <p id="allNumbers"></p>
-        <p id="allNames"></p>
-        <p id="allPics"></p>
-
+      <section class ="cards">
+        <section id="name" class="name">
+          <section class= "image">
+          </section>
+        </section>
+       </section>
+<!--Intentos fallidos
+      <section class="pokemonCard">
+          <p id="pokemonName" class="pokemonName"></p>
+      <section class="pokemonCard">
+          <p id="pokemonNumber" class="pokemonNumber"></p>
+      <section class="pokemonCard"></section>
+          <img id="pokemonPics" class="pokemonPics">
       </section>
-
-      <button type="button" id="buttonBack1">Back 1</button>
-      <button type="button" id="buttonNext">Next 1</button>
-
-    </section>
-
-
-
+      <section class = 'allNames' ></section>
+        -->
+        <section>
+          <button type="button" id="buttonBack1">Back 1</button>
+          <button type="button" id="buttonNext">Next 1</button>
+        </section>
+        <button type="button" id="buttonBack">Back</button>
+        </section>
     <section hidden id="BeginnerSection">
       <p id="pokemonName"></p>
       <p id="pokemonNumber"></p>
       <p id="pokemonPic"></p>
       <p id="pokemonAbout"></p>
       <p id="pokemonType"></p>
-
-
       <button type="button" id="buttonBack">Back</button>
     </section>
-
   </main>
-
   <footer>© Copyright 2021 - Todos los derechos reservados
   </footer>
-
   <script src="main.js" type="module"></script>
 </body>
-
 </html>
+
+
 
