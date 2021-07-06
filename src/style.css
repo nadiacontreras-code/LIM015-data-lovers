@@ -1,72 +1,72 @@
+/*********************************BODY******************/
 * {
-  margin: 0;
-  padding: 0;
+   margin: 0;
+   padding: 0;
 }
 
 /*-- HEADER */
 
 header {
-  background-color: #ffbe0b;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+   background-color: #ffbe0b;
+   height: 65px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
 }
-
 header img {
-  width: 500px;
-  margin-top: 10px;
+   width: 500px;
+   margin-top: 10px;
 }
 
 /********NAVIGATION*******/
 .navigation {
-  background: #084ab4;
-  height: 45px;
-  display: flex;
-  justify-content: center;
+   background: #084ab4;
+   height: 45px;
+   display: flex;
+   justify-content: center;
 }
 
 .navigation ul {
-  list-style: none;
+   list-style: none;
 }
 
 .menu li {
-  /*accede al "hijo" li*/
-  display: inline-block;
-  /*para que se ordenen uno despues del otro horizontal*/
-  position: relative;
-  /*para al reducir espacio no se distorsione la lista*/
-  padding: 0px 100px;
+   /*accede al "hijo" li*/
+   display: inline-block;
+   /*para que se ordenen uno despues del otro horizontal*/
+   position: relative;
+   /*para al reducir espacio no se distorsione la lista*/
+   padding: 0px 100px;
 }
 
 .menu li a {
-  /*accede a la etiqueta a, del "hijo" li*/
-  display: block;
-  padding: 5px;
-  width: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-  /*no muestra la linea de hipervinc*/
-  background: #084ab4;
-  text-align: center;
+   /*accede a la etiqueta a, del "hijo" li*/
+   display: block;
+   padding: 5px;
+   width: 100px;
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+   text-decoration: none;
+   /*no muestra la linea de hipervinc*/
+   background: #084ab4;
+   text-align: center;
 }
 
 .menu :hover {
-  /*accede a todos los li y a en clase menu*/
-  color: #ffbe0b;
-  /*color cuando se pasa mouse*/
-  transition: all 0.2s;
-  /*tiempo que demora en colorearse*/
+   /*accede a todos los li y a en clase menu*/
+   color: #ffbe0b;
+   /*color cuando se pasa mouse*/
+   transition: all 0.2s;
+   /*tiempo que demora en colorearse*/
 }
 
 .homeLogo {
-  height: 35px;
-  width: 35px;
-  float: left;
-  margin-bottom: 5px;
-  /*margin-top: 5px;
+   height: 35px;
+   width: 35px;
+   float: left;
+   margin-bottom: 5px;
+   /*margin-top: 5px;
   /*margin-right: 0px;*/
 }
 
@@ -74,96 +74,111 @@ header img {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #084ab4;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  height: 45px;
+   background-color: #084ab4;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   height: 45px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 5px 10px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  width: 300px;
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 5px 10px;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: bold;
+   width: 300px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  color: #ffbe0b;
+   color: #ffbe0b;
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+   width: 30px;
+   height: 30px;
 }
 
-
-/*******BODY******/
+/*******MAIN******/
 main {
-  background-image: url(pic/fondoPokebola.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+   background-image: url(pic/fondoPokebola.png);
+   background-repeat: no-repeat;
+   background-size: cover;
 }
-
+.mainGeneralSearch {
+   text-align: center;
+}
+#buttonSearch {
+   color: black;
+   background: #ffbe0b;
+   border-color: #ffbe0b;
+}
+button img {
+   font-size: 10px;
+   background-color: #ffbe0b;
+}
+.generalAdvancedSearch h1 {
+   text-align: center;
+}
+.generalAdvancedSearchList li {
+   list-style: none;
+   float: left;
+   padding: 10px 40px;
+}
 main {
-  /*= class = flex*/
-  /* display: flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
-  /*height: 100vh;*/
-  display: flex;
-  /*fácil adaptación*/
-  align-items: center;
-  /*alineamiento vertical*/
-  flex-direction: column;
-  /*ordena contenido de arriba hacia abajo*/
+   /* display: flex;*/
+   /*justify-content: center;*/
+   /*align-items: center;*/
+   /*height: 100vh;*/
+   display: flex;
+   /*fácil adaptación*/
+   align-items: center;
+   /*alineamiento vertical*/
+   flex-direction: column;
+   /*ordena contenido de arriba hacia abajo*/
 }
 
-
-/********* BUSQUEDA AVANZADA****/
+/*********************** BUSQUEDA AVANZADA****/
 .advanceSearchItem {
-  float: left;
-  /*para ordenar horizontalmente*/
+   float: left;
+   /*para ordenar horizontalmente*/
 }
-
 
 /*****CARDS******/
 .cardSection {
-  /*width: 100%;*/
-  /*overflow: scroll;*/
-  padding: 20px;
-  position: relative;
-  /*para que los sig se posicionen en funcion a este*/
-  margin-left: 65px;
+   /*width: 100%;*/
+   /*overflow: scroll;*/
+   padding: 20px;
+   position: relative;
+   /*para que los sig se posicionen en funcion a este*/
+   margin-left: 65px;
 }
 
 #card {
-  white-space: normal;
-  /*nowrap: horiznt, normal:organiza debajo, pre: +ordenado, va hacia abajo*/
-  margin: 15px 15px;
-  /*arriba/abajo  y laterales*/
-  padding-bottom: 5px;
-  /*para que no se recorte la img*/
+   white-space: normal;
+   /*nowrap: horiznt, normal:organiza debajo, pre: +ordenado, va hacia abajo*/
+   margin: 15px 15px;
+   /*arriba/abajo  y laterales*/
+   padding-bottom: 5px;
+   /*para que no se recorte la img*/
 }
 
 .pokemonCard {
-  background: linear-gradient(#ffffff, #848485);
-  width: 165px;
-  height: 200px;
-  border-radius: 20px;
-  overflow: hidden;
-  margin: 10px;
-  display: inline-block;
-  /*para que NO se junten uno debajo del otro, sino al lado*/
-  cursor: pointer;
-  transition: 450ms all;
-  /*transform-origin: center left; /*para que no se distorcione, y vaya de izq a der*/
+   background: linear-gradient(#ffffff, #848485);
+   width: 165px;
+   height: 200px;
+   border-radius: 20px;
+   overflow: hidden;
+   margin: 10px;
+   display: inline-block;
+   /*para que NO se junten uno debajo del otro, sino al lado*/
+   cursor: pointer;
+   transition: 450ms all;
+   /*transform-origin: center left; /*para que no se distorcione, y vaya de izq a der*/
 }
 
 /*
@@ -174,48 +189,63 @@ main {
 /*}*/
 
 #card:hover .pokemonCard {
-  /*cuando no se enfoca a una imagen*/
-  opacity: 0.1;
+   /*cuando no se enfoca a una imagen*/
+   opacity: 0.1;
 }
 
 #card:hover .pokemonCard:hover {
-  /*cuando se enfoca a una imagen*/
-  transform: scale(1.3);
-  /*incrementa el tamaño en 30% */
-  opacity: 1;
-  /*para que se muestre clara la imagen, sin opacidad = 1*/
+   /*cuando se enfoca a una imagen*/
+   transform: scale(1.3);
+   /*incrementa el tamaño en 30% */
+   opacity: 1;
+   /*para que se muestre clara la imagen, sin opacidad = 1*/
 }
 
 .pokemonNumber {
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-left: 20px;
+   font-size: 15px;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-left: 20px;
 }
 
 .pokemonPic {
-  width: 120px;
-  height: 120px;
-  margin-top: 0px;
-  margin-left: 20px;
-  /*para centrear la imagen*/
-  /*object-fit:contain;*/
+   width: 120px;
+   height: 120px;
+   margin-top: 0px;
+   margin-left: 20px;
+   /*para centrear la imagen*/
+   /*object-fit:contain;*/
 }
 
 .pokemonName {
-  font-size: 15px;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 0px;
+   font-size: 15px;
+   text-align: center;
+   font-weight: bold;
+   margin-top: 0px;
 }
-
+/**********************BOTON BACK********************/
+#buttonBack {
+   float: right;
+}
+/**********************FOOTER********************/
 footer {
-  background-color: #da0808da;
-  display: flex;
-  padding-top: 20px;
-  height: 30px;
-  justify-content: center;
-  /*alineamiento horizontal*/
-  color: white;
-  font-size: 12px;
+   background-color: #da0808da;
+   display: flex;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   height: 30px;
+   /*justify-content: center; /*alineamiento horizontal*/
+   color: white;
+   font-size: 12px;
+}
+.footerList i {
+   padding: 0px 10px;
+   margin-top: 0px;
+   font-size: 25px;
+   float: left;
+}
+.footerList li {
+   list-style: none;
+   float: right;
+   padding: 10px 0px 0px 420px;
 }

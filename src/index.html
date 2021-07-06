@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Pokedex</title>
   <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -39,34 +40,34 @@
   </nav> -->
 
   <main class="flex">
-    <section>
+    <section class="mainGeneralSearch">
       <h1>Search your Pokemon by number or name</h1>
-      <input type="search" id="generalSearch" placeholder="Example: Write 025 or Pikachu">
-      <input type="submit">
-      <button type="button" id="buttonGeneralSearch">
-        <img src="" alt="search">
+      <input type="search" placeholder="Example: Write 025 or Pikachu">
+      <button type="button" id="buttonSearch">
+        <img src="pic/searchLupa24.png">
+        <!-- <i class='bx bx-search-alt'></i> -->
       </button>
     </section>
-    <section>
+    <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
-      <ul class="advanceSearch">
-        <ul class="advanceSearchItem">Number:
+      <ul class="generalAdvancedSearchList">
+        <li>Number:
           <select name="searchByNumber" id="searchByNumber">
             <optgroup label="Sort by:">
               <option value="lowerNumber" href="">Lower Number</option>
               <option value="topNumber" href="">Top Number</option>
             </optgroup>
           </select>
-        </ul>
-        <ul class="advanceSearchItem"> Name:
+        </li>
+        <li>Name:
           <select name="searchByName" id="searchByName">
             <optgroup label="Sort by:">
               <option value="az" href="">A-Z</option>
               <option value="za" href="">Z-A</option>
             </optgroup>
           </select>
-        </ul>
-        <ul class="advanceSearchItem">Type:
+        </li>
+        <li class="advanceSearchItem">Type:
           <select name="searchByType" id="searchByType">
             <optgroup label="Choose type:">
               <option id="grass" href="">Grass</option>
@@ -89,7 +90,7 @@
               <option value="steel" href="">Steel</option>
             </optgroup>
           </select>
-        </ul>
+        </li>
       </ul>
     </section>
 
@@ -128,8 +129,21 @@
       <button type="button" id="buttonBack">Back</button>
     </section>
   </main>
+  <footer>
+    <section class="footerList">
+      <a href="https://www.facebook.com/Pokemon/" alt="FacebookPokemon">
+        <i class='bx bxl-facebook-square'></i>
+      </a>
+      <a href="https://www.instagram.com/pokemongoapp/?hl=es-la" alt="InstagramPokemon">
+        <i class='bx bxl-instagram'></i>
+      </a>
+      <a href="https://twitter.com/pokemongoapp?lang=es">
+        <i class='bx bxl-twitter'></i>
+      </a>
+      <li>© Copyright 2021 - Todos los derechos reservados</li>
 
-  <footer>© Copyright 2021 - Todos los derechos reservados
+    </section>
+
   </footer>
 
   <script src="main.js" type="module"></script>
