@@ -1,8 +1,9 @@
+/*********************************BODY******************/
 * {
    margin: 0;
    padding: 0;
 }
-/*-- HEADER */
+/************************ HEADER ******************/
 .headerText {
    background-color: #ffbe0b;
    height: 65px;
@@ -10,14 +11,13 @@
    align-items: center;
    flex-direction: column;
 }
-
 header img {
    width: 500px;
    margin-top: 10px;
 }
 
-.navigation {
-   background: #084ab4;
+nav {
+   background-color: #084ab4;
    height: 45px;
    display: flex;
    justify-content: center;
@@ -61,13 +61,32 @@ header img {
 
    margin-left: 0px;
 }
-/*---BODY----*/
+/********************************* MAIN ******************/
 main {
    background-image: url(pic/fondoPokebola.png);
    background-repeat: no-repeat;
    background-size: cover;
 }
-
+.mainGeneralSearch {
+   text-align: center;
+}
+#buttonSearch {
+   color: black;
+   background: #ffbe0b;
+   border-color: #ffbe0b;
+}
+button img {
+   font-size: 10px;
+   background-color: #ffbe0b;
+}
+.generalAdvancedSearch h1 {
+   text-align: center;
+}
+.generalAdvancedSearchList li {
+   list-style: none;
+   float: left;
+   padding: 10px 40px;
+}
 .flex {
    /* display: flex;*/
    /*justify-content: center;*/
@@ -81,8 +100,8 @@ main {
    /*ordena contenido de arriba hacia abajo*/
 }
 
-/*****CARDS******/
-/********* BUSQUEDA AVANZADA****/
+/***********************CARDS************************/
+/*********************** BUSQUEDA AVANZADA****/
 .advanceSearchItem {
    float: left;
    /*para ordenar horizontalmente*/
@@ -147,13 +166,29 @@ main {
    font-weight: bold;
    margin-top: 0px;
 }
-
+/**********************BOTON BACK********************/
+#buttonBack {
+   float: right;
+}
+/**********************FOOTER********************/
 footer {
    background-color: #da0808da;
    display: flex;
-   padding-top: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
    height: 30px;
-   justify-content: center; /*alineamiento horizontal*/
+   /*justify-content: center; /*alineamiento horizontal*/
    color: white;
    font-size: 12px;
+}
+.footerList i {
+   padding: 0px 10px;
+   margin-top: 0px;
+   font-size: 25px;
+   float: left;
+}
+.footerList li {
+   list-style: none;
+   float: right;
+   padding: 10px 0px 0px 420px;
 }
