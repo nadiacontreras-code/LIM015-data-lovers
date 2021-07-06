@@ -11,19 +11,21 @@ import {
 //BASE DE DATOS, carpeta DATA
 import data from './data/pokemon/pokemon.js';
 //import * as data from './data.js';
+
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
-buttonGeneralSearch.addEventListener('click', getResult => { 
+buttonGeneralSearch.addEventListener('click', getResult => {
   const generalSearch = document.getElementById("generalSearch").value;
+
   if (generalSearch == "") {
     alert("Please write a Pokemon number or name")
   } else if (generalSearch > 251) {
     alert("Please write a number between 1 to 251")
   } else {
     function getResult() {
-    document.getElementById("displayAllPokemons").style.display = "none";
-    document.getElementById("searchResult").style.display = "block";
+      document.getElementById("displayAllPokemons").style.display = "none";
+      document.getElementById("searchResult").style.display = "block";
+    }
   }
-}
 })
 //Para guardar los items dentro de array
 const allPokemons = [];
@@ -54,6 +56,7 @@ data.pokemon.forEach(item => {
 //Direccionando items para ubicar en section cards:
 //operador spread (...), genera una lista de valores a partir de un array
 card.append(...allPokemons); //verificar en Elementos <- Consola
+
 //example(12, 15); PRUEBA con return en data.js, para mostrar html
 document.getElementById("paraPrueba").innerHTML = example(12, 15);
 //document.getElementById("searchByType").innerHTML = filterType(12, 15);
