@@ -10,22 +10,22 @@
 <body>
   <div id="root"></div>
   <header>
-    <img src="pic/welcome.png" ; alt="Welcome" />
-    <img hidden src="pic/exploring.png" ; alt="Exploring" />
+    <section class="headerText">
+      <img src="pic/welcome.png" ; alt="Welcome" />
+      <img hidden src="pic/exploring.png" ; alt="Exploring" />
+    </section>
+    <nav class="navigation">
+      <ul class="menu">
+        <li>
+          <a href="index.html">
+            <img class="homeLogo" src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Home">
+            Home</a>
+        </li>
+        <li><a href="">Statistics</a></li>
+        <li><a href="">Follow us</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav class="navigation">
-    <ul class="menu">
-      <li>
-        <a href="index.html">
-          <section class="homeLogo"></section>
-          <img src=" URL " ; alt="Home">
-          </section>Home
-        </a>
-      </li>
-      <li><a href="">Statistics</a></li>
-      <li><a href="">Follow us</a></li>
-    </ul>
-  </nav>
   <main class="flex">
     <section>
       <h1>Search your Pokemon by number or name</h1>
@@ -81,6 +81,7 @@
       </ul>
     </section>
 
+
     <!-- Seccion de todos los pokemones>-->
     <section id="displayAllPokemons">
       <p id="paraPrueba"></p>
@@ -101,11 +102,9 @@
         <button type="button" id="buttonBack1">Back 1</button>
         <button type="button" id="buttonNext">Next 1</button>
       </section>
-
-
-
       <button type="button" id="buttonBack">Back</button>
     </section>
+
 
     <!--Mostrando pokemon buscado en otra ventana-->
     <section hidden id="searchResult">
