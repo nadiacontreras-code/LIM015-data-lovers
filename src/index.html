@@ -10,22 +10,34 @@
 <body>
   <div id="root"></div>
   <header>
-    <section class="headerText">
+    <section>
       <img src="pic/welcome.png" ; alt="Welcome" />
       <img hidden src="pic/exploring.png" ; alt="Exploring" />
     </section>
-    <nav class="navigation">
-      <ul class="menu">
-        <li>
-          <a href="index.html">
-            <img class="homeLogo" src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Home">
-            Home</a>
-        </li>
-        <li><a href="">Statistics</a></li>
-        <li><a href="">Follow us</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <nav class="topnav">
+    <a href="#home">
+      <img class="icon" src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Home">
+      Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </nav>
+  <!--
+  <nav class="navigation">
+    <ul class="menu">
+      <li>
+        <a href="index.html">
+          <img class="homeLogo" src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Home">
+          Home</a>
+      </li>
+      <li><a href="">About us</a></li>
+      <li><a href="">Statistics</a></li>
+      <li><a href="">Follow us</a></li>
+    </ul>
+  </nav> -->
+
   <main class="flex">
     <section>
       <h1>Search your Pokemon by number or name</h1>
@@ -116,9 +128,12 @@
       <button type="button" id="buttonBack">Back</button>
     </section>
   </main>
+
   <footer>© Copyright 2021 - Todos los derechos reservados
   </footer>
+
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
