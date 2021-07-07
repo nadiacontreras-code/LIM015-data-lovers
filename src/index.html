@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <!--ícono que aparece en pestaña de navegación-->
+  <link rel="icon" href="pic/pikachu.ico">
   <title>Pokedex</title>
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
@@ -20,34 +23,27 @@
     </section>
   </header>
 
-  <nav class="topnav">
-    <a href="#home">
-      <img class="icon" src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Home">
-      Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </nav>
-  <!--
   <nav class="navigation">
-    <ul class="menu">
-      <li>
-        <a href="index.html">
-          <img class="homeLogo" src="https://img.icons8.com/color/48/000000/pokeball--v1.png" alt="Home">
-          Home</a>
-      </li>
-      <li><a href="">About us</a></li>
-      <li><a href="">Statistics</a></li>
-      <li><a href="">Follow us</a></li>
-    </ul>
-  </nav> -->
+    <a href="index.html">
+      <img class="icon" src="pic/pokeball.ico" alt="Home">
+      Home</a>
+    <a href="#news">
+      <img class="icon" src="pic/pikachu.ico" alt="News">
+      News</a>
+    <a href="#statistics">
+      <img class="icon" src="pic/statistics.ico" alt="Statistics">
+      Statistics</a>
+    <a href="#follow_us">
+      <img class="icon" src="pic/like.ico" alt="Follow_us">
+      Follow us</a>
+  </nav>
 
-  <main class="flex">
+  <main>
     <h1 class="textSearch">Search your Pokemon by number or name</h1>
     <section>
       <input class="inputGeneralSearch" id="generalSearch" type="text" placeholder="Example: Write 025 or Pikachu">
       <button type="button" id="buttonGeneralSearch">
-        <img class="iconGeneralSearch" src="pic/searchLupa24.png">
+        <img class="iconGeneralSearch" src="pic/searchLupa.ico">
         <!-- <i class='bx bx-search-alt'></i> -->
       </button>
 
@@ -58,7 +54,6 @@
       <ul class="generalAdvancedSearchList">
 
         <li>Number:
-
           <select class="advancedSearchList" name="searchByNumber" id="searchByNumber">
             <optgroup label="Sort by:">
               <option value="lowerNumber" href="">Lower Number</option>
@@ -75,7 +70,7 @@
             </optgroup>
           </select>
         </li>
-        <li class="advanceSearchItem">Type:
+        <li>Type:
           <select class="advancedSearchList" name="searchByType" id="searchByType">
             <optgroup label="Choose type:">
               <option id="grass" href="">Grass</option>
@@ -118,22 +113,24 @@
       </section>
 
       <section>
-        <button type="button" id="buttonBack1">Back 1</button>
-        <button type="button" id="buttonNext">Next 1</button>
+        <button class="bottonBack" type="button" id="buttonBack1">Back 1</button>
+        <button class="bottonBack" type="button" id="buttonNext">Next 1</button>
       </section>
-      <button type="button" id="buttonBack">Back</button>
+      <button class="bottonBack" type="button" id="buttonBack">Back</button>
     </section>
 
 
     <!--Mostrando pokemon buscado en otra ventana-->
     <section hidden id="searchResult">
-      <p id="pokemonName">...</p>
-      <h1>Page under construction</h1>
-      <p id="pokemonNumber"></p>
-      <p id="pokemonPic"></p>
-      <p id="pokemonAbout"></p>
-      <p id="pokemonType"></p>
-      <button type="button" id="buttonBackPage">Back</button>
+      <section>
+        <p id="pokemonName">...</p>
+        <h1>Page under construction</h1>
+        <p id="pokemonNumber"></p>
+        <p id="pokemonPic"></p>
+        <p id="pokemonAbout"></p>
+        <p id="pokemonType"></p>
+      </section>
+      <button class="bottonBack" type="button" id="buttonBackPage">Back</button>
     </section>
   </main>
   <footer>
@@ -147,7 +144,7 @@
       <a href="https://twitter.com/pokemongoapp?lang=es">
         <i class="bx bxl-twitter"></i>
       </a>
-      <p>© Copyright 2021 - Todos los derechos reservados</p>
+      <p>©2021 Developed by Nadia Contreras and Maritza Rodriguez</p>
     </section>
   </footer>
 
