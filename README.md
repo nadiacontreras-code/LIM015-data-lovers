@@ -2,31 +2,46 @@
 
 ## 1. Descripción proyecto
 
-El producto está diseñado pensando en satisfacer las necesidades de nuestros usuarios (niños, jóvenes o adultos principiantes o amantes del juego PokemonGo), quienes mediante una encuesta realizada por nosotros, identificamos tres historias (perfiles) de usuarios los cuales buscan
-información relevante sobre los Pokemones (nombre, número, descripción del pokemon, tipo y fases de evolución) para: identificar a los pokemones y tener datos importantes antes de jugar; clasificar a los Pokemones o Armar una mejor estrategia de batalla.
+El producto está diseñado pensando en satisfacer las necesidades de nuestros usuarios (niños, jóvenes o adultos principiantes o amantes del juego PokemonGo), quienes mediante una encuesta realizada por nosotros, se identifico buscan información relevante sobre los Pokemones (nombre, número, descripción del pokemon, tipo y fases de evolución) para: identificarlos y tener datos importantes antes de jugar; clasificar a los Pokemones o Armar una mejor estrategia de batalla.
 
 
 ## 2. Definición del producto
 
- El primero paso para diseñar esta pagina fue identifar las necesidades de nuestros usuarios para definir y elaborar nuestras historias de usuario,utilizando una encuesta que nos permitio adquirir datos importantes para filtrar la información clave para nuestro proyecto e interpretamos tres diferentes tipos de usuario, con tres necesidades y tres objetivos distintos. En base a la información procesada decidimos diseñar esta pagina donde el usuario encontrará la información que necesita de manera ordena y de facil acceso.
+ Los resultafos de la encuesta nos ayudaron a identificar al usuario y a filtrar información a usar en nuestro proyect. Interpretamos a un usuario con tres necesidades y tres objetivos distintos. En base a la información procesada decidimos diseñar esta pagina donde el usuario encontrará la información que necesita de manera ordena y de facil acceso.
 
 ## 3. Historias de usuario
 ### 3.1. Historia de usuario UNO:
 
 Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias de Usuario]que representen todo lo que el usuario necesita hacer/ver.
-* Como: Jugador principiante del juego PokemonGo.
-* Quiero: Nombre, número y descripción del pokémon.
+* Como: Jugador del juego PokemonGo.
+* Quiero: Nombre, número.
 * Para: Identificar a los pokemones y tener datos importantes antes de jugar.
-
-**3.1.1. Criterios de aceptación:**
+  
+#### 3.1.1. Criterios de aceptación:
 
 - Pantalla de bienvenida
 - Buscador por número y nombre de pokémon (lleva a una ventana con imagen y descripción del pokemon buscado ).
-- Botón para identificarse: Principiante
 - Se muestra imágenes de pokemones por numero de orden 001, 002
-- Botón de retorno que nos lleva la ventana anterior
+- Botón de retorno que nos lleva la ventana anterior.
+### 3.2. Historia de Usuario DOS:
+* Como: Jugador del juego PokemonGo.
+* Quiero: Saber los tipos de pokemones(agua, roca, volador)
+* Para: calsificar a los pokemones.
+#### 3.2.1. Criterios de aceptación:
 
-**3.1.2. Definición de Terminado**
+- Botón desplegable con lista clasificada por tipos de pokémon (aparecen todos los pokemones por tipo)
+- Botón de retorno que nos lleva la ventana anterior.
+  ### 3.3. Historia de Usuario TRES:
+* Como: Jugador del juego PokemonGo.
+* Quiero: Conocer las evoluciones de cada pokemon
+* Para: Armar una mejor estrategia de batlla.
+
+#### 3.3.1. Criterios de aceptación:
+- Mostrar imágenes con las fases de evolución del pokémon (anteriores o posteriores.
+- Botón de retorno que nos lleva la ventana anterior.
+
+
+**3.4. Definición de Terminado**
 - Datos a usar coinciden con el "quiero" de la historia de usuario.
 - Solo usar la DATA que el usuario especificó en el "Quiero"
 - Respetar el prototipo final, de ser el caso mejorarlo.
@@ -44,10 +59,10 @@ Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias de
 Creación de nuestros prototipos:
 1. Diseño en papel
 
-![Prototipo papel](/src/pic/prototipoPapel.PNG)
+![Prototipo papel](/src/pic/PrototipoPapel2.jpg)
 
 2. Diseño lineal en figma
-![Prototipo lineal Figma](/src/pic/PrototipoLinealFigma.PNG)
+![Prototipo lineal Figma](/src/pic/Prototipofinal.PNG)
 
 
 1. Diseño final en figma
