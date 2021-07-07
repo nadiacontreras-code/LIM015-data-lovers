@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <title>Pokedex</title>
   <link rel="stylesheet" href="style.css" />
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mukta:wght@300&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -40,35 +43,40 @@
   </nav> -->
 
   <main class="flex">
-    <section class="mainGeneralSearch">
-      <h1>Search your Pokemon by number or name</h1>
-      <input type="search" placeholder="Example: Write 025 or Pikachu">
+    <h1 class="textSearch">Search your Pokemon by number or name</h1>
+    <section>
+      <input class="inputGeneralSearch" id="generalSearch" type="text" placeholder="Example: Write 025 or Pikachu">
       <button type="button" id="buttonGeneralSearch">
-        <img src="pic/searchLupa24.png">
+        <img class="iconGeneralSearch" src="pic/searchLupa24.png">
         <!-- <i class='bx bx-search-alt'></i> -->
       </button>
+
     </section>
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
+
       <ul class="generalAdvancedSearchList">
+
         <li>Number:
-          <select name="searchByNumber" id="searchByNumber">
+
+          <select class="advancedSearchList" name="searchByNumber" id="searchByNumber">
             <optgroup label="Sort by:">
               <option value="lowerNumber" href="">Lower Number</option>
               <option value="topNumber" href="">Top Number</option>
+
             </optgroup>
           </select>
         </li>
         <li>Name:
-          <select name="searchByName" id="searchByName">
+          <select class="advancedSearchList" name="searchByName" id="searchByName">
             <optgroup label="Sort by:">
               <option value="az" href="">A-Z</option>
-              <option value="za" href="">Z-A</option>
+              <option vlue="za" href="">Z-A</option>
             </optgroup>
           </select>
         </li>
         <li class="advanceSearchItem">Type:
-          <select name="searchByType" id="searchByType">
+          <select class="advancedSearchList" name="searchByType" id="searchByType">
             <optgroup label="Choose type:">
               <option id="grass" href="">Grass</option>
               <option id="poison" href="">Poison</option>
@@ -97,9 +105,7 @@
 
     <!-- Seccion de todos los pokemones>-->
     <section id="displayAllPokemons">
-      <p id="paraPrueba"></p>
-
-      <h1>Pokemons</h1>
+      <h1>Pokemons List</h1>
       <section class="cardMain">
         <section class="cardSection">
           <section id="card">
@@ -121,29 +127,28 @@
 
     <!--Mostrando pokemon buscado en otra ventana-->
     <section hidden id="searchResult">
-      <p id="pokemonName">HOLLLLLLAAAA</p>
+      <p id="pokemonName">...</p>
+      <h1>Page under construction</h1>
       <p id="pokemonNumber"></p>
       <p id="pokemonPic"></p>
       <p id="pokemonAbout"></p>
       <p id="pokemonType"></p>
-      <button type="button" id="buttonBack">Back</button>
+      <button type="button" id="buttonBackPage">Back</button>
     </section>
   </main>
   <footer>
     <section class="footerList">
-      <a href="https://www.facebook.com/Pokemon/" alt="FacebookPokemon">
-        <i class='bx bxl-facebook-square'></i>
+      <a href="https://es-la.facebook.com/PokemonGO/" alt="FacebookPokemon">
+        <i class="bx bxl-facebook-square"></i>
       </a>
       <a href="https://www.instagram.com/pokemongoapp/?hl=es-la" alt="InstagramPokemon">
-        <i class='bx bxl-instagram'></i>
+        <i class="bx bxl-instagram"></i>
       </a>
       <a href="https://twitter.com/pokemongoapp?lang=es">
-        <i class='bx bxl-twitter'></i>
+        <i class="bx bxl-twitter"></i>
       </a>
-      <li>© Copyright 2021 - Todos los derechos reservados</li>
-
+      <p>© Copyright 2021 - Todos los derechos reservados</p>
     </section>
-
   </footer>
 
   <script src="main.js" type="module"></script>

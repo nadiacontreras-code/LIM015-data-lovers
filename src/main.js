@@ -1,11 +1,11 @@
 //DOM
 //Importando de data.js
-import {
+/*import {
   example
 } from './data.js';
 import {
   filterType
-} from './data.js';
+} from './data.js';*/
 //import { anotherExample } from './data.js';
 //
 //BASE DE DATOS, carpeta DATA
@@ -13,7 +13,7 @@ import data from './data/pokemon/pokemon.js';
 //import * as data from './data.js';
 
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
-buttonGeneralSearch.addEventListener('click', getResult => {
+buttonGeneralSearch.addEventListener('click', () => {
   const generalSearch = document.getElementById("generalSearch").value;
 
   if (generalSearch == "") {
@@ -21,11 +21,12 @@ buttonGeneralSearch.addEventListener('click', getResult => {
   } else if (generalSearch > 251) {
     alert("Please write a number between 1 to 251")
   } else {
-    function getResult() {
+  /*  function getResult() {*/
       document.getElementById("displayAllPokemons").style.display = "none";
       document.getElementById("searchResult").style.display = "block";
     }
-  }
+  
+  
 })
 //Para guardar los items dentro de array
 const allPokemons = [];
@@ -58,5 +59,5 @@ data.pokemon.forEach(item => {
 card.append(...allPokemons); //verificar en Elementos <- Consola
 
 //example(12, 15); PRUEBA con return en data.js, para mostrar html
-document.getElementById("paraPrueba").innerHTML = example(12, 15);
+//document.getElementById("paraPrueba").innerHTML = example(12, 15);
 //document.getElementById("searchByType").innerHTML = filterType(12, 15);
