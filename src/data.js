@@ -25,23 +25,25 @@ const algo = (dataName) => {
 }*/
 
 //FUNCION ORDEN ALFABETICO A-Z / Z-A
-export const orderAz = (choose,pokemonesName) =>{
- /* const pokeOrder = pokemonesName.sort((pok1,pok2)=>{
-    return (pok1 < pok2) ? -1 : 1
-  })*/
-  
-  let pokemonOrder ;
-  if (choose == "az"){
-  pokemonOrder = pokemonesName.sort((pok1,pok2) =>{
-    return (pok1.name < pok2.name) ? -1 : 1
-    })} else if (choose == "za") {
-    pokemonOrder = pokemonesName.sort((pok1,pok2) =>{
-        return (pok1.name > pok2.name) ? -1 : 1
-    })} else{
-      return " "
-    }
-    console.log(pokemonOrder);
+export const orderAz = (choose, pokemonesName) => {
+  /* const pokeOrder = pokemonesName.sort((pok1,pok2)=>{
+     return (pok1 < pok2) ? -1 : 1
+   })*/
+
+  let pokemonOrder;
+  if (choose == "az") {
+    pokemonOrder = pokemonesName.sort((pok1, pok2) => {
+      return (pok1.name < pok2.name) ? -1 : 1
+    })
+  } else if (choose == "za") {
+    pokemonOrder = pokemonesName.sort((pok1, pok2) => {
+      return (pok1.name > pok2.name) ? -1 : 1
+    })
+  } else {
+    return " "
   }
+  console.log(pokemonOrder);
+}
 
 
 
@@ -60,10 +62,9 @@ export const orderAz = (choose,pokemonesName) =>{
 
 
 
- /* console.log(pokemonOrder);
-  for (let key in pokemonOrder) {
+/* console.log(pokemonOrder);
+ for (let key in pokemonOrder) {
 
-  //console.log(pokemonOrder[key].name)
-  }
-  return pokemonOrder;*/
-
+ //console.log(pokemonOrder[key].name)
+ }
+ return pokemonOrder;*/
