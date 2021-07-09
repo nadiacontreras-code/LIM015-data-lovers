@@ -18,12 +18,12 @@
   <div id="root"></div>
   <header>
     <section>
-      <img src="pic/welcome.png" ; alt="Welcome" />
-      <img hidden src="pic/exploring.png" ; alt="Exploring" />
+      <img id="WelcomeToPage" src="pic/welcome.png" alt="WelcomeToPage" />
+      <img hidden id="ExploringPage" src="pic/exploring.png" alt="ExploringPage" />
     </section>
   </header>
 
-  <nav class="navigation">
+  <nav class="navigationMenu">
     <a href="index.html">
       <img class="icon" src="pic/pokeball.ico" alt="Home">
       Home</a>
@@ -41,20 +41,17 @@
   <main>
     <h1 class="textSearch">Search your Pokemon by number or name</h1>
     <section>
-      <input class="inputGeneralSearch" id="generalSearch" type="text" placeholder="Example: Write 025 or Pikachu">
+      <input class="inputGeneralSearch" id="inputGeneralSearch" type="text" placeholder="Example: Write 025 or Pikachu">
       <button type="button" id="buttonGeneralSearch">
         <img class="iconGeneralSearch" src="pic/searchLupa.ico">
-        <!-- <i class='bx bx-search-alt'></i> -->
       </button>
 
     </section>
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
-
       <ul class="generalAdvancedSearchList">
-
         <li>Number:
-          <select class="advancedSearchList" name="clasifyByNumber" id="clasifyByNumber">
+          <select class="selectAdvancedSearchList" id="orderByNumber">
             <optgroup label="Sort by:">
               <option value="lowerNumber" href="">Lower Number</option>
               <option value="topNumber" href="">Top Number</option>
@@ -63,18 +60,18 @@
           </select>
         </li>
         <li>Name:
-          <select class="advancedSearchList" name="clasifyByName" id="clasifyByName">
-            <option class="optionAlphabetical" value=" " href="">Choose</option>
-            <option class="optionAlphabetical" value="az" href="">A-Z</option>
-            <option class="optionAlphabetical" value="za" href="">Z-A</option>
-
+          <select class="selectAdvancedSearchList" id="orderByName">
+            <optgroup label="Sort by:">
+              <option value="az" href="">A-Z</option>
+              <option value="za" href="">Z-A</option>
+            </optgroup>
           </select>
         </li>
         <li>Type:
-          <select class="advancedSearchList" name="clasifyByType" id="clasifyByType">
+          <select class="selectAdvancedSearchList" id="orderByType">
             <optgroup label="Choose type:">
-              <option id="grass" href="">Grass</option>
-              <option id="poison" href="">Poison</option>
+              <option value="grass" href="">Grass</option>
+              <option value="poison" href="">Poison</option>
               <option value="fire" href="">Fire</option>
               <option value="flying" href="">Flying</option>
               <option value="water" href="">Water</option>
@@ -101,47 +98,41 @@
     <!-- Seccion de todos los pokemones>-->
     <section id="displayAllPokemons">
       <h1>Pokemons List</h1>
-      <section class="cardMain">
-        <section class="cardSection">
-          <section id="card">
-            <!-- <section class = "pokemonCard"> </section>-->
-            <!-- <section class = "pokemonNumber"> </section>-->
-            <!-- <section class = "pokemonPic"> </section>-->
-            <!-- <section class = "pokemonName"> </section>-->
-          </section>
+      <section class="cardSection">
+        <section id="card">
+          <!-- <section class = "pokemonCard"> </section>-->
+          <!-- <p class = "pokemonNumber"> </p>-->
+          <!-- <img class = "pokemonPic">-->
+          <!-- <p class = "pokemonName"></p>
+            </section>-->
         </section>
       </section>
-
-      <section>
-        <button class="bottonBack" type="button" id="buttonBack1">Back 1</button>
-        <button class="bottonBack" type="button" id="buttonNext">Next 1</button>
-      </section>
-      <button class="bottonBack" type="button" id="buttonBack">Back</button>
     </section>
-
-
+    <section class="sectionButtonInteractionMain">
+      <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
+      <button class="buttonInteraction" type="button" id="buttonNext">Next</button>
+    </section>
+    <section class="buttonReturnPageMain">
+      <button class="buttonReturnPage" type="button" id="buttonReturnPage">Return</button>
+    </section>
     <!--Mostrando pokemon buscado en otra ventana-->
-    <section hidden id="searchResult">
+    <section hidden id="sectionShowResult">
       <section>
-        <p id="pokemonName">...</p>
         <h1>Page under construction</h1>
-        <p id="pokemonNumber"></p>
-        <p id="pokemonPic"></p>
-        <p id="pokemonAbout"></p>
-        <p id="pokemonType"></p>
+
       </section>
-      <button class="bottonBack" type="button" id="buttonBackPage">Back</button>
+      <button class="buttonReturnPage" type="button" id="buttonReturnPage2">Return</button>
     </section>
   </main>
   <footer>
-    <section class="footerList">
-      <a href="https://es-la.facebook.com/PokemonGO/" alt="FacebookPokemon">
+    <section class="footerListSocialMedia">
+      <a href="https://es-la.facebook.com/PokemonGO/" alt="FacebookPokemonGo">
         <i class="bx bxl-facebook-square"></i>
       </a>
-      <a href="https://www.instagram.com/pokemongoapp/?hl=es-la" alt="InstagramPokemon">
+      <a href="https://www.instagram.com/pokemongoapp/?hl=es-la" alt="InstagramPokemonGo">
         <i class="bx bxl-instagram"></i>
       </a>
-      <a href="https://twitter.com/pokemongoapp?lang=es">
+      <a href="https://twitter.com/pokemongoapp?lang=es" alt="TwitterPokemonGo">
         <i class="bx bxl-twitter"></i>
       </a>
       <p>©2021 Developed by Nadia Contreras and Maritza Rodriguez</p>
