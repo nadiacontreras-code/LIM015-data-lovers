@@ -1,30 +1,29 @@
 //DOM
-
 //Importando BASE DE DATOS
 import data from './data/pokemon/pokemon.js';
-import * as dataJs from './data.js'; // (*)Importa todo de data.js
-
-
-/*Importando funciones PARA PRUEBA
+//Importando todas las funciones 
+import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
+//Si hay peoblemas en el test llamar a cada funcion como abajo
+/*Importando funciones
 import {
   example
-} from './data.js';
-//example(12, 15); PRUEBA con return en data.js, para mostrar html
-//document.getElementById("paraPrueba").innerHTML = example(12, 15);
-*/
+} from './data.js';*/
+
 
 //BUSQUEDA GENERAL POKEMONES ingresando nombre o número
 
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
 buttonGeneralSearch.addEventListener('click', () => {
-  const generalSearch = document.getElementById("generalSearch").value;
+  const inputGeneralSearch = document.getElementById("inputGeneralSearch").value;
 
-  if (generalSearch == "") {
+  if (inputGeneralSearch == "") {
     alert("Please write a Pokemon number or name")
-  } else if (generalSearch > 251) {
+  } else if (inputGeneralSearch > 251) {
     alert("Please write a number between 1 to 251")
   } else {
     /*  function getResult() {*/
+    document.getElementById("WelcomeToPage").style.display = "none";
+    document.getElementById("ExploringPage").style.display = "block";
     document.getElementById("displayAllPokemons").style.display = "none";
     document.getElementById("searchResult").style.display = "block";
   }
@@ -32,12 +31,16 @@ buttonGeneralSearch.addEventListener('click', () => {
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
 const allData = data.pokemon;
-const allPokemons = []; //Para guardar los items dentro de array
-//Para ubicar items dentro de una section
-const card = document.querySelector('#card')
+let pokemonsCard = []; //Para guardar los items dentro de array
+//------Para ubicar items dentro de una section
+let card = document.querySelector('#card');
 
-function drawData(parametro) {
-  parametro.forEach(item => {
+function showData(itemSearch) {
+  // Para limpiar la pagina de las cards
+  card.innerHTML = "";
+  pokemonsCard  = [];
+ // Extrayendo información de Num, Img y Name  independiente
+  let cardInformation = itemSearch.forEach(item => {
     //Creando nodos numero
     const number = document.createElement('p')
     number.textContent = item.num;
@@ -57,92 +60,44 @@ function drawData(parametro) {
     //append: para agregar mas de una característica
     section.append(number, pic, name); //*appendChild solo acepta uno
     //Incluimos los items dentro de array
-    allPokemons.push(section);
+    pokemonsCard.push(section);
   });
-  card.append(...allPokemons);
-}
-window.addEventListener('load', drawData(data.pokemon));
-//Direccionando items para ubicar en section cards:
-//operador spread (...), genera una LISTA de valores a partir de un array
-//card.append(...allPokemons); //verificar en Elementos <- Consola
+  //Direccionando items para ubicar en section cards:
+  //operador spread (...), genera una LISTA de valores a partir de un array
+  card.append(...pokemonsCard);
 
+  return cardInformation
+}
+// Para mostrar los card en la pantalla //
+window.addEventListener('load', showData(data.pokemon)); //itemSearch=data.pokemon//
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
-
+/*import {
+  numericalOrder
+} from './data.js';
+*/
 //Selector Number
-const orderByNumber = document.getElementById('clasifyByNumber');
+const orderByNumber = document.getElementById('orderByNumber');
 orderByNumber.addEventListener('change', () => {
-  dataJs.numericalOrder(allPokemons) //numericalOrder(parameter) en data.js
-  card.append(...allPokemons) //para mostrar en pantalla
-})
+  let numberOrderSelect = orderByNumber.value;
+  let dataOrderNumber = dataFunctions.numericalOrder(numberOrderSelect,allData); //numericalOrder(parameter) en data.js
+  showData(dataOrderNumber);
+ 
+});
 
 //ORDENAR POR ORDEN ALFABETICO A-Z/Z-A
 /*import {
-  orderAZ
+  alphabeticalOrder
 } from './data.js';
 */
-const selectAz = document.getElementById("clasifyByName");
-selectAz.addEventListener("change", () => {
-  let valueSelect = selectAz.value;
-  dataJs.orderAz(valueSelect, allData);
+const orderByName = document.getElementById("orderByName");
+orderByName.addEventListener("change", () => {
   
+  let nameOrderSelect = orderByName.value;
+  let dataOrderName = dataFunctions.alphabeticalOrder(nameOrderSelect, allData);
+  showData(dataOrderName);
+
+
 });
 
-//console.log(allData);
 
-/*
-const nameOrder = document.getElementById('alphabeticalOrder');
-nameOrder.addEventListener('change', () => {
-})
-*/
-
-/* (let i = 0; i < allPokemons.length; i++) {
-  const card = document.querySelector('#card')
-  // console.log(allPokemons[i])
-}
-*/
-
-/*nst alphabeticalOrder = document.getElementById('alphabeticalOrder');
-alphabeticalOrder.addEventListener('change', () => {
-      const order = alphabeticalOrder.value;
-      let az;
-
-
-      /*const card = document.querySelector('#card')
-  data.pokemon.forEach(item => {
-    const name = document.createElement('p')
-    name.textContent = item.name
-
-    if (order == 'az') {
-      item.name.toUpperCase().sort();
-    } else {
-      item.name.toUpperCase().reverse();
-    }
-    name.className = "pokemonName";
-
-    const section = document.createElement('section');
-    section.className = "pokemonCard"
-
-    section.append(name);
-
-    allPokemons.push(section);
-  });
-  card.append(...allPokemons);
-*/
-//document.getElementById("card").innerHTML = "Elejí " + order;
-
-
-//})
-/*
-let orderAtoZ;
-const alphabeticalOrder = document.getElementById('alphabeticalOrder');
-alphabeticalOrder.addEventListener('change', () => { //antes onchange en html
-  const cardName = document.getElementById("card");
-  cardName.innerHTML = "";
-  orderAtoZ = alphabeticalOrder.value;
-  //se llama a la funcion de data.js para ordenar alfabéticamente
-  alphabetical(allPokemons, orderAtoZ)
-});
-*/
-
-//console.log(alphabeticalOrder(a, b, c))

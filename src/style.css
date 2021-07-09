@@ -17,11 +17,12 @@ header {
 header img {
    width: 500px;
    margin-top: 10px;
+   align-items: center;
 }
 
 /*****NAVIGATON ****/
 
-.navigation {
+.navigationMenu {
    background-color: #084ab4;
    overflow: hidden;
    display: flex;
@@ -29,7 +30,7 @@ header img {
    height: 40px;
 }
 
-.navigation a {
+.navigationMenu a {
    float: left;
    color: #f2f2f2;
    text-align: center;
@@ -40,7 +41,7 @@ header img {
    width: 300px;
 }
 
-.navigation a:hover {
+.navigationMenu a:hover {
    color: #ffbe0b;
 }
 
@@ -144,7 +145,7 @@ main {
    border-radius: 50px;
 }
 
-.advancedSearchList {
+.selectAdvancedSearchList {
    width: 130px;
    margin-left: 20px;
    height: 25px;
@@ -171,18 +172,20 @@ main {
 .cardSection {
    /*width: 100%;*/
    /*overflow: scroll;*/
-   padding: 20px;
+   padding: 0px;
    position: relative;
    /*para que los sig se posicionen en funcion a este*/
-   margin-left: 120px;
+   margin: 0px 50px;
+   align-items: center;
 }
 
 #card {
    white-space: normal;
    /*nowrap: horiznt, normal:organiza debajo, pre: +ordenado, va hacia abajo*/
-   margin: 15px 15px;
+   margin: 0px;
    /*arriba/abajo  y laterales*/
-   padding-bottom: 5px;
+   /*padding-bottom: 5px;*/
+   padding: 0px;
    /*para que no se recorte la img*/
 }
 
@@ -243,8 +246,17 @@ main {
    margin-top: 0px;
 }
 
-/**********************BOTON BACK********************/
-.bottonBack {
+/**********************BUTTON INTERACTION********************/
+.sectionButtonInteractionMain {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   float: left;
+   padding: 0px;
+   margin: 0px;
+}
+
+.buttonInteraction {
    background-color: #da0808da;
    border-radius: 12px;
    border: none;
@@ -255,9 +267,40 @@ main {
    padding: 10px;
    margin: 5px;
    cursor: pointer;
+   margin: 50px;
 }
 
-.bottonBack:hover {
+.buttonInteraction:hover {
+   background: #ffbe0b;
+   color: black;
+}
+/**********************BUTTON RETURN PAGE********************/
+.buttonReturnPageMain {
+   display: flex;
+   align-items: center;
+
+   margin-bottom: 30px;
+   margin-top: 0px;
+   padding: 0px;
+}
+
+.buttonReturnPage {
+   background-color: #da0808da;
+   border-radius: 12px;
+   border: none;
+   height: 35px;
+   width: 65px;
+   color: white;
+   font-size: 15px;
+   padding: 10px;
+   margin-right: 0px;
+   cursor: pointer;
+   /*display: flex;
+   /* align-items: center;
+   flex-direction: row;
+   float: right;*/
+}
+.buttonReturnPage:hover {
    background: #ffbe0b;
    color: black;
 }
@@ -274,16 +317,19 @@ footer {
    font-size: 12px;
 }
 
-.footerList i {
+.footerListSocialMedia i {
    padding: 3px 10px;
    font-size: 25px;
    float: left;
    color: black;
 }
 
-.footerList p {
-   list-style: none;
-   float: right;
-   padding: 5px 0px 0px 450px;
+.footerListSocialMedia p {
+   /*list-style: none;*/
+   /* float: right;*/
+   text-align: center;
+
+   /* padding: 5px 0px 0px 450px;*/
    /***con padding  5px 0px 0px 400px, genera espacioen blanco*/
+   /*display: flex;*/
 }
