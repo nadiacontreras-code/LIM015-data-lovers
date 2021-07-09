@@ -6,33 +6,46 @@ export const example = (num1, num2) => {
   return resultado;
   //console.log("La suma es: "+ resultado)
 };
-export const filterType = (data, typeChoose) => {
-  const typeOfPokemon = data.filter(
-    pokemon => pokemon.type.indexOf(typeChoose.toLowerCase()) > -1,
-  )
-  return typeOfPokemon;
-};
-/*
-const filterByGeneration = (data, valor) => {
-  const filterPokemonByGeneration = data.filter(
-    pokemon => pokemon.generation.name === valor,
-  );
-  return filterPokemonByGeneration;
-};
-*/
-/*
-export const example = () => {
- })
- return pokemonNumber;
+
+
+/*PROBANDO SORT()
+const dataName = [5, 9, 8]
+  export const alphabeticalOrder = () => {
+  dataName.sort();
+  console.log(dataName);
+
+}*/
+/*const dataName = "ma"
+const algo = (dataName) => {
+  console.log(dataName.charCodeAt())
+}*/
+let str = "HELLO WORLD";
+console.log(str.charCodeAt(0))
+
+export const firstLetter = (parameter) => {
+  //charCodeAt() indica valor ACCI (MAYUSCULAS de 65 a 90)
+  return parameter.charCodeAt(0);
 }
-export const anotherExample = () => {
-  return 'OMG';
-};
-//const datas = data;
-export const pokemon = () => {
-  //const description = datas.filter(datas => datas == data.name);
-  //return description;
-  const datas = pokemon.filter(callback(1));
-  return datas;
-};
-*/
+
+
+
+//FUNCION ORDEN ALFABETICO A-Z / Z-A
+export const orderAZ = (parameter, dataNadia) => {
+  let pokemonOrder;
+  pokemonOrder = dataNadia.sort(function (pok1, pok2) {
+
+    return (pok1.name - pok2.name);
+  });
+  /*if (parameter == "az") {
+    pokemonOrder = dataNadia.sort((pok1, pok2) => pok1.name - pok2.name);
+  } else {
+    pokemonOrder = dataNadia.sort((pok1, pok2) => pok2.name - pok1.name);
+  }*/
+
+  //console.log(pokemonOrder);
+  for (let key in pokemonOrder) {
+
+    pokemonOrder[key].name
+  }
+  return pokemonOrder;
+}
