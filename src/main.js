@@ -67,61 +67,42 @@ window.addEventListener('load', drawData(data.pokemon));
 //card.append(...allPokemons); //verificar en Elementos <- Consola
 
 
-//ORDENAR POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
-/*
-import {
-  numericalOrder
-} from './data.js';
+//MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 
 //Selector Number
-const orderByName = document.getElementById('searchByNumber');
-orderByName.addEventListener('change', () => {
-  numericalOrder(allPokemons) //numericalOrder(parameter) en data.js
+const orderByNumber = document.getElementById('clasifyByNumber');
+orderByNumber.addEventListener('change', () => {
+  dataJs.numericalOrder(allPokemons) //numericalOrder(parameter) en data.js
   card.append(...allPokemons) //para mostrar en pantalla
 })
-*/
 
 //ORDENAR POR ORDEN ALFABETICO A-Z/Z-A
 /*import {
   orderAZ
 } from './data.js';
 */
-const selectAZ = document.getElementById("searchByName");
-selectAZ.addEventListener("change", () => {
-  let valueSelect = selectAZ.value;
-  dataJs.orderAZ(valueSelect, allData);
+const selectAz = document.getElementById("clasifyByName");
+selectAz.addEventListener("change", () => {
+  let valueSelect = selectAz.value;
+  dataJs.orderAz(valueSelect, allData);
+  
 });
 
-
+//console.log(allData);
 
 /*
 const nameOrder = document.getElementById('alphabeticalOrder');
 nameOrder.addEventListener('change', () => {
-
-
 })
 */
 
-
-
-
-
-
-/*
-for (let i = 0; i < allPokemons.length; i++) {
+/* (let i = 0; i < allPokemons.length; i++) {
   const card = document.querySelector('#card')
   // console.log(allPokemons[i])
 }
 */
 
-
-
-
-
-
-
-/*
-const alphabeticalOrder = document.getElementById('alphabeticalOrder');
+/*nst alphabeticalOrder = document.getElementById('alphabeticalOrder');
 alphabeticalOrder.addEventListener('change', () => {
       const order = alphabeticalOrder.value;
       let az;
@@ -152,10 +133,6 @@ alphabeticalOrder.addEventListener('change', () => {
 
 
 //})
-
-
-
-
 /*
 let orderAtoZ;
 const alphabeticalOrder = document.getElementById('alphabeticalOrder');
