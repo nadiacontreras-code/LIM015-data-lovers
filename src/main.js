@@ -40,25 +40,58 @@ function showData(itemSearch) {
   card.innerHTML = "";
   pokemonsCard = [];
   // Extrayendo información de Num, Img y Name  independiente
-  let cardInformation = itemSearch.forEach(item => {
+  let cardInformation = itemSearch.forEach(itemValue => {
     //Creando nodos numero
     const number = document.createElement('p')
-    number.textContent = item.num;
+    number.textContent = itemValue.num;
     number.className = "pokemonNumber"; //clase, para dar estilos css
     //Creando nodos imagen
     const pic = document.createElement('img')
-    pic.src = item.img; //src: source (link)
+    pic.src = itemValue.img; //src: source (link)
     pic.className = "pokemonPic";
     //Creando nodos nombre
     const name = document.createElement('p')
-    name.textContent = item.name.toUpperCase();
+    name.textContent = itemValue.name.toUpperCase();
     name.className = "pokemonName"; //clase, para dar estilos css
+    //Creando nodos type
+    let pokemonCardType = [];
+    let type = document.querySelector('#pokemonType');
+
+    function showType(itemType) {
+      type.innerHTML = "";
+      pokemonCardType = [];
+
+      let typeInformation = itemType.forEach(itemSeparate => {
+        //creando nodos para cada type //
+        const eachType = document.createElement('li')
+        eachType.textContent = itemSeparate;
+        eachType.className = "eachPokemonType";
+
+        const listPokemonType = document.createElement('ul');
+        listPokemonType.className = "listPokemonType"
+        listPokemonType.append(eachType);
+
+        pokemonCardType.push(listPokemonType);
+      });
+      type.append(...pokemonCardType);
+      return typeInformation
+    }
+    window.addEventListener('load', showType(data.pokemon.type));
+    /* let type = "";
+     let individualTypes ="";
+     for(let i=0;i < itemValue.type.length;i++){
+       individualTypes += itemValue.type[i] + "";
+      type = document.createElement('p')
+      type.className = "pokemonType"; //clase, para dar estilos css
+      type.textContent = individualTypes.toUpperCase();
+      console.log(individualTypes);
+     }*/
     //Creando section (parent) para num, pic, name (append)
     const section = document.createElement('section');
     section.className = "pokemonCard"
     //section agrega  num, pic, name
     //append: para agregar mas de una característica
-    section.append(number, pic, name); //*appendChild solo acepta uno
+    section.append(number, pic, name, type); //*appendChild solo acepta uno
     //Incluimos los items dentro de array
     pokemonsCard.push(section);
   });
@@ -69,7 +102,7 @@ function showData(itemSearch) {
   return cardInformation
 }
 // Para mostrar los card en la pantalla //
-window.addEventListener('load', showData(data.pokemon)); //itemSearch=data.pokemon//
+window.addEventListener('load', showData(allData)); //itemSearch=data.pokemon//
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 /*import {
@@ -88,22 +121,6 @@ orderByNumber.addEventListener('change', () => {
 //ORDENAR POR ORDEN ALFABETICO A-Z/Z-A
 /*import {
   alphabeticalOrder
-} from './data.js';
-*/
-const orderByName = document.getElementById("orderByName");
-orderByName.addEventListener("change", () => {
-
-  let nameOrderSelect = orderByName.value;
-  let dataOrderName = dataFunctions.alphabeticalOrder(nameOrderSelect, allData);
-  showData(dataOrderName);
-
-
-});
-
-
-//ORDENAR POR TIPO
-/*import {
-  tipeOrder
 } from './data.js';
 */
 const orderByName = document.getElementById("orderByName");

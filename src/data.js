@@ -44,10 +44,6 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
 
 
 
-
-
-
-
 /* for (let key in pokemonOrder) {
 
  //console.log(pokemonOrder[key].name)
