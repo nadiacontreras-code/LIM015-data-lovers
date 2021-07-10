@@ -38,8 +38,8 @@ let card = document.querySelector('#card');
 function showData(itemSearch) {
   // Para limpiar la pagina de las cards
   card.innerHTML = "";
-  pokemonsCard  = [];
- // Extrayendo información de Num, Img y Name  independiente
+  pokemonsCard = [];
+  // Extrayendo información de Num, Img y Name  independiente
   let cardInformation = itemSearch.forEach(item => {
     //Creando nodos numero
     const number = document.createElement('p')
@@ -80,9 +80,9 @@ window.addEventListener('load', showData(data.pokemon)); //itemSearch=data.pokem
 const orderByNumber = document.getElementById('orderByNumber');
 orderByNumber.addEventListener('change', () => {
   let numberOrderSelect = orderByNumber.value;
-  let dataOrderNumber = dataFunctions.numericalOrder(numberOrderSelect,allData); //numericalOrder(parameter) en data.js
+  let dataOrderNumber = dataFunctions.numericalOrder(numberOrderSelect, allData); //numericalOrder(parameter) en data.js
   showData(dataOrderNumber);
- 
+
 });
 
 //ORDENAR POR ORDEN ALFABETICO A-Z/Z-A
@@ -92,7 +92,7 @@ orderByNumber.addEventListener('change', () => {
 */
 const orderByName = document.getElementById("orderByName");
 orderByName.addEventListener("change", () => {
-  
+
   let nameOrderSelect = orderByName.value;
   let dataOrderName = dataFunctions.alphabeticalOrder(nameOrderSelect, allData);
   showData(dataOrderName);
@@ -101,3 +101,17 @@ orderByName.addEventListener("change", () => {
 });
 
 
+//ORDENAR POR TIPO
+/*import {
+  tipeOrder
+} from './data.js';
+*/
+const orderByName = document.getElementById("orderByName");
+orderByName.addEventListener("change", () => {
+
+  let nameOrderSelect = orderByName.value;
+  let dataOrderName = dataFunctions.alphabeticalOrder(nameOrderSelect, allData);
+  showData(dataOrderName);
+
+
+});
