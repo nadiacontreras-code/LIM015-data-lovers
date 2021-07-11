@@ -41,15 +41,22 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
 //console.log(pokemonOrder);
 
 
+//FUNCION FILTRAR POR TIPO  ((aun no funciona, mejorar ))
 
+export const typeFilter = (selectType, dataType) => {
+  let pokemonTypeFilter;
+  if (selectType == "poison") {
+    pokemonTypeFilter = dataType.filter(pok => {
+      pok.type.indexOf(dataType) > -1
+      return pok;
+    })
+  } else {
+    return " "
+  }
+}
 
-
-/* for (let key in pokemonOrder) {
-
- //console.log(pokemonOrder[key].name)
- }
- return pokemonOrder;*/
-
-//console.log(pokemonOrder[key].name)
-/*}
-return pokemonOrder;*/
+//indexOf()método devuelve posición de primera aparición valor especificado
+//indexOf() si no coindice devuelve -1
+//const pokemonTypeFilter = selectType.filter(pokemon => pokemon.type.indexOf(dataType.toLowerCase()) > -1, );
+///return pokemonTypeFilter;
+//};

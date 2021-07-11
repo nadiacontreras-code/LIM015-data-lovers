@@ -29,17 +29,28 @@ buttonGeneralSearch.addEventListener('click', () => {
   }
 })
 
+//Funcion para crear extraer cada tipo por separado
+const eachType = (elem) => {
+  let createType = "";
+  elem.forEach((newElem) => {
+    //span: contenedor en línea, para marcar parte de texto o doc
+    //notación $ {}, para inyectar expresiones dentro de cualquier string
+    createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
+  });
+  return createType;
+};
+
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
 const allData = data.pokemon;
 let pokemonsCard = []; //Para guardar los items dentro de array
-//------Para ubicar items dentro de una section
+//Para ubicar items dentro de una section
 let card = document.querySelector('#card');
 
 function showData(itemSearch) {
   // Para limpiar la pagina de las cards
   card.innerHTML = "";
   pokemonsCard = [];
-  // Extrayendo información de Num, Img y Name  independiente
+  // Extrayendo información de Num, Img, Name, Type  independiente
   let cardInformation = itemSearch.forEach(itemValue => {
     //Creando nodos numero
     const number = document.createElement('p')
@@ -54,44 +65,19 @@ function showData(itemSearch) {
     name.textContent = itemValue.name.toUpperCase();
     name.className = "pokemonName"; //clase, para dar estilos css
     //Creando nodos type
-    let pokemonCardType = [];
-    let type = document.querySelector('#pokemonType');
+    const type = document.createElement('p')
+    type.innerHTML = eachType(itemValue.type)
+    //innerHTML, recupera y establece el mismo contenido pero en formato HTML
+    //textContent, recupera y establece el contenido de la etiqueta como texto plano
+    type.className = "pokemonType"; //clase, para dar estilos css
 
-    function showType(itemType) {
-      type.innerHTML = "";
-      pokemonCardType = [];
-
-      let typeInformation = itemType.forEach(itemSeparate => {
-        //creando nodos para cada type //
-        const eachType = document.createElement('li')
-        eachType.textContent = itemSeparate;
-        eachType.className = "eachPokemonType";
-
-        const listPokemonType = document.createElement('ul');
-        listPokemonType.className = "listPokemonType"
-        listPokemonType.append(eachType);
-
-        pokemonCardType.push(listPokemonType);
-      });
-      type.append(...pokemonCardType);
-      return typeInformation
-    }
-    window.addEventListener('load', showType(data.pokemon.type));
-    /* let type = "";
-     let individualTypes ="";
-     for(let i=0;i < itemValue.type.length;i++){
-       individualTypes += itemValue.type[i] + "";
-      type = document.createElement('p')
-      type.className = "pokemonType"; //clase, para dar estilos css
-      type.textContent = individualTypes.toUpperCase();
-      console.log(individualTypes);
-     }*/
     //Creando section (parent) para num, pic, name (append)
     const section = document.createElement('section');
     section.className = "pokemonCard"
-    //section agrega  num, pic, name
+    //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
     section.append(number, pic, name, type); //*appendChild solo acepta uno
+
     //Incluimos los items dentro de array
     pokemonsCard.push(section);
   });
@@ -103,6 +89,7 @@ function showData(itemSearch) {
 }
 // Para mostrar los card en la pantalla //
 window.addEventListener('load', showData(allData)); //itemSearch=data.pokemon//
+
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 /*import {
@@ -129,6 +116,17 @@ orderByName.addEventListener("change", () => {
   let nameOrderSelect = orderByName.value;
   let dataOrderName = dataFunctions.alphabeticalOrder(nameOrderSelect, allData);
   showData(dataOrderName);
+});
+//ORDENAR POR TIPO
+/*import {
+  typeFilter
+} from './data.js';
+*/
+const filterByType = document.getElementById("orderByType");
+filterByType.addEventListener("change", () => {
 
-
+  let typeFilterSelect = filterByType.value;
+  let dataFilterType = dataFunctions.typeFilter(typeFilterSelect, allData);
+  showData(dataFilterType);
+  //eachType(dataFilterType);
 });
