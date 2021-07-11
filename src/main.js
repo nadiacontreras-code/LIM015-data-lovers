@@ -56,7 +56,7 @@ function showData(itemSearch) {
     name.className = "pokemonName"; //clase, para dar estilos css
     //Creando nodos type
   
-     //ul//
+     //ul// Intento Nadia
     //const types = itemValue.type = ["grass","poison"];
     //let types = "";
    allData.forEach(function (a){
