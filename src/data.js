@@ -40,23 +40,21 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
 }
 //console.log(pokemonOrder);
 
+//FUNCION FILTRAR POR TIPO
 
-//FUNCION FILTRAR POR TIPO  ((aun no funciona, mejorar ))
-
-export const typeFilter = (selectType, dataType) => {
-  let pokemonTypeFilter;
-  if (selectType == "poison") {
-    pokemonTypeFilter = dataType.filter(pok => {
-      pok.type.indexOf(dataType) > -1
-      return pok;
-    })
-  } else {
-    return " "
-  }
-}
-
+export const typeFilter = (selectorType, dataType) => {
+ 
+  let pokemonTypeFilter  = dataType.filter((pok) => {
 //indexOf()método devuelve posición de primera aparición valor especificado
 //indexOf() si no coindice devuelve -1
-//const pokemonTypeFilter = selectType.filter(pokemon => pokemon.type.indexOf(dataType.toLowerCase()) > -1, );
-///return pokemonTypeFilter;
-//};
+      if( pok.type.indexOf(selectorType) > -1 ){
+        return true; 
+      }
+    return false;
+  });
+  return pokemonTypeFilter;
+ // console.log(pokemonTypeFilter);
+}
+
+
+
