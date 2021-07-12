@@ -40,46 +40,17 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
 }
 //console.log(pokemonOrder);
 
+//FUNCION FILTRAR POR TIPO
 
-//FUNCION FILTRAR POR TIPO  
-//TERCER INTENTO
-export const typeFilter = (selectType, dataType) => {
-  const pokemonTypeFilter = selectType.filter((pok) => {
-    pok.type.indexOf(dataType) > -1
+export const typeFilter = (selectorType, dataType) => {
+  let pokemonTypeFilter = dataType.filter((pok) => {
+    //indexOf()método devuelve posición de primera aparición valor especificado
+    //indexOf() si no coindice devuelve -1
+    if (pok.type.indexOf(selectorType) > -1) {
+      return true;
+    }
+    return false;
   });
   return pokemonTypeFilter;
-};
-
-//SEGUNDO INTENTO
-/*export const typeFilter = (selectorType, dataType) => {
-  let prueba3 = dataType.filter((item) => {
-*/
-/*for (let i = 0; i < item.type.length; i++) {
-  let comparation = item.type[i];
-  console.log(comparation);*/
-/*if (item.type.indexOf(selectorType) == 0 || item.type.indexOf(selectorType) == 1) {
-  return true;
+  // console.log(pokemonTypeFilter);
 }
-return false;
-})
-console.log(prueba3);
-}*/
-
-/*PRIMER INTENTO
-export const typeFilter = (selectType, dataType) => {
-  let pokemonTypeFilter;
-  if (selectType == "poison") {
-    pokemonTypeFilter = dataType.filter(pok => {
-      pok.type.indexOf(dataType) > -1
-      return pok;
-    })
-  } else {
-    return " "
-  }
-}
-*/
-//indexOf()método devuelve posición de primera aparición valor especificado
-//indexOf() si no coindice devuelve -1
-//const pokemonTypeFilter = selectType.filter(pokemon => pokemon.type.indexOf(dataType.toLowerCase()) > -1, );
-///return pokemonTypeFilter;
-//};
