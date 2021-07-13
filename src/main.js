@@ -14,19 +14,28 @@ import {
 
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
 buttonGeneralSearch.addEventListener('click', () => {
-  const inputGeneralSearch = document.getElementById("inputGeneralSearch").value;
-
+let inputGeneralSearch = document.getElementById("inputGeneralSearch").value;
+document.getElementById('displayAllPokemons').style.display = 'none';
   if (inputGeneralSearch == "") {
     alert("Please write a Pokemon number or name")
   } else if (inputGeneralSearch > 251) {
     alert("Please write a number between 1 to 251")
   } else {
+     
+        let searchGeneral = data.pokemon.filter((item)=>{
+        if (inputGeneralSearch == item.num){
+      return pokemonsCard[inputGeneralSearch-1];
+        }
+        })
+        return searchGeneral;
+        console.log(searchGeneral);
+      }
     /*  function getResult() {*/
     document.getElementById("WelcomeToPage").style.display = "none";
     document.getElementById("ExploringPage").style.display = "block";
     document.getElementById("displayAllPokemons").style.display = "none";
     document.getElementById("searchResult").style.display = "block";
-  }
+  
 })
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
@@ -45,7 +54,6 @@ elem.forEach((newElem) => { // forEach ===map
   });
   return createType; 
  }
-
 
 function showData(itemSearch) {
   // Para limpiar la pagina de las cards
@@ -90,7 +98,9 @@ function showData(itemSearch) {
   card.append(...pokemonsCard);
 
   return cardInformation
+ 
 }
+console.log(card);
 // Para mostrar los card en la pantalla //
 window.addEventListener('load', showData(allData)); //itemSearch=data.pokemon//
 
@@ -130,6 +140,13 @@ filterByType.addEventListener("change", () => {
   let dataFilterType = dataFunctions.typeFilter(typeFilterSelect, allData);
   showData(dataFilterType)
 });
+/* OCULTANDO TARJETAS//
+card.addEventListener('click', getInformation);
+  function getInformation (){
+  document.getElementById('displayAllPokemons').style.display = 'none';
+  }
+  */
+
 
 
 

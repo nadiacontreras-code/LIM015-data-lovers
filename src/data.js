@@ -54,7 +54,7 @@ export const typeFilter = (selectorType, dataType) => {
   });
   return pokemonTypeFilter;
  // console.log(pokemonTypeFilter);
-}
+} 
 
 
 
