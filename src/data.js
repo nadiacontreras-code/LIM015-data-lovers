@@ -1,5 +1,23 @@
 //FUNCIONALIDAD
 
+//BUSCAR POR NAME  O NUM
+export const search = (data, searchValue) => {
+  const resultOfSearch = data.filter((pok) => {
+
+    if (pok.name.startsWith(searchValue) || pok.num.startsWith(searchValue)) {
+      return true;
+    }
+    return false;
+  });
+  return resultOfSearch;
+  //console.log(prueba)
+};
+
+//SACAR INFORMACION 
+export const information = (dataPok) => {
+
+}
+
 
 //FUNCION ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 export const numericalOrder = (selectOrder, dataNumber) => {
@@ -43,7 +61,7 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
 //FUNCION FILTRAR POR TIPO
 
 export const typeFilter = (selectorType, dataType) => {
-  let pokemonTypeFilter = dataType.filter((pok) => {
+  const pokemonTypeFilter = dataType.filter((pok) => {
     //indexOf()método devuelve posición de primera aparición valor especificado
     //indexOf() si no coindice devuelve -1
     if (pok.type.indexOf(selectorType) > -1) {

@@ -194,11 +194,11 @@ main {
 
 .pokemonCard {
    background: linear-gradient(#ffffff, #848485);
-   width: 165px;
-   height: 200px;
+   width: 180px;
+   height: 230px;
    border-radius: 20px;
    overflow: hidden;
-   margin: 15px;
+   margin: 25px;
    display: inline-block;
    /*para que NO se junten uno debajo del otro, sino al lado*/
    cursor: pointer;
@@ -224,10 +224,11 @@ main {
    /*incrementa el tamaño en 30% */
    opacity: 1;
    /*para que se muestre clara la imagen, sin opacidad = 1*/
+   /*transform: rotateY(180deg); /*gira 180*/
 }
 
 .pokemonNumber {
-   font-size: 15px;
+   font-size: 17px;
    font-weight: bold;
    margin-top: 10px;
    margin-left: 20px;
@@ -237,17 +238,109 @@ main {
    width: 120px;
    height: 120px;
    margin-top: 0px;
-   margin-left: 20px;
+   margin-left: 30px;
    /*para centrear la imagen*/
    /*object-fit:contain;*/
 }
 
 .pokemonName {
-   font-size: 15px;
+   font-size: 16px;
    text-align: center;
    font-weight: bold;
    margin-top: 0px;
 }
+
+.pokemonType {
+   font-size: 16px;
+   text-align: center;
+   font-weight:unset;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+
+   color:#1a1a1a;
+}
+
+.eachPokemonType {
+   padding: 1px 5px 7px 2px;
+   border-radius: 8px;
+}
+.grass{
+   background-color:#588157;
+   
+   
+}
+
+.poison{
+   background-color: #c08fe9;
+}
+
+.fire{
+background-color: #eca542;
+}
+
+.flying{
+   background-color: #e3e3e3;
+}
+
+.water{
+background-color: #a1d3fb;
+}
+
+.bug{
+background-color: #f9dc5c;
+}
+
+.normal{
+background-color: #ffcad4;
+}
+
+.electric {
+   background-color: #8faae6;
+   }
+
+.ground {
+  background-color: #8d6b48;
+}
+
+.fighting {
+   background-color: #a7333f;
+ }
+
+ .psychic {
+   background-color: #e5c552; 
+ }
+
+ .ice {
+   background-color:#3a74ba; 
+ }
+
+ .ghost {
+   background-color: #44a1a0; 
+ }
+
+ .rock {
+   background-color: #636940; 
+ }
+
+ .dragon {
+   background-color: #004440; 
+   color: white;
+ }
+
+ .fairy {
+   background-color: #f6ab79; 
+ }
+
+ .dark {
+   background-color: #262426; 
+   color: gray;
+ }
+
+ .steel {
+   background-color:#7c7c7c; 
+ }
+
 
 /**********************BUTTON INTERACTION********************/
 .sectionButtonInteractionMain {

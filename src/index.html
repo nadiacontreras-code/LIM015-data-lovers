@@ -45,12 +45,14 @@
   <main>
     <h1 class="textSearch">Search your Pokemon by number or name</h1>
     <section>
-      <input class="inputGeneralSearch" id="inputGeneralSearch" type="text" placeholder="Example: Write 025 or Pikachu">
+      <input class="inputGeneralSearch" id="inputGeneralSearch" type="search"
+        placeholder="Example: Write 025 or Pikachu">
+      <!--autocomplete puede ser on/off, probar -->
       <button type="button" id="buttonGeneralSearch">
         <img class="iconGeneralSearch" src="pic/searchLupa.ico">
       </button>
-
     </section>
+
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
       <ul class="generalAdvancedSearchList">
@@ -102,9 +104,9 @@
     <!-- Seccion de todos los pokemones>-->
     <section id="displayAllPokemons">
       <h1>Pokemons List</h1>
-      <section class="cardSection">
+      <section class="cardSection" id="cardSection">
         <section id="card">
-          <!-- <section class = "pokemonCard">
+          <!-- <section class = "pokemonCard" >
               <p class = "pokemonNumber"> </p>
               <img class = "pokemonPic">
               <p class = "pokemonName"></p>
@@ -115,7 +117,6 @@
                 <span class = "eachPokemonType (type3)"> </span>
               </p>
             </section>-->
-
         </section>
       </section>
     </section>
@@ -127,6 +128,12 @@
     <section class="buttonReturnPageMain">
       <button class="buttonReturnPage" type="button" id="buttonReturnPage">Return</button>
     </section>
+    <!--Mostrando pokemon ELEGIDO en otra pantalla, dando click en un pokemon-->
+    <section hidden id="sectionShowClickPokemon">
+
+    </section>
+
+
     <!--Mostrando pokemon buscado en otra ventana-->
     <section hidden id="sectionShowResult">
       <section>
