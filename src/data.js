@@ -13,11 +13,12 @@ export const search = (data, searchValue) => {
   //console.log(prueba)
 };
 
-//SACAR INFORMACION 
+
+/*SACAR INFORMACION 
 export const information = (dataPok) => {
 
 }
-
+*/
 
 //FUNCION ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 export const numericalOrder = (selectOrder, dataNumber) => {
@@ -58,8 +59,8 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
 }
 //console.log(pokemonOrder);
 
-//FUNCION FILTRAR POR TIPO
 
+//FUNCION FILTRAR POR TIPO
 export const typeFilter = (selectorType, dataType) => {
   const pokemonTypeFilter = dataType.filter((pok) => {
     //indexOf()método devuelve posición de primera aparición valor especificado
@@ -70,5 +71,5 @@ export const typeFilter = (selectorType, dataType) => {
     return false;
   });
   return pokemonTypeFilter;
-  // console.log(pokemonTypeFilter);
+  //console.log(pokemonTypeFilter);
 }

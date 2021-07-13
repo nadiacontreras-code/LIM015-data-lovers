@@ -1,6 +1,12 @@
-import { example, anotherExample } from '../src/data.js';
+import {
+  //example,
+  search,
+  numericalOrder,
+  alphabeticalOrder,
+  typeFilter
+} from '../src/data.js';
 
-
+/*
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
@@ -10,23 +16,44 @@ describe('example', () => {
     expect(example()).toBe('example');
   });
 });
-describe('example', () => {
+*/
+describe('search', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof search).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `pikachu`', () => {
+    expect(search("pikachu", "pikachu")).toBe("pikachu");
   });
 });
 
 
-describe('anotherExample', () => {
+describe('numericalOrder', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof numericalOrder).toBe('function');
   });
 
   it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+    expect(numericalOrder()).toBe(' ');
+  });
+});
+
+describe('alphabeticalOrder', () => {
+  it('is a function', () => {
+    expect(typeof alphabeticalOrder).toBe('function');
+  });
+
+  it('returns -1', () => {
+    expect(alphabeticalOrder()).toBe();
+  });
+});
+
+describe('typeFilter', () => {
+  it('is a function', () => {
+    expect(typeof typeFilter).toBe('function');
+  });
+
+  it('returns `anotherExample`', () => {
+    expect(typeFilter()).toBe(' ');
   });
 });
