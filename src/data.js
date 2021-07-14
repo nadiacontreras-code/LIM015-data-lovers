@@ -14,9 +14,9 @@ export const search = (data, searchValue) => {
 };
 
 //SACAR INFORMACION 
-export const information = (dataPok) => {
+/*export const information = (dataPok) => {
 
-}
+}*/
 
 
 //FUNCION ORDEN NUMERICO ASCENDENTE/DESCENDENTE

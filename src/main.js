@@ -113,7 +113,7 @@ function showData(itemSearch) {
   return cardInformation
  
 }
-console.log(card);
+//console.log(card);
 // Para mostrar los card en la pantalla //
 window.addEventListener('load', showData(allData)); //itemSearch=data.pokemon//
 
@@ -134,12 +134,20 @@ function eachType(elem) {
 //MOSTRAR ABOUT
 const displayAllPokemons = document.getElementById('displayAllPokemons');
 displayAllPokemons.addEventListener('click', () => {
-
-
-  alert("Hola");
+alert("Hola");
 })
-
 */
+/*let pokemonCard = document.querySelector('pokemonCard');
+pokemonCard.addEventListener('click', () => {
+alert("hola");
+document.getElementById('displayAllPokemons').style.display = "none";
+document.getElementById("WelcomeToPage").style.display = "none";
+document.getElementById("ExploringPage").style.display = "block";
+document.querySelector('.pokemonAbout').style.display = "block";
+
+
+})*/
+
 
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
