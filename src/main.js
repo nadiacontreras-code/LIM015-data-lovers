@@ -31,6 +31,7 @@ buttonGeneralSearch.addEventListener('click', () => {
 const allData = data.pokemon;
 //Para guardar los items dentro de array
 let pokemonsCard = [];
+let pokemonsCard2 = [];
 //Para ubicar items dentro de una section
 let card = document.querySelector('#card');
 
@@ -39,6 +40,7 @@ function showData(itemSearch) {
   // Para limpiar la pagina de las cards
   card.innerHTML = "";
   pokemonsCard = [];
+  pokemonsCard2 = [];
 
   // Extrayendo información de Num, Img, Name y Type independiente
   let cardInformation = itemSearch.forEach(itemValue => { // forEach === map
@@ -57,22 +59,35 @@ function showData(itemSearch) {
     name.className = "pokemonName";
     //Creando nodos type
     const type = document.createElement('p')
-    type.innerHTML = eachType(itemValue.type)
+    type.innerHTML = eachType(itemValue.type);
     type.className = "pokemonType";
+    //Creando nodos about
+    const about = document.createElement('p')
+    about.textContent = itemValue.about.hidden;
+    about.className = "pokemonAbout";
+
+
+
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
     section.className = "pokemonCard";
     section.id = `${itemValue.num}`; //id
+
+    const section2 = document.createElement('section');
+    section2.className = "pokemonCardBack"
+
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
     section.append(number, pic, name, type); //*appendChild solo acepta uno
+    section2.append(about);
 
     //Incluimos los items dentro de array
     pokemonsCard.push(section);
+    pokemonsCard2.push(section2);
   });
   //Direccionando items para ubicar en section cards:
   //operador spread (...), genera una LISTA de valores a partir de un array
-  card.append(...pokemonsCard)
+  card.append(...pokemonsCard, ...pokemonsCard2)
 
   /*MOSTRAR INFORMACION ESPICIFICA DE POKEMON SELECCIONADO
   const cardClick = document.querySelectorAll('.pokemonCard');
@@ -154,7 +169,7 @@ openInfo();
 */
 
 
-/*PRUEBA 1  
+/*PRUEBA 1
 
 //console.log(data.pokemon)
 
@@ -217,12 +232,6 @@ cardClick.addEventListener('click', () => {
 //})
 
 */
-
-
-
-
-
-
 
 
 
