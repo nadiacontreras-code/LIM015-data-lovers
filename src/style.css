@@ -9,7 +9,7 @@
 /*-- HEADER */
 header {
    background-color: #ffbe0b;
-   height: 65px;
+   height: 50px;
    display: flex;
    align-items: center;
    flex-direction: column;
@@ -17,7 +17,7 @@ header {
 
 header img {
    width: 500px;
-   margin-top: 10px;
+   margin-top: 5px;
    align-items: center;
 }
 
@@ -28,7 +28,7 @@ header img {
    overflow: hidden;
    display: flex;
    justify-content: center;
-   height: 40px;
+   height: 38px;
 }
 
 .navigationMenu a {
@@ -44,6 +44,7 @@ header img {
 
 .navigationMenu a:hover {
    color: #ffbe0b;
+   cursor: pointer;
 }
 .navigationMenu label {
    vertical-align: super;
@@ -69,10 +70,10 @@ main {
 /*******BUSCADOR GENERAL*******/
 .textSearch {
    color: white;
-   font-size: 25px;
+   font-size: 23px;
    text-align: center;
-   padding-top: 25px;
-   margin-bottom: 20px;
+   padding-top: 18px;
+   margin-bottom: 12px;
    letter-spacing: 0.5px;
    /*separa letras*/
 }
@@ -125,7 +126,7 @@ main {
 .generalAdvancedSearch h1 {
    text-align: center;
    font-size: 25px;
-   padding: 25px 0px 20px 0px;
+   padding: 22px 0px 12px 0px;
    color: white;
    font-weight: bold;
    letter-spacing: 0.5px;
@@ -143,17 +144,16 @@ main {
 }
 
 .generalAdvancedSearchList li:hover {
-   background-color: rgb(247, 83, 7);
-   /*background-color:#da0808da*/
-   /*rojo*/
+   *background-color: rgb(247, 83, 7);
+   background-color:#da0808da;
    border-radius: 50px;
 }
 
 .selectAdvancedSearchList {
    width: 130px;
-   margin-left: 20px;
-   height: 25px;
-   border-radius: 10px;
+   margin-left: 12px;
+   height: 28px;
+   border-radius: 12px;
    text-align: center;
    background-color: #ffbe0b;
    border: none;
@@ -167,159 +167,81 @@ main {
    color: white;
    font-weight: bold;
    font-size: 30px;
-   padding-top: 30px;
-   padding-bottom: 10px;
+   padding-top: 15px;
+   padding-bottom: 15px;
    letter-spacing: 1px;
    /*separa letras*/
 }
-/****CARDS FRONT/BACK ***/
-/*
-.displayCard{
-   max-width: 1200px;
-   margin: auto;
-   *background:rgb(247, 83, 7);
-   margin-top: 100px;
-   perspective: 1000px;
-   display: flex;
-   justify-content: center;
-   flex-wrap:wrap; /*responsive*/
-/*}
 
-.cardSection{
-   margin:20px;
-   perspective: 1000px;
-}
-.cardSection:hover #card{
-transform: rotateY(180deg);
+/*****CARDS INTENTO 5 ******/
+
+.cardSection {
+   padding: 0px;
+   margin: 0px 110px;
+   /*para alinear section cards*/
 }
 
-#card{
-   width: 350px;
-   height: 400px;
-   *background:#084ab4;
-   *position: relative;
+#card {
+   *white-space: normal;
+   margin: 0px;
+   padding: 0px;
+   /*para que no se recorte la img*/
+  -moz-transform-style: preserve-3d; /*moz, Para Firefox*/
    transform-style: preserve-3d;
-   transition: all 600ms;
-}
+ /*-moz-transform: perspective(10000px);
+ transform: perspective(10000px);*/
 
+}
 .pokemonCard, .pokemonCardBack{
-   width: 100px;
-   height:100px;
-   *position: absolute;
-   top:0;
-   left: 0;
-   backface-visibility: hidden;
-   transform-style: preserve-3d;
+   width: 230px;
+   height: 270px;
    border-radius: 20px;
+   margin: 25px;
+   display: inline-block;
+   /*para que NO se junten uno debajo del otro, sino al lado*/
+   justify-content: center;
 }
 
-.pokemonCardBack{
-   transform: rotateY(180deg);
-   background: yellow;
+.pokemonCard {
+   background: linear-gradient(#ffffff, #848485);
+   cursor: pointer;
+   position:relative;
+   /*para que los sig se posicionen en funcion a este (los absolute)*/
+   backface-visibility: hidden;
 }
-*/
 
-/*****CARDS******/
+.pokemonCardBack {
+   position: absolute;
+   background-image: url(pic/back.jpg);
+   background-size:cover;
+   /*Para colocar cardBack a la misma altura de cardFront:*/
+   margin-top: 25px;
+   margin-left: -255px;
+   padding: 15px;
+   transform: rotateY(-180deg);/*back se va atrás*/
+}
+.pokemonCardBack:hover{
+   transform:scale(1.3);
+   transition: 15ms;
+   cursor: pointer;
+}
+
+
+/*****CARDS PRIMERO/SIN BACK******/
 /*
 .cardSection {
    padding: 0px;
    position: relative;
    /*para que los sig se posicionen en funcion a este*/
   /* margin: 0px 50px;
-   align-items: center;*/
-/*}*/
-/*
-#card {
-   white-space: normal;
-   margin: 0px;
-   padding: 0px;
-   /*para que no se recorte la img*/
-
-/*}*/
-/*
-.pokemonCard {
-   background: linear-gradient(#ffffff, #848485);
-   width: 180px;
-   height: 230px;
-   border-radius: 20px;
-   overflow: hidden;
-   margin: 25px;
-   display: inline-block;
-   /*para que NO se junten uno debajo del otro, sino al lado*/
-   /*cursor: pointer;
-   transition: 450ms all;
-   perspective: 1000px; /*NUEVO*/
-   /*flex-wrap:wrap;
-   
-   transform-style: preserve-3d;
-   *backface-visibility: hidden;
-   position: relative;
-   
-/*}*/
-/*
-.pokemonCardBack{
-   background: linear-gradient(#ffffff, #848485);
-   width: 100%;
-   height: 100%;
-   border-radius: 20px;
-   overflow: hidden;
-   *margin: 25px;
-   *display: inline-block;
-   /*para que NO se junten uno debajo del otro, sino al lado*/
-   /*cursor: pointer;
-   *transition: 450ms all;
-   perspective: 1000px; /*NUEVO*/
-   /*flex-wrap:wrap;
-   
-   transform-style: preserve-3d;
-   backface-visibility: hidden;
-
-   transform: rotateY(180deg);
-   position: absolute;*/
-   
-/*}*/
-/*
-#card:hover .pokemonCard {
-   /*cuando no se enfoca a una imagen*/
-  /*opacity: 0.5;
-  
-/*}*/
-/*.pokemonCardBack:hover {
-   transform: rotateY(180deg);
-   backface-visibility:visible;
-}
-*/
-/*
-#card:hover .pokemonCard:hover {
-   /*cuando se enfoca a una imagen*/
-   /*transform: scale(1.3);
-   /*incrementa el tamaño en 30% */
-   /*opacity: 1;
-   /*para que se muestre clara la imagen, sin opacidad = 1*/
-   
-/*}*/
-
-
-/*****CARDS PRIMERO******/
-
-.cardSection {
-   /*width: 100%;*/
-   /*overflow: scroll;*/
-   padding: 0px;
-   position: relative;
-   /*para que los sig se posicionen en funcion a este*/
-   margin: 0px 50px;
    align-items: center;
 }
 #card {
    white-space: normal;
-   /*nowrap: horiznt, normal:organiza debajo, pre: +ordenado, va hacia abajo*/
    margin: 0px;
-   /*arriba/abajo  y laterales*/
-   /*padding-bottom: 5px;*/
    padding: 0px;
    /*para que no se recorte la img*/
-}
+/*}
 .pokemonCard {
    background: linear-gradient(#ffffff, #848485);
    width: 180px;
@@ -329,54 +251,49 @@ transform: rotateY(180deg);
    margin: 25px;
    display: inline-block;
    /*para que NO se junten uno debajo del otro, sino al lado*/
-   cursor: pointer;
+  /* cursor: pointer;
    transition: 450ms all;
    /*transform-origin: center left; /*para que no se distorcione, y vaya de izq a der*/
-}
-/*
-.pokemonCard:hover~.pokemonCard {
-  /*~ veriguliña, para dar opacidad al resto y enfocar a pokCard*/
-/*transform: translate3d(10px, 0s, 0);
-/*cards se desplazaron hacia la derecha --> x (3d (x,y,z)*/
-/*}*/
+/*}
+
 #card:hover .pokemonCard {
    /*cuando no se enfoca a una imagen*/
-   opacity: 0.5;
+ /*  opacity: 0.5;
 }
 #card:hover .pokemonCard:hover {
    /*cuando se enfoca a una imagen*/
-   transform: scale(1.3);
+  /* transform: scale(1.3);
    /*incrementa el tamaño en 30% */
-   opacity: 1;
+   /*opacity: 1;
    /*para que se muestre clara la imagen, sin opacidad = 1*/
    /*transform: rotateY(180deg); /*gira 180*/
-}
+/*}*/
 
 .pokemonNumber {
    font-size: 17px;
    font-weight: bold;
-   margin-top: 10px;
+   margin-top: 15px;
    margin-left: 20px;
 }
 
 .pokemonPic {
-   width: 120px;
-   height: 120px;
+   width: 140px;
+   height: 140px;
    margin-top: 0px;
-   margin-left: 30px;
+   margin-left: 50px;
    /*para centrear la imagen*/
-   object-fit:contain;
+   *object-fit:contain;
 }
 
 .pokemonName {
-   font-size: 16px;
+   font-size: 17px;
    text-align: center;
    font-weight: bold;
    margin-top: 0px;
 }
 
 .pokemonType {
-   font-size: 16px;
+   font-size: 17px;
    text-align: center;
    font-weight:unset;
    margin-top: 10px;
@@ -389,6 +306,42 @@ transform: rotateY(180deg);
    padding: 1px 5px 7px 2px;
    border-radius: 8px;
 }
+.pokemonAbout{
+   text-align: left;
+   font-size: 12px;
+   background-color: rgba(81, 223, 140, 0.5);
+   border-radius: 10px;
+   padding: 2px;
+}
+.pokemonSize{
+   text-align: left;
+   font-size: 11.3px;
+   background-color: rgba(81, 223, 140, 0.5);
+   border-radius: 10px;
+   padding: 3px;
+   margin-top: 4px;
+   color: brown;
+}
+
+.pokemonResistant{
+   text-align: left;
+   font-size: 11px;
+   background-color: rgba(81, 223, 140, 0.5);
+   border-radius: 10px;
+   padding: 2px;
+   margin-top: 4px;
+   color: purple;
+}
+.pokemonWeaknesses{
+   text-align: left;
+   font-size: 11px;
+   background-color: rgba(81, 223, 140, 0.5);
+   border-radius: 10px;
+   padding: 2px;
+   margin-top: 4px;
+   color: blue;
+}
+
 .grass{
    background-color:#588157;
 }
@@ -496,10 +449,10 @@ background-color: #8d6b48;
 .buttonReturnPageMain {
    display: flex;
    align-items: center;
-
    margin-bottom: 30px;
    margin-top: 0px;
    padding: 0px;
+   cursor: pointer;
 }
 
 .buttonReturnPage {
@@ -507,8 +460,8 @@ background-color: #8d6b48;
    border-radius: 12px;
    border: none;
    height: 35px;
-   width: 65px;
-   color: white;
+   width: 100px;
+   *color: white;
    font-size: 15px;
    padding: 10px;
    margin-right: 0px;
@@ -518,10 +471,18 @@ background-color: #8d6b48;
    flex-direction: row;
    float: right;*/
 }
-.buttonReturnPage:hover {
-   background: #ffbe0b;
-   color: black;
+.buttonReturnPage a {
+   color: white;
+   text-decoration: none;
 }
+
+.buttonReturnPage:hover{
+   background: #ffbe0b;
+}
+.buttonReturnPage:hover a{
+color: black;
+}
+
 
 /**********************FOOTER********************/
 footer {
