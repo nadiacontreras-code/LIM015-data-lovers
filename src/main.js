@@ -5,59 +5,41 @@ import data from './data/pokemon/pokemon.js';
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 //Si hay peoblemas en el test llamar a cada funcion como abajo
 
-/*import {
-  search
-} from './data.js';
-*/
 
-//BUSQUEDA GENERAL POKEMONES ingresando nombre o número
+//BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 let searchingPokemon;
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
 buttonGeneralSearch.addEventListener('click', () => {
   const inputGeneralSearch = document.getElementById("inputGeneralSearch").value;
   searchingPokemon = inputGeneralSearch.toLowerCase();
+
   if (inputGeneralSearch == "") {
     alert("Please write a Pokemon number or name")
-  } else if (inputGeneralSearch > 251) {
+  } else if (inputGeneralSearch > 251 || inputGeneralSearch < 1) {
     alert("Please write a number between 001 to 251")
   } else {
     let pokemonResult = dataFunctions.search(allData, searchingPokemon)
-
     showData(pokemonResult);
 
     document.getElementById("WelcomeToPage").style.display = "none";
     document.getElementById("ExploringPage").style.display = "block";
   }
 });
-/*
-//MOSTRAR INFORMACION DE POKEMON SELECCIONADO
-//let pokemonInformation;
-const cardClick = document.getElementById(`${allData.num}`);
-cardClick.addEventListener('click', () => {
-
-  let pokemonInformation = dataFunctions.information(allData.num)
-
-  document.getElementById("WelcomeToPage").style.display = "none";
-  document.getElementById("ExploringPage").style.display = "block";
-
-});
-*/
-
 
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
 const allData = data.pokemon;
-let pokemonsCard = []; //Para guardar los items dentro de array
-//let pokemonsCardBack = [];
+//Para guardar los items dentro de array
+let pokemonsCard = [];
 //Para ubicar items dentro de una section
 let card = document.querySelector('#card');
 
-
+//FUNCION para extraer información de base de datos
 function showData(itemSearch) {
   // Para limpiar la pagina de las cards
   card.innerHTML = "";
   pokemonsCard = [];
-  //pokemonsCardBack = [];
+
   // Extrayendo información de Num, Img, Name y Type independiente
   let cardInformation = itemSearch.forEach(itemValue => { // forEach === map
     //Creando nodos numero
@@ -68,85 +50,184 @@ function showData(itemSearch) {
     const pic = document.createElement('img')
     pic.src = itemValue.img; //src: source (link)
     pic.className = "pokemonPic";
+    pic.id = "pokemonPic";
     //Creando nodos nombre
     const name = document.createElement('p')
     name.textContent = itemValue.name.toUpperCase();
-    name.className = "pokemonName"; //clase, para dar estilos css
-
-    //NUEVO
-    //Creando nodos about
-    const about = document.createElement('p')
-    about.textContent = itemValue.about.hidden; //oculto
-    about.className = "pokemonAbout"; //clase, para dar estilos css
-
+    name.className = "pokemonName";
     //Creando nodos type
     const type = document.createElement('p')
     type.innerHTML = eachType(itemValue.type)
-    //innerHTML, recupera y establece el mismo contenido pero en formato HTML
-    //textContent, recupera y establece el contenido de la etiqueta como texto plano
-    type.className = "pokemonType"; //clase, para dar estilos css
-
-    //Creando section (parent) para num, pic, name, type (append)
+    type.className = "pokemonType";
+    //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
-    section.className = "pokemonCard"
-    section.id = `${itemValue.num}`
+    section.className = "pokemonCard";
+    section.id = `${itemValue.num}`; //id
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
-    section.append(number, pic, name, about, type); //*appendChild solo acepta uno
+    section.append(number, pic, name, type); //*appendChild solo acepta uno
 
     //Incluimos los items dentro de array
     pokemonsCard.push(section);
-
-    /*NUEVO
-    const sectionBack = document.createElement('section');
-    sectionBack.className = "pokemonCardBack"
-    sectionBack.append(about);
-    pokemonsCardBack.push(sectionBack);
-*/
-
   });
   //Direccionando items para ubicar en section cards:
   //operador spread (...), genera una LISTA de valores a partir de un array
   card.append(...pokemonsCard)
 
-  //NUEVO card.append(...pokemonsCard, ...pokemonsCardBack);
+  /*MOSTRAR INFORMACION ESPICIFICA DE POKEMON SELECCIONADO
+  const cardClick = document.querySelectorAll('.pokemonCard');
+  cardClick.forEach(elem => {
+    elem.addEventListener('click', () => {
+      //console.log("Hola")
+
+      document.getElementById("WelcomeToPage").style.display = "none";
+      document.getElementById("ExploringPage").style.display = "block";
+      document.querySelector(".generalAdvancedSearch").style.display = "none";
+      document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+      document.querySelector(".buttonReturnPageMain").style.display = "none";
+      document.getElementById("displayAllPokemons").style.display = "none";
+      //document.querySelectorAll(".pokemonCard").style.display = "none";
+      document.getElementById("sectionShowResult").style.display = "block";
+
+      let pokemonsInformation = [];
+      let sectionShowResult = document.querySelector('#pokemonChose');
+
+      function showInformation(itemInfo) {
+        sectionShowResult.innerHTML = "";
+        pokemonsInformation = [];
+
+        let pokemonChoose = itemInfo.forEach(itemValue => {
+          //Creando nodos about
+          const about = document.createElement('p')
+          about.textContent = itemValue.about;
+          about.className = "pokemonAbout"; //clase, para dar estilos css
+          //Creando nodos size
+          const size = document.createElement('p')
+          size.textContent = itemValue.size;
+          size.className = "pokemonSize"; //clase, para dar estilos css
+
+          //Creando section (parent)
+          const section2 = document.createElement('section');
+          section2.className = "pokemonCard"
+
+
+          pokemonsInformation.push(section2);
+        });
+        sectionShowResult.append(...pokemonsInformation)
+
+        return pokemonChoose
+      }
+      window.addEventListener('load', showInformation(allData));
+    });
+  }) //Aqui acaba
+*/
   return cardInformation
  
 }
-//console.log(card);
-// Para mostrar los card en la pantalla //
-window.addEventListener('load', showData(allData)); //itemSearch=data.pokemon//
+// Para mostrar los cards en la pantalla
+window.addEventListener('load', showData(allData)); //allData=data.pokemon
 
-//FUNTION PARA EXTRAER CADA TIPO POR SEPARADO
-function eachType(elem) {
-  let createType = "";
-  elem.forEach((newElem) => { // forEach ===map
-    //span: contenedor en línea, para marcar parte de texto o doc
-    //notación $ {}, para inyectar expresiones dentro de cualquier string
-    createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
-  });
-  return createType;
+
+
+/*PRUEBA 2
+
+function openModal(idCard) {
+  document.querySelector('#card').innerHTML =
+    `${data.pokemon[Number(idCard)-1].num}
+  ${data.pokemon[Number(idCard)-1].name}
+  <img class="pokemonPic" src="https://www.serebii.net/pokemongo/pokemon/${data.pokemon[Number(idCard)-1].num}.png"></img>`;
 }
 
+function openInfo() {
+  document.getElementById("cardSection").addEventListener('click', (e) => {
+    const replay = (index) => {
+      data.pokemon.find(buscando => {
+        buscando.img == index ? openModal(buscando.num) : null
+      })
+    };
+    replay(e.target.getAttribute('src'));
+  })
+}
+openInfo();
 
+//console.log(`${data.pokemon[Number(idCard) - 1].num}`)
 
-/*
-//MOSTRAR ABOUT
-const displayAllPokemons = document.getElementById('displayAllPokemons');
-displayAllPokemons.addEventListener('click', () => {
-alert("Hola");
-})
 */
-/*let pokemonCard = document.querySelector('pokemonCard');
-pokemonCard.addEventListener('click', () => {
-alert("hola");
-document.getElementById('displayAllPokemons').style.display = "none";
-document.getElementById("WelcomeToPage").style.display = "none";
-document.getElementById("ExploringPage").style.display = "block";
-document.querySelector('.pokemonAbout').style.display = "block";
 
 
-})*/
+/*PRUEBA 1  
+
+//console.log(data.pokemon)
+
+const cardClick = document.getElementById('001');
+//const cardClick = document.getElementById('001');
+//cardClick.forEach(elem => {
+//  elem.addEventListener('click', () => {
+//console.log("Hola")
+cardClick.addEventListener('click', () => {
+
+
+  document.getElementById("WelcomeToPage").style.display = "none";
+  document.getElementById("ExploringPage").style.display = "block";
+  document.querySelector(".generalAdvancedSearch").style.display = "none";
+  document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+  document.querySelector(".buttonReturnPageMain").style.display = "none";
+  document.getElementById("displayAllPokemons").style.display = "none";
+  //document.querySelectorAll(".pokemonCard").style.display = "none";
+  document.getElementById("sectionShowResult").style.display = "block";
+
+  document.getElementById("001").style.display = "block";
+
+  //document.querySelector(".pokemonCard").style.display = "block";
+  // console.log(`${allData.num}`)
+
+
+  /*
+              let pokemonsInformation = [];
+              let sectionShowResult = document.querySelector('#pokemonChose');
+
+              function showInformation(itemInfo) {
+                sectionShowResult.innerHTML = "";
+                pokemonsInformation = [];
+
+                let pokemonChoose = itemInfo.forEach(itemValue => {
+                  //Creando nodos about
+                  const about = document.createElement('p')
+                  about.textContent = itemValue.about;
+                  about.className = "pokemonAbout"; //clase, para dar estilos css
+                  //Creando nodos size
+                  const size = document.createElement('p')
+                  size.textContent = itemValue.size;
+                  size.className = "pokemonSize"; //clase, para dar estilos css
+
+                  //Creando section (parent)
+                  const section2 = document.createElement('section');
+                  section2.className = "pokemonCard"
+
+
+                  pokemonsInformation.push(section2);
+                });
+                sectionShowResult.append(...pokemonsInformation)
+
+                return pokemonChoose
+              }
+              window.addEventListener('load', showInformation(allData));
+
+});
+
+//})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -175,7 +256,19 @@ orderByName.addEventListener("change", () => {
   showData(dataOrderName);
 });
 
-//ORDENAR POR TIPO
+
+//FUNCION PARA EXTRAER CADA TIPO POR SEPARADO
+function eachType(elem) {
+  let createType = "";
+  elem.forEach((newElem) => { // forEach ===map
+    //span: contenedor en línea, para marcar parte de texto o doc
+    //notación $ {}, para inyectar expresiones dentro de cualquier string
+    createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
+  });
+  return createType;
+}
+
+//FILTRAR POR TIPO
 /*import {
   typeFilter
 } from './data.js';
