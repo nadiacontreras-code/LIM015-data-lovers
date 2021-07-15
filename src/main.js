@@ -31,7 +31,7 @@ buttonGeneralSearch.addEventListener('click', () => {
 const allData = data.pokemon;
 //Para guardar los items dentro de array
 let pokemonsCard = [];
-let pokemonsCard2 = [];
+//let pokemonsCard2 = [];
 //Para ubicar items dentro de una section
 let card = document.querySelector('#card');
 
@@ -40,7 +40,7 @@ function showData(itemSearch) {
   // Para limpiar la pagina de las cards
   card.innerHTML = "";
   pokemonsCard = [];
-  pokemonsCard2 = [];
+  //pokemonsCard2 = [];
 
   // Extrayendo información de Num, Img, Name y Type independiente
   let cardInformation = itemSearch.forEach(itemValue => { // forEach === map
@@ -63,8 +63,23 @@ function showData(itemSearch) {
     type.className = "pokemonType";
     //Creando nodos about
     const about = document.createElement('p')
-    about.textContent = itemValue.about.hidden;
+    about.textContent = `About: ${itemValue.about}`;
     about.className = "pokemonAbout";
+<<<<<<< HEAD
+=======
+    //Creando nodos size
+    const size = document.createElement('p')
+    size.textContent = `Height: ${itemValue.size['height']} Weight: ${itemValue.size['weight']}`;
+    size.className = "pokemonSize";
+    //Creando nodos resistant
+    const resistant = document.createElement('p')
+    resistant.textContent = `Resistant: ${itemValue.resistant}`;
+    resistant.className = "pokemonResistant";
+    //Creando nodos weaknesses
+    const weaknesses = document.createElement('p')
+    weaknesses.textContent = `Weaknesses: ${itemValue.weaknesses}`;
+    weaknesses.className = "pokemonWeaknesses";
+>>>>>>> upstream/main
 
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
@@ -77,15 +92,15 @@ function showData(itemSearch) {
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
     section.append(number, pic, name, type); //*appendChild solo acepta uno
-    section2.append(about);
+    section2.append(about, size, resistant, weaknesses);
 
     //Incluimos los items dentro de array
-    pokemonsCard.push(section);
-    pokemonsCard2.push(section2);
+    pokemonsCard.push(section, section2);
+    //pokemonsCard2.push(section2);
   });
   //Direccionando items para ubicar en section cards:
   //operador spread (...), genera una LISTA de valores a partir de un array
-  card.append(...pokemonsCard, ...pokemonsCard2)
+  card.append(...pokemonsCard)
 
   /*MOSTRAR INFORMACION ESPICIFICA DE POKEMON SELECCIONADO
   const cardClick = document.querySelectorAll('.pokemonCard');

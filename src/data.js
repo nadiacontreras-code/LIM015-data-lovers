@@ -31,9 +31,10 @@ export const numericalOrder = (selectOrder, dataNumber) => {
     pokemonNumberOrder = dataNumber.sort((pok1, pok2) => {
       return (pok2.num - pok1.num)
     })
-  } else {
-    return " ";
   }
+  /*else {
+     return "";
+   }*/
   //console.log(pokemonNumberOrder);
   return pokemonNumberOrder;
 }
@@ -63,9 +64,10 @@ export const alphabeticalOrder = (selectOrder, dataName) => {
     pokemonNameOrder = dataName.sort((pok1, pok2) => {
       return (pok1.name > pok2.name) ? -1 : 1
     })
-  } else {
-    return " ";
   }
+  /*else {
+     return " ";
+   }*/
   //console.log(pokemonNameOrder);
   return pokemonNameOrder;
 }
