@@ -65,8 +65,6 @@ function showData(itemSearch) {
     const about = document.createElement('p')
     about.textContent = `About: ${itemValue.about}`;
     about.className = "pokemonAbout";
-<<<<<<< HEAD
-=======
     //Creando nodos size
     const size = document.createElement('p')
     size.textContent = `Height: ${itemValue.size['height']} Weight: ${itemValue.size['weight']}`;
@@ -79,7 +77,6 @@ function showData(itemSearch) {
     const weaknesses = document.createElement('p')
     weaknesses.textContent = `Weaknesses: ${itemValue.weaknesses}`;
     weaknesses.className = "pokemonWeaknesses";
->>>>>>> upstream/main
 
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
