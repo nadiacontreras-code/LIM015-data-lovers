@@ -3,7 +3,7 @@
 //BUSCAR POR NAME  O NUM
 export const search = (data, searchValue) => {
   const resultOfSearch = data.filter((pok) => {
-
+     
     if (pok.name.startsWith(searchValue) || pok.num.startsWith(searchValue)) {
       return true;
     }
@@ -43,6 +43,18 @@ export const numericalOrder = (selectOrder, dataNumber) => {
 export const alphabeticalOrder = (selectOrder, dataName) => {
 
   let pokemonNameOrder;
+  /*switch (selectOrder ) {
+    case "za":
+      dataName.sort((pok1, pok2) => {
+      return (pok1.name > pok2.name) ? -1 : 1
+    })
+   break;
+    case "az":
+      dataName.sort((pok1, pok2) => {
+      return (pok1.name < pok2.name) ? -1 : 1
+    })
+  break; }
+  return true }*/
   if (selectOrder == "az") {
     pokemonNameOrder = dataName.sort((pok1, pok2) => {
       return (pok1.name < pok2.name) ? -1 : 1

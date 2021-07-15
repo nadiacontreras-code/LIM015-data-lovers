@@ -66,8 +66,6 @@ function showData(itemSearch) {
     about.textContent = itemValue.about.hidden;
     about.className = "pokemonAbout";
 
-
-
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
     section.className = "pokemonCard";
@@ -111,7 +109,7 @@ function showData(itemSearch) {
         sectionShowResult.innerHTML = "";
         pokemonsInformation = [];
 
-        let pokemonChoose = itemInfo.forEach(itemValue => {
+       /* let pokemonChoose = itemInfo.forEach(itemValue => {
           //Creando nodos about
           const about = document.createElement('p')
           about.textContent = itemValue.about;
@@ -124,18 +122,16 @@ function showData(itemSearch) {
           //Creando section (parent)
           const section2 = document.createElement('section');
           section2.className = "pokemonCard"
-
-
-          pokemonsInformation.push(section2);
-        });
-        sectionShowResult.append(...pokemonsInformation)
+          pokemonsInformation.push(section2);*/
+      //  });
+        /*sectionShowResult.append(...pokemonsInformation)
 
         return pokemonChoose
-      }
+      //}
       window.addEventListener('load', showInformation(allData));
-    });
-  }) //Aqui acaba
-*/
+   // });
+ // }) //Aqui acaba*/
+ 
   return cardInformation
  
 }
