@@ -121,7 +121,7 @@ function showData(itemSearch) {
         sectionShowResult.innerHTML = "";
         pokemonsInformation = [];
 
-        let pokemonChoose = itemInfo.forEach(itemValue => {
+       /* let pokemonChoose = itemInfo.forEach(itemValue => {
           //Creando nodos about
           const about = document.createElement('p')
           about.textContent = itemValue.about;
@@ -134,19 +134,18 @@ function showData(itemSearch) {
           //Creando section (parent)
           const section2 = document.createElement('section');
           section2.className = "pokemonCard"
-
-
-          pokemonsInformation.push(section2);
-        });
-        sectionShowResult.append(...pokemonsInformation)
+          pokemonsInformation.push(section2);*/
+      //  });
+        /*sectionShowResult.append(...pokemonsInformation)
 
         return pokemonChoose
-      }
+      //}
       window.addEventListener('load', showInformation(allData));
-    });
-  }) //Aqui acaba
-*/
+   // });
+ // }) //Aqui acaba*/
+ 
   return cardInformation
+ 
 }
 // Para mostrar los cards en la pantalla
 window.addEventListener('load', showData(allData)); //allData=data.pokemon
@@ -241,7 +240,6 @@ cardClick.addEventListener('click', () => {
 
 //})
 
-*/
 
 
 
