@@ -32,7 +32,9 @@
       <img class="icon" src="pic/pikachu.ico" alt="News">
       <label>News</label>
     </a>
-    <a href="#statistics" id="statistics">
+
+    <a href="#statistics" class="statisticsPage">
+
       <img class="icon" src="pic/statistics.ico" alt="Statistics">
       <label>Statistics</label>
     </a>
@@ -43,7 +45,9 @@
   </nav>
 
   <main>
-    <section class="generalSearch">
+
+    <section class="sectionGeneralSearch">
+
       <h1 class="textSearch">Search your Pokemon by number or name</h1>
       <section>
         <input class="inputGeneralSearch" id="inputGeneralSearch" type="search"
@@ -54,7 +58,7 @@
         </button>
       </section>
     </section>
-
+    <!-- Seccion de elección de filtrado>-->
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
       <ul class="generalAdvancedSearchList">
@@ -98,16 +102,17 @@
         <li>Rarity:
           <select class="selectAdvancedSearchList" id="orderByRarity">
             <option value="" href="" selected disabled>Choose rarity:</option>
-            <option value="normal" href="">Normal</option>
+
             <option value="legendary" href="">Legendary</option>
+            <option value="normal" href="">Normal</option>
+
             <option value="mythic" href="">Mythic</option>
           </select>
         </li>
       </ul>
     </section>
 
-
-    <!-- Seccion de todos los pokemones>-->
+    <!--------- Seccion de todos los pokemones>------>
     <section id="displayAllPokemons">
       <h1>Pokemons List</h1>
       <section class="displayCard" id="displayCard">
@@ -133,7 +138,51 @@
         </section>
       </section>
     </section>
+    <!------------ Seccion de estadísticas>--------->
+    <section hidden id="sectionGeneralStats">
+      <h1>Datos curiosos</h1>
+      <h1>Sabías que ?</h1>
+      <!--Mostrando %pokemones por rareza --->
+      <section id="rarityStatistics">
 
+        <h2 id="rarity1"></h2>
+
+      </section>
+
+      <section id="statsType" class="stats">
+        <li>los pokemones de tipo :
+          <select class="selectAdvancedSearchList" id="statsByType">
+            <option value="" href="" selected disabled>Choose type:</option>
+            <option value="grass" href="">Grass</option>
+            <option value="poison" href="">Poison</option>
+            <option value="fire" href="">Fire</option>
+            <option value="flying" href="">Flying</option>
+            <option value="water" href="">Water</option>
+            <option value="bug" href="">Bug</option>
+            <option value="normal" href="">Normal</option>
+            <option value="electric" href="">Electric</option>
+            <option value="ground" href="">Ground</option>
+            <option value="fighting" href="">Fighting</option>
+            <option value="psychic" href="">Psychic</option>
+            <option value="ice" href="">Ice</option>
+            <option value="ghost" href="">Ghost</option>
+            <option value="rock" href="">Rock</option>
+            <option value="dragon" href="">Dragon</option>
+            <option value="fairy" href="">Fairy</option>
+            <option value="dark" href="">Dark</option>
+            <option value="steel" href="">Steel</option>
+          </select>
+        </li>
+        <section class="statsResults">
+          <p> represetan el</p>
+          <p class="statisticsResults"></p>
+          <p> de todos los pokemones</p>
+        </section>
+
+
+      </section>
+    </section>
+    <!----------- Seccion de botones>-->
 
     <section class="sectionButtonInteractionMain">
       <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
@@ -150,21 +199,12 @@
         <h1>Pokemon Chose</h1>
         <!-- <h3 id="equis">x</h3> -->
         <section id="pokemonChose">
-
-
         </section>
 
       </section>
       <button class="buttonReturnPage" type="button" id="buttonReturnPage2"><a href="index.html">Home</a></button>
     </section>
 
-    <!--Mostrando %pokemones por rareza
-    <section hidden id="rarityStatistics">
-      <h1>Datos curiosos</h1>
-      <h2 id="rarity1"></h2>
-
-
-    </section>-->
   </main>
   <footer>
     <section class="footerListSocialMedia">

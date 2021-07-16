@@ -79,9 +79,9 @@ function showData(itemSearch) {
     weaknesses.textContent = `Weaknesses: ${itemValue.weaknesses}`;
     weaknesses.className = "pokemonWeaknesses";
     //Creando nodos rarity
-    /*const rarity = document.createElement('p')
-    rarity.textContent = itemValue.rarity
-    rarity.className = "pokemonRarity";*/
+    const rarity = document.createElement('p')
+    rarity.textContent = `Rarity: ${itemValue.rarity}`;
+    rarity.className = "pokemonRarity";
 
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
@@ -94,25 +94,20 @@ function showData(itemSearch) {
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
     section.append(number, pic, name, type); //*appendChild solo acepta uno
-    section2.append(about, size, resistant, weaknesses);
+    section2.append(about, size, resistant, weaknesses, rarity);
 
     //Incluimos los items dentro de array
     pokemonsCard.push(section, section2);
-    //pokemonsCard2.push(section2);
+
   });
   //Direccionando items para ubicar en section cards:
   //operador spread (...), genera una LISTA de valores a partir de un array
   card.append(...pokemonsCard)
 
-
-
   return cardInformation
-
 }
 // Para mostrar los cards en la pantalla
 window.addEventListener('load', showData(allData)); //allData=data.pokemon
-
-
 
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
@@ -129,10 +124,7 @@ orderByNumber.addEventListener('change', () => {
 });
 
 //ORDENAR POR ORDEN ALFABETICO A-Z/Z-A
-/*import {
-  alphabeticalOrder
-} from './data.js';
-*/
+
 const orderByName = document.getElementById("orderByName");
 orderByName.addEventListener("change", () => {
   let nameOrderSelect = orderByName.value;
@@ -150,13 +142,11 @@ function eachType(elem) {
     createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
   });
   return createType;
+
 }
 
 //FILTRAR POR TIPO
-/*import {
-  typeFilter
-} from './data.js';
-*/
+
 const filterByType = document.getElementById("orderByType");
 filterByType.addEventListener("change", () => {
   let typeFilterSelect = filterByType.value;
@@ -165,13 +155,50 @@ filterByType.addEventListener("change", () => {
 });
 
 //FILTRAR POR RAREZA
-/*import {
-  rarityFilter
-} from './data.js';
-*/
+
 const filterByRarity = document.getElementById("orderByRarity");
 filterByRarity.addEventListener("change", () => {
   let rarityFilterSelect = filterByRarity.value;
   let dataFilterRarity = dataFunctions.rarityFilter(rarityFilterSelect, allData);
   showData(dataFilterRarity)
 });
+
+
+//--------------- SECTION STATISTICS, MOSTRANDO PORCENTAJE ------------------//
+
+// StatsPage: mostrando el PORCENTAJE X TIPO //
+const statistics = document.querySelector(".statisticsPage");
+statistics.addEventListener('click', nextPage);
+
+function nextPage() {
+  document.getElementById("WelcomeToPage").style.display = "none";
+  document.getElementById("ExploringPage").style.display = "block";
+  document.querySelector(".generalAdvancedSearch").style.display = "none";
+  document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+  document.querySelector(".buttonReturnPageMain").style.display = "block";
+  document.getElementById("displayAllPokemons").style.display = "none";
+  document.getElementById("sectionGeneralStats").style.display = "block";
+
+  const chooseStatics = document.getElementById("statsByType");
+  chooseStatics.addEventListener("change", filterStats);
+
+  function filterStats() {
+    let pruebaStatics = chooseStatics.value;
+    //console.log(pruebaStatics);
+    //let showStats = dataFunctions.getStats(allData, pruebaStatics);
+    let showStats = dataFunctions.getTypeStats(allData, pruebaStatics)
+    //console.log(showStats);
+    let statisticsResults = document.querySelector(".statisticsResults");
+    statisticsResults.innerHTML = showStats;
+  }
+  //PORCENTAJE DE POKEMONES POR RAREZA
+
+  let legendaryStatistics;
+
+
+  document.getElementById('rarityStatistics').style.display = "block";
+
+  legendaryStatistics = dataFunctions.countRarity(allData, 'legendary');
+  document.getElementById('rarity1').innerHTML = legendaryStatistics;
+
+}
