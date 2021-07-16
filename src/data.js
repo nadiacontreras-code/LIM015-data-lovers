@@ -87,3 +87,21 @@ export const typeFilter = (selectorType, dataType) => {
   return pokemonTypeFilter;
   //console.log(pokemonTypeFilter);
 }
+
+export const getTypeStats = (data, valor) => {
+  let porcentaje = "";
+  let point= 0;
+
+  data.forEach((item)=>{
+  item.type;
+    item.type.forEach((individual)=> {
+    individual
+      if (individual === valor){
+      point +=1
+      porcentaje = ((point /data.length)*100).toFixed(2)+ "%";
+      }
+    })
+  })
+  return porcentaje;
+  //console.log(porcentaje);
+}

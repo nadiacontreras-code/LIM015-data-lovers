@@ -32,7 +32,7 @@
       <img class="icon" src="pic/pikachu.ico" alt="News">
       <label>News</label>
     </a>
-    <a href="#statistics">
+    <a href="#statistics" class="statisticsPage">
       <img class="icon" src="pic/statistics.ico" alt="Statistics">
       <label>Statistics</label>
     </a>
@@ -52,7 +52,7 @@
         <img class="iconGeneralSearch" src="pic/searchLupa.ico">
       </button>
     </section>
-
+    <!-- Seccion de elección de filtrado>-->
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
       <ul class="generalAdvancedSearchList">
@@ -97,7 +97,7 @@
     </section>
 
 
-    <!-- Seccion de todos los pokemones>-->
+    <!--------- Seccion de todos los pokemones>------>
     <section id="displayAllPokemons">
       <h1>Pokemons List</h1>
       <section class="displayCard" id="displayCard">
@@ -123,7 +123,40 @@
         </section>
       </section>
     </section>
+    <!------------ Seccion de estadísticas>--------->
+    <section id="stats" class="stats">
+      <h1> Sabias que ?</h1>
+      <li>los pokemones de tipo :
+        <select class="selectAdvancedSearchList" id="statsByType">
+          <option value="" href="" selected disabled>Choose type:</option>
+          <option value="grass" href="">Grass</option>
+          <option value="poison" href="">Poison</option>
+          <option value="fire" href="">Fire</option>
+          <option value="flying" href="">Flying</option>
+          <option value="water" href="">Water</option>
+          <option value="bug" href="">Bug</option>
+          <option value="normal" href="">Normal</option>
+          <option value="electric" href="">Electric</option>
+          <option value="ground" href="">Ground</option>
+          <option value="fighting" href="">Fighting</option>
+          <option value="psychic" href="">Psychic</option>
+          <option value="ice" href="">Ice</option>
+          <option value="ghost" href="">Ghost</option>
+          <option value="rock" href="">Rock</option>
+          <option value="dragon" href="">Dragon</option>
+          <option value="fairy" href="">Fairy</option>
+          <option value="dark" href="">Dark</option>
+          <option value="steel" href="">Steel</option>
+        </select>
+      </li>
+      <section class="statsResults">
+        <p> represetan el</p>
+        <p class="statisticsResults"></p>
+        <p> de todos los pokemones</p>
+      </section>
 
+    </section>
+    <!----------- Seccion de botones>-->
     <section class="sectionButtonInteractionMain">
       <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
       <button class="buttonInteraction" type="button" id="buttonNext">Next</button>

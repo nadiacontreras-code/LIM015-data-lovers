@@ -283,6 +283,7 @@ function eachType(elem) {
     createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
   });
   return createType;
+  
 }
 
 //FILTRAR POR TIPO
@@ -296,3 +297,30 @@ filterByType.addEventListener("change", () => {
   let dataFilterType = dataFunctions.typeFilter(typeFilterSelect, allData);
   showData(dataFilterType)
 });
+
+const statistics = document.querySelector(".statisticsPage");
+statistics.addEventListener('click', nextPage);
+function nextPage(){
+  document.getElementById("WelcomeToPage").style.display = "none";
+  document.getElementById("ExploringPage").style.display = "block";
+  document.querySelector(".generalAdvancedSearch").style.display = "none";
+  document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+  document.querySelector(".buttonReturnPageMain").style.display = "block";
+  document.getElementById("displayAllPokemons").style.display = "none";
+
+ const chooseStatics = document.getElementById("statsByType");
+chooseStatics.addEventListener("change",filterStats);
+function filterStats(){
+  let pruebaStatics = chooseStatics.value;
+  //console.log(pruebaStatics);
+//let showStats = dataFunctions.getStats(allData, pruebaStatics);
+let showStats =dataFunctions.getTypeStats(allData, pruebaStatics)
+//console.log(showStats);
+let statisticsResults = document.querySelector(".statisticsResults");
+statisticsResults.innerHTML = showStats;
+
+
+}
+}
+
+

@@ -3,7 +3,8 @@ import {
   search,
   numericalOrder,
   alphabeticalOrder,
-  typeFilter
+  typeFilter,
+  getTypeStats
 } from '../src/data.js';
 
 //Importando BASE DE DATOS
@@ -87,6 +88,17 @@ describe('typeFilter', () => {
   it('filter by type chosen', () => {
   const filterTest = typeFilter("rock", data.pokemon);
    expect(filterTest[17].type).not.toHaveLength(3);
-   console.log(filterTest[17].type);
+   //console.log(filterTest[17].type);
   })
 });
+
+describe('getTypeStats', () => {
+ it('is a function', ()=> {
+   expect(typeof getTypeStats).toBe('function');
+ });
+
+ it('get percents by type', ()=> {
+   const getStats = getTypeStats(data.pokemon, "water");
+   expect(getStats).toBe('19.92%')
+ })
+})
