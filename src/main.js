@@ -5,7 +5,6 @@ import data from './data/pokemon/pokemon.js';
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 //Si hay peoblemas en el test llamar a cada funcion como abajo
 
-
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 let searchingPokemon;
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
@@ -24,6 +23,7 @@ buttonGeneralSearch.addEventListener('click', () => {
     document.getElementById("WelcomeToPage").style.display = "none";
     document.getElementById("ExploringPage").style.display = "block";
     document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+
   }
 });
 
@@ -79,9 +79,11 @@ function showData(itemSearch) {
     weaknesses.textContent = `Weaknesses: ${itemValue.weaknesses}`;
     weaknesses.className = "pokemonWeaknesses";
     //Creando nodos rarity
+
     const rarity = document.createElement('p')
     rarity.textContent = `Rarity: ${itemValue.rarity}`;
     rarity.className = "pokemonRarity"; 
+
 
 
     //Creando nodo section (parent) para num, pic, name, type (append)
@@ -105,11 +107,13 @@ function showData(itemSearch) {
   //operador spread (...), genera una LISTA de valores a partir de un array
   card.append(...pokemonsCard)
 
+
   return cardInformation
- 
+
 }
 // Para mostrar los cards en la pantalla
 window.addEventListener('load', showData(allData)); //allData=data.pokemon
+
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 /*import {
@@ -164,6 +168,7 @@ filterByRarity.addEventListener("change", () => {
   showData(dataFilterRarity)
 });
 
+
 //--------------- SECTION STATISTICS, MOSTRANDO PORCENTAJE ------------------//
 
 // StatsPage: mostrando el PORCENTAJE X TIPO //
@@ -193,13 +198,16 @@ function nextPage(){
 
 let legendaryStatistics;
 
+
   document.getElementById('rarityStatistics').style.display = "block";
 
   legendaryStatistics = dataFunctions.countRarity(allData, 'legendary');
   document.getElementById('rarity1').innerHTML = legendaryStatistics;
 
 
+
 }
+
 
 
 

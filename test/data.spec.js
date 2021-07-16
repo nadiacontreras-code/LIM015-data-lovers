@@ -6,6 +6,7 @@ import {
   typeFilter,
   rarityFilter,
   getTypeStats
+
 } from '../src/data.js';
 //Importando BASE DE DATOS
 import data from '../src/data/pokemon/pokemon.js';
@@ -23,6 +24,7 @@ describe('search', () => {
   it('is a function', () => {
     expect(typeof search).toBe('function');
   });
+
   it('search number or name writting', () => {
     //(data, searchValue)
     const searchTest = search(data.pokemon, "pikachu");
@@ -69,6 +71,7 @@ describe('typeFilter', () => {
   it('is a function', () => {
     expect(typeof typeFilter).toBe('function');
   });
+
   it('filter by type chosen', () => {
     //(selectorType, dataType)
     const filterTest = typeFilter("rock", data.pokemon);
@@ -77,16 +80,19 @@ describe('typeFilter', () => {
     expect(filterTest[17].type).not.toHaveLength(3);
   })
 });
+
 describe('rarityFilter', () => {
   it('is a function', () => {
     expect(typeof rarityFilter).toBe('function');
   });
+
   it('filter by rarity chosen', () => {
     //(selectorRarity, dataRarity)
     const filterTest = rarityFilter("legendary", data.pokemon);
     //[] numero de cards-1 de una rareza
     //Método .toHaveLength(number), verifica longitud de String expect
     expect(filterTest[8].rarity).toHaveLength(9);
+
   })
 });
 describe('getTypeStats', () => {
@@ -96,5 +102,6 @@ describe('getTypeStats', () => {
   it('get percents by type', () => {
     const getStats = getTypeStats(data.pokemon, "water");
     expect(getStats).toBe('19.92%')
+
   })
 });
