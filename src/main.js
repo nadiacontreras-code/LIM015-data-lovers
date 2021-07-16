@@ -80,7 +80,7 @@ function showData(itemSearch) {
     weaknesses.className = "pokemonWeaknesses";
     //Creando nodos rarity
     /*const rarity = document.createElement('p')
-    rarity.textContent = `${itemValue.pokemon-rarity}`;
+    rarity.textContent = itemValue.rarity
     rarity.className = "pokemonRarity";*/
 
     //Creando nodo section (parent) para num, pic, name, type (append)
@@ -104,92 +104,13 @@ function showData(itemSearch) {
   //operador spread (...), genera una LISTA de valores a partir de un array
   card.append(...pokemonsCard)
 
-  /*MOSTRAR INFORMACION ESPICIFICA DE POKEMON SELECCIONADO
-  const cardClick = document.querySelectorAll('.pokemonCard');
-  cardClick.forEach(elem => {
-    elem.addEventListener('click', () => {
-      //console.log("Hola")
 
-      document.getElementById("WelcomeToPage").style.display = "none";
-      document.getElementById("ExploringPage").style.display = "block";
-      document.querySelector(".generalAdvancedSearch").style.display = "none";
-      document.querySelector(".sectionButtonInteractionMain").style.display = "none";
-      document.querySelector(".buttonReturnPageMain").style.display = "none";
-      document.getElementById("displayAllPokemons").style.display = "none";
-      //document.querySelectorAll(".pokemonCard").style.display = "none";
-      document.getElementById("sectionShowResult").style.display = "block";
-
-      let pokemonsInformation = [];
-      let sectionShowResult = document.querySelector('#pokemonChose');
-
-      function showInformation(itemInfo) {
-        sectionShowResult.innerHTML = "";
-        pokemonsInformation = [];
-
-       /* let pokemonChoose = itemInfo.forEach(itemValue => {
-          //Creando nodos about
-          const about = document.createElement('p')
-          about.textContent = itemValue.about;
-          about.className = "pokemonAbout"; //clase, para dar estilos css
-          //Creando nodos size
-          const size = document.createElement('p')
-          size.textContent = itemValue.size;
-          size.className = "pokemonSize"; //clase, para dar estilos css
-
-          //Creando section (parent)
-          const section2 = document.createElement('section');
-          section2.className = "pokemonCard"
-          pokemonsInformation.push(section2);*/
-  //  });
-  /*sectionShowResult.append(...pokemonsInformation)
-
-        return pokemonChoose
-      //}
-      window.addEventListener('load', showInformation(allData));
-   // });
- // }) //Aqui acaba*/
 
   return cardInformation
 
 }
 // Para mostrar los cards en la pantalla
 window.addEventListener('load', showData(allData)); //allData=data.pokemon
-
-
-
-/*
-let pokemonsInformation = [];
-let sectionShowResult = document.querySelector('#pokemonChose');
-
-function showInformation(itemInfo) {
-  sectionShowResult.innerHTML = "";
-  pokemonsInformation = [];
-
-  let pokemonChoose = itemInfo.forEach(itemValue => {
-    //Creando nodos about
-    const about = document.createElement('p')
-    about.textContent = itemValue.about;
-    about.className = "pokemonAbout"; //clase, para dar estilos css
-    //Creando nodos size
-    const size = document.createElement('p')
-    size.textContent = itemValue.size;
-    size.className = "pokemonSize"; //clase, para dar estilos css
-
-    //Creando section (parent)
-    const section2 = document.createElement('section');
-    section2.className = "pokemonCard"
-
-
-    pokemonsInformation.push(section2);
-  });
-  sectionShowResult.append(...pokemonsInformation)
-
-  return pokemonChoose
-}
-window.addEventListener('load', showInformation(allData));
-});
-//})*/
-
 
 
 
@@ -254,31 +175,3 @@ filterByRarity.addEventListener("change", () => {
   let dataFilterRarity = dataFunctions.rarityFilter(rarityFilterSelect, allData);
   showData(dataFilterRarity)
 });
-
-
-//PORCENTAJE DE POKEMONES POR RAREZA
-/*import {
-  countRarity
-} from './data.js';
-*/
-/*
-let legendaryStatistics
-
-//legendaryStatistics = countRarity("legendary", allData);*/
-/*
-const statistics = document.getElementById("statistics");
-statistics.addEventListener("click", () => {
-
-  document.getElementById("WelcomeToPage").style.display = "none";
-  document.getElementById("ExploringPage").style.display = "block";
-  document.querySelector(".generalSearch").style.display = "none";
-  document.querySelector(".generalAdvancedSearch").style.display = "none";
-  document.getElementById("displayAllPokemons").style.display = "none";
-  document.querySelector(".sectionButtonInteractionMain").style.display = "none";
-  document.getElementById('rarityStatistics').style.display = "block";
-
-  legendaryStatistics = dataFunctions.countRarity(allData, 'legendary');
-  document.getElementById('rarity1').innerHTML = legendaryStatistics;
-
-});
-*/
