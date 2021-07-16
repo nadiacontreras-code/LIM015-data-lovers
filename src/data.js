@@ -88,6 +88,23 @@ export const typeFilter = (selectorType, dataType) => {
   //console.log(pokemonTypeFilter);
 }
 
+//FUNCION FILTRAR POR RAREZA
+
+export const rarityFilter = (selectorRarity, dataRarity) => {
+  const pokemonRarityFilter = dataRarity.filter((pok) => {
+    //indexOf()método devuelve posición de primera aparición valor especificado
+    //indexOf() si no coindice devuelve -1
+    if (pok.rarity.indexOf(selectorRarity) > -1) {
+      return true;
+    }
+    return false;
+  });
+  return pokemonRarityFilter;
+  //console.log(pokemonTypeFilter);
+}
+
+
+// FUNCION PORCENTAJE X TIPO
 export const getTypeStats = (data, valor) => {
   let porcentaje = "";
   let point= 0;
@@ -105,3 +122,19 @@ export const getTypeStats = (data, valor) => {
   return porcentaje;
   //console.log(porcentaje);
 }
+//CONTAR POKEMONES POR RAREZA %
+export const countRarity = (data, value) => {
+  let porcentaje = "";
+  let point = 0;
+  data.forEach((item) => {
+    item.rarity;
+        if (item.rarity === value) {
+        point += 1
+        porcentaje = ((point / data.length) * 100).toFixed(2)+ "%";
+      }
+    })
+
+  return porcentaje;
+  //console.log(porcentaje);
+}
+
