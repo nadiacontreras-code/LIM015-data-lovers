@@ -79,9 +79,12 @@ function showData(itemSearch) {
     weaknesses.textContent = `Weaknesses: ${itemValue.weaknesses}`;
     weaknesses.className = "pokemonWeaknesses";
     //Creando nodos rarity
-    /*const rarity = document.createElement('p')
-    rarity.textContent = `${itemValue.pokemon-rarity}`;
-    rarity.className = "pokemonRarity";*/
+
+    const rarity = document.createElement('p')
+    rarity.textContent = `Rarity: ${itemValue.rarity}`;
+    rarity.className = "pokemonRarity"; 
+
+
 
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
@@ -94,104 +97,22 @@ function showData(itemSearch) {
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
     section.append(number, pic, name, type); //*appendChild solo acepta uno
-    section2.append(about, size, resistant, weaknesses);
+    section2.append(about, size, resistant, weaknesses, rarity);
 
     //Incluimos los items dentro de array
     pokemonsCard.push(section, section2);
-    //pokemonsCard2.push(section2);
+
   });
   //Direccionando items para ubicar en section cards:
   //operador spread (...), genera una LISTA de valores a partir de un array
   card.append(...pokemonsCard)
 
-  /*MOSTRAR INFORMACION ESPICIFICA DE POKEMON SELECCIONADO
-  const cardClick = document.querySelectorAll('.pokemonCard');
-  cardClick.forEach(elem => {
-    elem.addEventListener('click', () => {
-      //console.log("Hola")
-
-      document.getElementById("WelcomeToPage").style.display = "none";
-      document.getElementById("ExploringPage").style.display = "block";
-      document.querySelector(".generalAdvancedSearch").style.display = "none";
-      document.querySelector(".sectionButtonInteractionMain").style.display = "none";
-      document.querySelector(".buttonReturnPageMain").style.display = "none";
-      document.getElementById("displayAllPokemons").style.display = "none";
-      //document.querySelectorAll(".pokemonCard").style.display = "none";
-      document.getElementById("sectionShowResult").style.display = "block";
-
-      let pokemonsInformation = [];
-      let sectionShowResult = document.querySelector('#pokemonChose');
-
-      function showInformation(itemInfo) {
-        sectionShowResult.innerHTML = "";
-        pokemonsInformation = [];
-
-       /* let pokemonChoose = itemInfo.forEach(itemValue => {
-          //Creando nodos about
-          const about = document.createElement('p')
-          about.textContent = itemValue.about;
-          about.className = "pokemonAbout"; //clase, para dar estilos css
-          //Creando nodos size
-          const size = document.createElement('p')
-          size.textContent = itemValue.size;
-          size.className = "pokemonSize"; //clase, para dar estilos css
-
-          //Creando section (parent)
-          const section2 = document.createElement('section');
-          section2.className = "pokemonCard"
-          pokemonsInformation.push(section2);*/
-  //  });
-  /*sectionShowResult.append(...pokemonsInformation)
-
-        return pokemonChoose
-      //}
-      window.addEventListener('load', showInformation(allData));
-   // });
- // }) //Aqui acaba*/
 
   return cardInformation
 
 }
 // Para mostrar los cards en la pantalla
 window.addEventListener('load', showData(allData)); //allData=data.pokemon
-
-
-
-/*
-let pokemonsInformation = [];
-let sectionShowResult = document.querySelector('#pokemonChose');
-
-function showInformation(itemInfo) {
-  sectionShowResult.innerHTML = "";
-  pokemonsInformation = [];
-
-  let pokemonChoose = itemInfo.forEach(itemValue => {
-    //Creando nodos about
-    const about = document.createElement('p')
-    about.textContent = itemValue.about;
-    about.className = "pokemonAbout"; //clase, para dar estilos css
-    //Creando nodos size
-    const size = document.createElement('p')
-    size.textContent = itemValue.size;
-    size.className = "pokemonSize"; //clase, para dar estilos css
-
-    //Creando section (parent)
-    const section2 = document.createElement('section');
-    section2.className = "pokemonCard"
-
-
-    pokemonsInformation.push(section2);
-  });
-  sectionShowResult.append(...pokemonsInformation)
-
-  return pokemonChoose
-}
-window.addEventListener('load', showInformation(allData));
-});
-//})*/
-
-
-
 
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
@@ -208,10 +129,7 @@ orderByNumber.addEventListener('change', () => {
 });
 
 //ORDENAR POR ORDEN ALFABETICO A-Z/Z-A
-/*import {
-  alphabeticalOrder
-} from './data.js';
-*/
+
 const orderByName = document.getElementById("orderByName");
 orderByName.addEventListener("change", () => {
   let nameOrderSelect = orderByName.value;
@@ -229,13 +147,11 @@ function eachType(elem) {
     createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
   });
   return createType;
+  
 }
 
 //FILTRAR POR TIPO
-/*import {
-  typeFilter
-} from './data.js';
-*/
+
 const filterByType = document.getElementById("orderByType");
 filterByType.addEventListener("change", () => {
   let typeFilterSelect = filterByType.value;
@@ -244,10 +160,7 @@ filterByType.addEventListener("change", () => {
 });
 
 //FILTRAR POR RAREZA
-/*import {
-  rarityFilter
-} from './data.js';
-*/
+
 const filterByRarity = document.getElementById("orderByRarity");
 filterByRarity.addEventListener("change", () => {
   let rarityFilterSelect = filterByRarity.value;
@@ -256,29 +169,48 @@ filterByRarity.addEventListener("change", () => {
 });
 
 
-//PORCENTAJE DE POKEMONES POR RAREZA
-/*import {
-  countRarity
-} from './data.js';
-*/
-/*
-let legendaryStatistics
+//--------------- SECTION STATISTICS, MOSTRANDO PORCENTAJE ------------------//
 
-//legendaryStatistics = countRarity("legendary", allData);*/
-/*
-const statistics = document.getElementById("statistics");
-statistics.addEventListener("click", () => {
-
+// StatsPage: mostrando el PORCENTAJE X TIPO //
+const statistics = document.querySelector(".statisticsPage");
+statistics.addEventListener('click', nextPage);
+function nextPage(){
   document.getElementById("WelcomeToPage").style.display = "none";
   document.getElementById("ExploringPage").style.display = "block";
-  document.querySelector(".generalSearch").style.display = "none";
   document.querySelector(".generalAdvancedSearch").style.display = "none";
-  document.getElementById("displayAllPokemons").style.display = "none";
   document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+  document.querySelector(".buttonReturnPageMain").style.display = "block";
+  document.getElementById("displayAllPokemons").style.display = "none";
+  document.getElementById("sectionGeneralStats").style.display = "block";
+
+  const chooseStatics = document.getElementById("statsByType");
+  chooseStatics.addEventListener("change",filterStats);
+  function filterStats(){
+    let pruebaStatics = chooseStatics.value;
+    //console.log(pruebaStatics);
+    //let showStats = dataFunctions.getStats(allData, pruebaStatics);
+    let showStats =dataFunctions.getTypeStats(allData, pruebaStatics)
+    //console.log(showStats);
+    let statisticsResults = document.querySelector(".statisticsResults");
+    statisticsResults.innerHTML = showStats;
+  }
+//PORCENTAJE DE POKEMONES POR RAREZA
+
+let legendaryStatistics;
+
+
   document.getElementById('rarityStatistics').style.display = "block";
 
   legendaryStatistics = dataFunctions.countRarity(allData, 'legendary');
   document.getElementById('rarity1').innerHTML = legendaryStatistics;
 
-});
-*/
+
+
+}
+
+
+
+
+
+
+

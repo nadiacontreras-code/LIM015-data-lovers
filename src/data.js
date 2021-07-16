@@ -83,6 +83,8 @@ export const typeFilter = (selectorType, dataType) => {
 }
 
 //FUNCION FILTRAR POR RAREZA
+
+
 export const rarityFilter = (selectorRarity, dataRarity) => {
   const pokemonRarityFilter = dataRarity.filter((pok) => {
     //indexOf()método devuelve posición de primera aparición valor especificado
@@ -96,46 +98,42 @@ export const rarityFilter = (selectorRarity, dataRarity) => {
   //console.log(pokemonTypeFilter);
 }
 
-//CONTAR POKEMONES POR RAREZA %
-/*export const countRarity = (rarityToCount, dataRarity) => {
 
-  //const countTotal = dataRarity.lenght;
-  //console.log(countTotal)
-  let raritySum = 0;
-  let total;
-  for (let i = 0; i <= 251; i++) {
-    if (dataRarity[i].rarity == rarityToCount) {
-      console.log(dataRarity[i].rarity)
-      raritySum++;
-      console.log(raritySum);
-    }
-  }
-  /*dataRarity.map(el => {
-      if (el === rarityToCount) {
-        raritySum = raritySum + 1;
-        console.log(raritySum)
-      }
-  */
-/*total = (raritySum / 251) * 100;
-  return total;
-}
-*/
 
-//CONTAR POKEMONES POR RAREZA %
-/*export const countRarity = (data, value) => {
+// FUNCION PORCENTAJE X TIPO
+export const getTypeStats = (data, valor) => {
   let porcentaje = "";
-  let point = 0;
-  data.forEach((item) => {
-    item.rarity;
-    item.rarity.forEach((individual) => {
-      individual
-      if (individual === value) {
-        point += 1
-        porcentaje = ((point / data.length) * 100).toFixed(2);
+  let point= 0;
+
+  data.forEach((item)=>{
+  item.type;
+    item.type.forEach((individual)=> {
+    individual
+      if (individual === valor){
+      point +=1
+      porcentaje = ((point /data.length)*100).toFixed(2)+ "%";
       }
     })
   })
   return porcentaje;
   //console.log(porcentaje);
 }
-*/
+//CONTAR POKEMONES POR RAREZA %
+export const countRarity = (data, value) => {
+
+  let porcentaje = "";
+  let point = 0;
+  data.forEach((item) => {
+    item.rarity;
+
+        if (item.rarity === value) {
+        point += 1
+        porcentaje = ((point / data.length) * 100).toFixed(2)+ "%";
+      }
+    })
+
+  return porcentaje;
+  //console.log(porcentaje);
+}
+
+

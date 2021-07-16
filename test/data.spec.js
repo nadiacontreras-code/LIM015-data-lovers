@@ -4,18 +4,17 @@ import {
   numericalOrder,
   alphabeticalOrder,
   typeFilter,
-  rarityFilter
-} from '../src/data.js';
+  rarityFilter,
+  getTypeStats
 
+} from '../src/data.js';
 //Importando BASE DE DATOS
 import data from '../src/data/pokemon/pokemon.js';
-
 /*
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
-
   it('returns `example`', () => {
     expect(example()).toBe('example');
   });
@@ -34,19 +33,16 @@ describe('search', () => {
     expect(searchTest[0].name).toBe("pikachu");
   });
 });
-
 describe('numericalOrder', () => {
   it('is a function', () => {
     expect(typeof numericalOrder).toBe('function');
   });
-
   it('sort by lower number', () => {
     //(selectOrder, dataNumber)
     const numericalTest = numericalOrder("lowerNumber", data.pokemon);
     //al ordenar [0] es primero por default: 001
     expect(numericalTest[0].num).toBe('001');
   });
-
   it('sort by top number', () => {
     //(selectOrder, dataNumber)
     const numericalTest = numericalOrder("topNumber", data.pokemon);
@@ -54,19 +50,16 @@ describe('numericalOrder', () => {
     expect(numericalTest[0].num).toBe('251');
   });
 });
-
 describe('alphabeticalOrder', () => {
   it('is a function', () => {
     expect(typeof alphabeticalOrder).toBe('function');
   });
-
   it('sort by `az`', () => {
     //(selectOrder, dataName)
     const alphabeticalTest = alphabeticalOrder("az", data.pokemon);
     //al ordenar [0] cambia por primero de letra A
     expect(alphabeticalTest[0].name).toBe('abra');
   });
-
   it('sort by `za`', () => {
     //(selectOrder, dataName)
     const alphabeticalTest = alphabeticalOrder("za", data.pokemon);
@@ -74,7 +67,6 @@ describe('alphabeticalOrder', () => {
     expect(alphabeticalTest[0].name).toBe('zubat');
   });
 });
-
 describe('typeFilter', () => {
   it('is a function', () => {
     expect(typeof typeFilter).toBe('function');
@@ -100,5 +92,16 @@ describe('rarityFilter', () => {
     //[] numero de cards-1 de una rareza
     //Método .toHaveLength(number), verifica longitud de String expect
     expect(filterTest[8].rarity).toHaveLength(9);
+
+  })
+});
+describe('getTypeStats', () => {
+  it('is a function', () => {
+    expect(typeof getTypeStats).toBe('function');
+  });
+  it('get percents by type', () => {
+    const getStats = getTypeStats(data.pokemon, "water");
+    expect(getStats).toBe('19.92%')
+
   })
 });
