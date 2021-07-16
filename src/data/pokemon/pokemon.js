@@ -13,7 +13,7 @@ export default {
       "height": "0.71 m",
       "weight": "6.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -111,7 +111,7 @@ export default {
       "height": "0.99 m",
       "weight": "13.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -209,7 +209,7 @@ export default {
       "height": "2.01 m",
       "weight": "100.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -307,7 +307,7 @@ export default {
       "height": "0.61 m",
       "weight": "8.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -403,7 +403,7 @@ export default {
       "height": "1.09 m",
       "weight": "19.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -506,7 +506,7 @@ export default {
       "height": "1.70 m",
       "weight": "90.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire",
       "flying"
@@ -624,7 +624,7 @@ export default {
       "height": "0.51 m",
       "weight": "9.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -718,7 +718,7 @@ export default {
       "height": "0.99 m",
       "weight": "22.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -812,7 +812,7 @@ export default {
       "height": "1.60 m",
       "weight": "85.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -906,7 +906,7 @@ export default {
       "height": "0.30 m",
       "weight": "2.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug"
     ],
@@ -985,7 +985,7 @@ export default {
       "height": "0.71 m",
       "weight": "9.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug"
     ],
@@ -1064,7 +1064,7 @@ export default {
       "height": "1.09 m",
       "weight": "32.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "flying"
@@ -1169,7 +1169,7 @@ export default {
       "height": "0.30 m",
       "weight": "3.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -1252,7 +1252,7 @@ export default {
       "height": "0.61 m",
       "weight": "10.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -1335,7 +1335,7 @@ export default {
       "height": "0.99 m",
       "weight": "29.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -1440,7 +1440,7 @@ export default {
       "height": "0.30 m",
       "weight": "1.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -1535,7 +1535,7 @@ export default {
       "height": "1.09 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -1630,7 +1630,7 @@ export default {
       "height": "1.50 m",
       "weight": "39.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -1739,7 +1739,7 @@ export default {
       "height": "0.30 m",
       "weight": "3.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -1824,7 +1824,7 @@ export default {
       "height": "0.71 m",
       "weight": "18.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -1909,7 +1909,7 @@ export default {
       "height": "0.30 m",
       "weight": "2.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -2006,7 +2006,7 @@ export default {
       "height": "1.19 m",
       "weight": "38.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -2103,7 +2103,7 @@ export default {
       "height": "2.01 m",
       "weight": "6.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -2200,7 +2200,7 @@ export default {
       "height": "3.51 m",
       "weight": "65.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -2290,7 +2290,7 @@ export default {
       "height": "0.41 m",
       "weight": "6.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -2389,7 +2389,7 @@ export default {
       "height": "0.79 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -2495,7 +2495,7 @@ export default {
       "height": "0.61 m",
       "weight": "12.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -2591,7 +2591,7 @@ export default {
       "height": "0.99 m",
       "weight": "29.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -2680,7 +2680,7 @@ export default {
       "height": "0.41 m",
       "weight": "7.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -2775,7 +2775,7 @@ export default {
       "height": "0.79 m",
       "weight": "20.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -2870,7 +2870,7 @@ export default {
       "height": "1.30 m",
       "weight": "60.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison",
       "ground"
@@ -2968,7 +2968,7 @@ export default {
       "height": "0.51 m",
       "weight": "9.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -3063,7 +3063,7 @@ export default {
       "height": "0.89 m",
       "weight": "19.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -3158,7 +3158,7 @@ export default {
       "height": "1.40 m",
       "weight": "62.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison",
       "ground"
@@ -3263,7 +3263,7 @@ export default {
       "height": "0.61 m",
       "weight": "7.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -3356,7 +3356,7 @@ export default {
       "height": "1.30 m",
       "weight": "40.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -3456,7 +3456,7 @@ export default {
       "height": "0.61 m",
       "weight": "9.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -3547,7 +3547,7 @@ export default {
       "height": "1.09 m",
       "weight": "19.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -3659,7 +3659,7 @@ export default {
       "height": "0.51 m",
       "weight": "5.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -3766,7 +3766,7 @@ export default {
       "height": "0.99 m",
       "weight": "12.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -3859,7 +3859,7 @@ export default {
       "height": "0.79 m",
       "weight": "7.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison",
       "flying"
@@ -3964,7 +3964,7 @@ export default {
       "height": "1.60 m",
       "weight": "55.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison",
       "flying"
@@ -4068,7 +4068,7 @@ export default {
       "height": "0.51 m",
       "weight": "5.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -4177,7 +4177,7 @@ export default {
       "height": "0.79 m",
       "weight": "8.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -4286,7 +4286,7 @@ export default {
       "height": "1.19 m",
       "weight": "18.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -4384,7 +4384,7 @@ export default {
       "height": "0.30 m",
       "weight": "5.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "grass"
@@ -4479,7 +4479,7 @@ export default {
       "height": "0.99 m",
       "weight": "29.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "grass"
@@ -4581,7 +4581,7 @@ export default {
       "height": "0.99 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -4674,7 +4674,7 @@ export default {
       "height": "1.50 m",
       "weight": "12.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -4781,7 +4781,7 @@ export default {
       "height": "0.20 m",
       "weight": "0.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -4877,7 +4877,7 @@ export default {
       "height": "0.71 m",
       "weight": "33.3 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -4973,7 +4973,7 @@ export default {
       "height": "0.41 m",
       "weight": "4.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -5065,7 +5065,7 @@ export default {
       "height": "0.99 m",
       "weight": "32.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -5157,7 +5157,7 @@ export default {
       "height": "0.79 m",
       "weight": "19.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -5246,7 +5246,7 @@ export default {
       "height": "1.70 m",
       "weight": "76.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -5335,7 +5335,7 @@ export default {
       "height": "0.51 m",
       "weight": "28.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -5424,7 +5424,7 @@ export default {
       "height": "0.99 m",
       "weight": "32.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -5527,7 +5527,7 @@ export default {
       "height": "0.71 m",
       "weight": "19.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -5618,7 +5618,7 @@ export default {
       "height": "1.91 m",
       "weight": "155.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -5730,7 +5730,7 @@ export default {
       "height": "0.61 m",
       "weight": "12.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -5835,7 +5835,7 @@ export default {
       "height": "0.99 m",
       "weight": "20.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -5947,7 +5947,7 @@ export default {
       "height": "1.30 m",
       "weight": "54.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "fighting"
@@ -6060,7 +6060,7 @@ export default {
       "height": "0.89 m",
       "weight": "19.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -6153,7 +6153,7 @@ export default {
       "height": "1.30 m",
       "weight": "56.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -6246,7 +6246,7 @@ export default {
       "height": "1.50 m",
       "weight": "48.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -6353,7 +6353,7 @@ export default {
       "height": "0.79 m",
       "weight": "19.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -6454,7 +6454,7 @@ export default {
       "height": "1.50 m",
       "weight": "70.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -6555,7 +6555,7 @@ export default {
       "height": "1.60 m",
       "weight": "130.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -6677,7 +6677,7 @@ export default {
       "height": "0.71 m",
       "weight": "4.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -6775,7 +6775,7 @@ export default {
       "height": "0.99 m",
       "weight": "6.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -6880,7 +6880,7 @@ export default {
       "height": "1.70 m",
       "weight": "15.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "poison"
@@ -6978,7 +6978,7 @@ export default {
       "height": "0.89 m",
       "weight": "45.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "poison"
@@ -7070,7 +7070,7 @@ export default {
       "height": "1.60 m",
       "weight": "55.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "poison"
@@ -7162,7 +7162,7 @@ export default {
       "height": "0.41 m",
       "weight": "20.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "ground"
@@ -7262,7 +7262,7 @@ export default {
       "height": "0.99 m",
       "weight": "105.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "ground"
@@ -7376,7 +7376,7 @@ export default {
       "height": "1.40 m",
       "weight": "300.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "ground"
@@ -7490,7 +7490,7 @@ export default {
       "height": "0.99 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -7588,7 +7588,7 @@ export default {
       "height": "1.70 m",
       "weight": "95.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -7686,7 +7686,7 @@ export default {
       "height": "1.19 m",
       "weight": "36.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "psychic"
@@ -7791,7 +7791,7 @@ export default {
       "height": "1.60 m",
       "weight": "78.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "psychic"
@@ -7885,7 +7885,7 @@ export default {
       "height": "0.30 m",
       "weight": "6.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -7976,7 +7976,7 @@ export default {
       "height": "0.99 m",
       "weight": "60.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -8081,7 +8081,7 @@ export default {
       "height": "0.79 m",
       "weight": "15.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -8174,7 +8174,7 @@ export default {
       "height": "1.40 m",
       "weight": "39.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -8271,7 +8271,7 @@ export default {
       "height": "1.80 m",
       "weight": "85.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -8368,7 +8368,7 @@ export default {
       "height": "1.09 m",
       "weight": "90.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -8471,7 +8471,7 @@ export default {
       "height": "1.70 m",
       "weight": "120.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "ice"
@@ -8582,7 +8582,7 @@ export default {
       "height": "0.89 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -8679,7 +8679,7 @@ export default {
       "height": "1.19 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -8783,7 +8783,7 @@ export default {
       "height": "0.30 m",
       "weight": "4.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -8872,7 +8872,7 @@ export default {
       "height": "1.50 m",
       "weight": "132.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "ice"
@@ -8976,7 +8976,7 @@ export default {
       "height": "1.30 m",
       "weight": "0.1 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ghost",
       "poison"
@@ -9088,7 +9088,7 @@ export default {
       "height": "1.60 m",
       "weight": "0.1 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ghost",
       "poison"
@@ -9200,7 +9200,7 @@ export default {
       "height": "1.50 m",
       "weight": "40.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ghost",
       "poison"
@@ -9319,7 +9319,7 @@ export default {
       "height": "8.79 m",
       "weight": "210.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "ground"
@@ -9432,7 +9432,7 @@ export default {
       "height": "0.99 m",
       "weight": "32.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -9520,7 +9520,7 @@ export default {
       "height": "1.60 m",
       "weight": "75.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -9622,7 +9622,7 @@ export default {
       "height": "0.41 m",
       "weight": "6.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -9711,7 +9711,7 @@ export default {
       "height": "1.30 m",
       "weight": "60.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -9807,7 +9807,7 @@ export default {
       "height": "0.51 m",
       "weight": "10.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -9901,7 +9901,7 @@ export default {
       "height": "1.19 m",
       "weight": "66.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -9995,7 +9995,7 @@ export default {
       "height": "0.41 m",
       "weight": "2.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "psychic"
@@ -10091,7 +10091,7 @@ export default {
       "height": "2.01 m",
       "weight": "120.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "psychic"
@@ -10201,7 +10201,7 @@ export default {
       "height": "0.41 m",
       "weight": "6.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -10290,7 +10290,7 @@ export default {
       "height": "0.99 m",
       "weight": "45.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -10379,7 +10379,7 @@ export default {
       "height": "1.50 m",
       "weight": "49.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -10482,7 +10482,7 @@ export default {
       "height": "1.40 m",
       "weight": "50.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -10592,7 +10592,7 @@ export default {
       "height": "1.19 m",
       "weight": "65.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -10672,7 +10672,7 @@ export default {
       "height": "0.61 m",
       "weight": "1.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -10769,7 +10769,7 @@ export default {
       "height": "1.19 m",
       "weight": "9.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison"
     ],
@@ -10866,7 +10866,7 @@ export default {
       "height": "0.99 m",
       "weight": "115.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground",
       "rock"
@@ -10970,7 +10970,7 @@ export default {
       "height": "1.91 m",
       "weight": "120.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground",
       "rock"
@@ -11074,7 +11074,7 @@ export default {
       "height": "1.09 m",
       "weight": "34.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -11170,7 +11170,7 @@ export default {
       "height": "0.99 m",
       "weight": "35.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -11264,7 +11264,7 @@ export default {
       "height": "2.21 m",
       "weight": "80.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -11359,7 +11359,7 @@ export default {
       "height": "0.41 m",
       "weight": "8.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -11457,7 +11457,7 @@ export default {
       "height": "1.19 m",
       "weight": "25.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -11562,7 +11562,7 @@ export default {
       "height": "0.61 m",
       "weight": "15.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -11651,7 +11651,7 @@ export default {
       "height": "1.30 m",
       "weight": "39.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -11754,7 +11754,7 @@ export default {
       "height": "0.79 m",
       "weight": "34.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -11850,7 +11850,7 @@ export default {
       "height": "1.09 m",
       "weight": "80.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "psychic"
@@ -11965,7 +11965,7 @@ export default {
       "height": "1.30 m",
       "weight": "54.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -12055,7 +12055,7 @@ export default {
       "height": "1.50 m",
       "weight": "56.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "flying"
@@ -12166,7 +12166,7 @@ export default {
       "height": "1.40 m",
       "weight": "40.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ice",
       "psychic"
@@ -12272,7 +12272,7 @@ export default {
       "height": "1.09 m",
       "weight": "30.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -12368,7 +12368,7 @@ export default {
       "height": "1.30 m",
       "weight": "44.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -12468,7 +12468,7 @@ export default {
       "height": "1.50 m",
       "weight": "55.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug"
     ],
@@ -12566,7 +12566,7 @@ export default {
       "height": "1.40 m",
       "weight": "88.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -12647,7 +12647,7 @@ export default {
       "height": "0.89 m",
       "weight": "10.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -12713,7 +12713,7 @@ export default {
       "height": "6.50 m",
       "weight": "235.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "flying"
@@ -12825,7 +12825,7 @@ export default {
       "height": "2.49 m",
       "weight": "220.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "ice"
@@ -12924,7 +12924,7 @@ export default {
       "height": "0.30 m",
       "weight": "4.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -12981,7 +12981,7 @@ export default {
       "height": "0.30 m",
       "weight": "6.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -13098,7 +13098,7 @@ export default {
       "height": "0.99 m",
       "weight": "29.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -13179,7 +13179,7 @@ export default {
       "height": "0.79 m",
       "weight": "24.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -13266,7 +13266,7 @@ export default {
       "height": "0.89 m",
       "weight": "25.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -13364,7 +13364,7 @@ export default {
       "height": "0.79 m",
       "weight": "36.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -13504,7 +13504,7 @@ export default {
       "height": "0.41 m",
       "weight": "7.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "water"
@@ -13611,7 +13611,7 @@ export default {
       "height": "0.99 m",
       "weight": "35.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "water"
@@ -13718,7 +13718,7 @@ export default {
       "height": "0.51 m",
       "weight": "11.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "water"
@@ -13811,7 +13811,7 @@ export default {
       "height": "1.30 m",
       "weight": "40.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "water"
@@ -13911,7 +13911,7 @@ export default {
       "height": "1.80 m",
       "weight": "59.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "flying"
@@ -14000,7 +14000,7 @@ export default {
       "height": "2.11 m",
       "weight": "460.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -14092,7 +14092,7 @@ export default {
       "height": "1.70 m",
       "weight": "55.4 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "ice",
       "flying"
@@ -14170,7 +14170,7 @@ export default {
       "height": "1.60 m",
       "weight": "52.6 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "electric",
       "flying"
@@ -14256,7 +14256,7 @@ export default {
       "height": "2.01 m",
       "weight": "60.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "fire",
       "flying"
@@ -14335,7 +14335,7 @@ export default {
       "height": "1.80 m",
       "weight": "3.3 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dragon"
     ],
@@ -14430,7 +14430,7 @@ export default {
       "height": "3.99 m",
       "weight": "16.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dragon"
     ],
@@ -14525,7 +14525,7 @@ export default {
       "height": "2.21 m",
       "weight": "210.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dragon",
       "flying"
@@ -14644,7 +14644,7 @@ export default {
       "height": "2.01 m",
       "weight": "122.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "psychic"
     ],
@@ -14734,7 +14734,7 @@ export default {
       "height": "0.41 m",
       "weight": "4.0 kg"
     },
-    "pokemon-rarity": "mythic",
+    "rarity": "mythic",
     "type": [
       "psychic"
     ],
@@ -14844,7 +14844,7 @@ export default {
       "height": "0.89 m",
       "weight": "6.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -14940,7 +14940,7 @@ export default {
       "height": "1.19 m",
       "weight": "15.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -15036,7 +15036,7 @@ export default {
       "height": "1.80 m",
       "weight": "100.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -15132,7 +15132,7 @@ export default {
       "height": "0.51 m",
       "weight": "7.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -15228,7 +15228,7 @@ export default {
       "height": "0.89 m",
       "weight": "19.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -15324,7 +15324,7 @@ export default {
       "height": "1.70 m",
       "weight": "79.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -15420,7 +15420,7 @@ export default {
       "height": "0.61 m",
       "weight": "9.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -15514,7 +15514,7 @@ export default {
       "height": "1.09 m",
       "weight": "25.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -15608,7 +15608,7 @@ export default {
       "height": "2.31 m",
       "weight": "88.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -15702,7 +15702,7 @@ export default {
       "height": "0.79 m",
       "weight": "6.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -15787,7 +15787,7 @@ export default {
       "height": "1.80 m",
       "weight": "32.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -15872,7 +15872,7 @@ export default {
       "height": "0.71 m",
       "weight": "21.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -15948,7 +15948,7 @@ export default {
       "height": "1.60 m",
       "weight": "40.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "flying"
@@ -16039,7 +16039,7 @@ export default {
       "height": "0.99 m",
       "weight": "10.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "flying"
@@ -16131,7 +16131,7 @@ export default {
       "height": "1.40 m",
       "weight": "35.6 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "flying"
@@ -16223,7 +16223,7 @@ export default {
       "height": "0.51 m",
       "weight": "8.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -16316,7 +16316,7 @@ export default {
       "height": "1.09 m",
       "weight": "33.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "poison"
@@ -16409,7 +16409,7 @@ export default {
       "height": "1.80 m",
       "weight": "75.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "poison",
       "flying"
@@ -16507,7 +16507,7 @@ export default {
       "height": "0.51 m",
       "weight": "12.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "electric"
@@ -16598,7 +16598,7 @@ export default {
       "height": "1.19 m",
       "weight": "22.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "electric"
@@ -16689,7 +16689,7 @@ export default {
       "height": "0.30 m",
       "weight": "2.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -16781,7 +16781,7 @@ export default {
       "height": "0.30 m",
       "weight": "3.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fairy"
     ],
@@ -16889,7 +16889,7 @@ export default {
       "height": "0.30 m",
       "weight": "1.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "fairy"
@@ -16991,7 +16991,7 @@ export default {
       "height": "0.30 m",
       "weight": "1.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fairy"
     ],
@@ -17096,7 +17096,7 @@ export default {
       "height": "0.61 m",
       "weight": "3.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fairy",
       "flying"
@@ -17198,7 +17198,7 @@ export default {
       "height": "0.21 m",
       "weight": "2.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic",
       "flying"
@@ -17290,7 +17290,7 @@ export default {
       "height": "1.50 m",
       "weight": "15.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic",
       "flying"
@@ -17382,7 +17382,7 @@ export default {
       "height": "0.61 m",
       "weight": "7.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -17474,7 +17474,7 @@ export default {
       "height": "0.79 m",
       "weight": "13.3 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -17566,7 +17566,7 @@ export default {
       "height": "1.40 m",
       "weight": "61.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -17658,7 +17658,7 @@ export default {
       "height": "0.41 m",
       "weight": "5.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -17758,7 +17758,7 @@ export default {
       "height": "0.41 m",
       "weight": "8.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "fairy"
@@ -17855,7 +17855,7 @@ export default {
       "height": "0.79 m",
       "weight": "28.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "fairy"
@@ -17952,7 +17952,7 @@ export default {
       "height": "1.19 m",
       "weight": "38.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock"
     ],
@@ -18043,7 +18043,7 @@ export default {
       "height": "10.90 m",
       "weight": "33.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -18141,7 +18141,7 @@ export default {
       "height": "0.41 m",
       "weight": "0.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "flying"
@@ -18238,7 +18238,7 @@ export default {
       "height": "0.61 m",
       "weight": "1.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "flying"
@@ -18335,7 +18335,7 @@ export default {
       "height": "0.79 m",
       "weight": "3.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass",
       "flying"
@@ -18432,7 +18432,7 @@ export default {
       "height": "0.79 m",
       "weight": "11.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -18512,7 +18512,7 @@ export default {
       "height": "0.30 m",
       "weight": "1.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -18607,7 +18607,7 @@ export default {
       "height": "0.79 m",
       "weight": "8.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "grass"
     ],
@@ -18702,7 +18702,7 @@ export default {
       "height": "1.19 m",
       "weight": "38.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "flying"
@@ -18789,7 +18789,7 @@ export default {
       "height": "0.41 m",
       "weight": "8.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "ground"
@@ -18878,7 +18878,7 @@ export default {
       "height": "1.40 m",
       "weight": "75.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "ground"
@@ -18967,7 +18967,7 @@ export default {
       "height": "0.89 m",
       "weight": "26.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -19055,7 +19055,7 @@ export default {
       "height": "0.99 m",
       "weight": "27.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dark"
     ],
@@ -19137,7 +19137,7 @@ export default {
       "height": "0.51 m",
       "weight": "2.1 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dark",
       "flying"
@@ -19234,7 +19234,7 @@ export default {
       "height": "2.01 m",
       "weight": "79.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "psychic"
@@ -19331,7 +19331,7 @@ export default {
       "height": "0.71 m",
       "weight": "1.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ghost"
     ],
@@ -19424,7 +19424,7 @@ export default {
       "height": "0.51 m",
       "weight": "5.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -19484,7 +19484,7 @@ export default {
       "height": "1.30 m",
       "weight": "28.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "psychic"
     ],
@@ -19557,7 +19557,7 @@ export default {
       "height": "1.50 m",
       "weight": "41.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal",
       "psychic"
@@ -19639,7 +19639,7 @@ export default {
       "height": "0.61 m",
       "weight": "7.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug"
     ],
@@ -19728,7 +19728,7 @@ export default {
       "height": "1.19 m",
       "weight": "125.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "steel"
@@ -19818,7 +19818,7 @@ export default {
       "height": "1.50 m",
       "weight": "14.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -19898,7 +19898,7 @@ export default {
       "height": "1.09 m",
       "weight": "64.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground",
       "flying"
@@ -19992,7 +19992,7 @@ export default {
       "height": "9.19 m",
       "weight": "400.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "steel",
       "ground"
@@ -20089,7 +20089,7 @@ export default {
       "height": "0.61 m",
       "weight": "7.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fairy"
     ],
@@ -20178,7 +20178,7 @@ export default {
       "height": "1.40 m",
       "weight": "48.7 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fairy"
     ],
@@ -20267,7 +20267,7 @@ export default {
       "height": "0.51 m",
       "weight": "3.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "poison"
@@ -20354,7 +20354,7 @@ export default {
       "height": "2.01 m",
       "weight": "125.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "steel"
@@ -20448,7 +20448,7 @@ export default {
       "height": "0.61 m",
       "weight": "20.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "rock"
@@ -20532,7 +20532,7 @@ export default {
       "height": "1.50 m",
       "weight": "54.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "bug",
       "fighting"
@@ -20620,7 +20620,7 @@ export default {
       "height": "0.89 m",
       "weight": "28.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dark",
       "ice"
@@ -20716,7 +20716,7 @@ export default {
       "height": "0.61 m",
       "weight": "8.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -20801,7 +20801,7 @@ export default {
       "height": "1.80 m",
       "weight": "125.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -20886,7 +20886,7 @@ export default {
       "height": "0.71 m",
       "weight": "35.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -20977,7 +20977,7 @@ export default {
       "height": "0.79 m",
       "weight": "55.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire",
       "rock"
@@ -21070,7 +21070,7 @@ export default {
       "height": "0.41 m",
       "weight": "6.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ice",
       "ground"
@@ -21160,7 +21160,7 @@ export default {
       "height": "1.09 m",
       "weight": "55.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ice",
       "ground"
@@ -21250,7 +21250,7 @@ export default {
       "height": "0.61 m",
       "weight": "5.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "rock"
@@ -21338,7 +21338,7 @@ export default {
       "height": "0.61 m",
       "weight": "12.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -21427,7 +21427,7 @@ export default {
       "height": "0.89 m",
       "weight": "28.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water"
     ],
@@ -21516,7 +21516,7 @@ export default {
       "height": "0.89 m",
       "weight": "16.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ice",
       "flying"
@@ -21602,7 +21602,7 @@ export default {
       "height": "2.11 m",
       "weight": "220.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "flying"
@@ -21693,7 +21693,7 @@ export default {
       "height": "1.70 m",
       "weight": "50.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "steel",
       "flying"
@@ -21779,7 +21779,7 @@ export default {
       "height": "0.61 m",
       "weight": "10.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dark",
       "fire"
@@ -21872,7 +21872,7 @@ export default {
       "height": "1.40 m",
       "weight": "35.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "dark",
       "fire"
@@ -21965,7 +21965,7 @@ export default {
       "height": "1.80 m",
       "weight": "152.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "water",
       "dragon"
@@ -22063,7 +22063,7 @@ export default {
       "height": "0.51 m",
       "weight": "33.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -22152,7 +22152,7 @@ export default {
       "height": "1.09 m",
       "weight": "120.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ground"
     ],
@@ -22241,7 +22241,7 @@ export default {
       "height": "0.61 m",
       "weight": "32.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -22339,7 +22339,7 @@ export default {
       "height": "1.40 m",
       "weight": "71.2 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -22419,7 +22419,7 @@ export default {
       "height": "1.19 m",
       "weight": "58.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -22476,7 +22476,7 @@ export default {
       "height": "0.71 m",
       "weight": "21.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -22577,7 +22577,7 @@ export default {
       "height": "1.40 m",
       "weight": "48.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fighting"
     ],
@@ -22666,7 +22666,7 @@ export default {
       "height": "0.41 m",
       "weight": "6.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "ice",
       "psychic"
@@ -22763,7 +22763,7 @@ export default {
       "height": "0.61 m",
       "weight": "23.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "electric"
     ],
@@ -22866,7 +22866,7 @@ export default {
       "height": "0.71 m",
       "weight": "21.4 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "fire"
     ],
@@ -22973,7 +22973,7 @@ export default {
       "height": "1.19 m",
       "weight": "75.5 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -23053,7 +23053,7 @@ export default {
       "height": "1.50 m",
       "weight": "46.8 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "normal"
     ],
@@ -23143,7 +23143,7 @@ export default {
       "height": "1.91 m",
       "weight": "178.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "electric"
     ],
@@ -23225,7 +23225,7 @@ export default {
       "height": "2.11 m",
       "weight": "198.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "fire"
     ],
@@ -23311,7 +23311,7 @@ export default {
       "height": "2.01 m",
       "weight": "187.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "water"
     ],
@@ -23395,7 +23395,7 @@ export default {
       "height": "0.60 m",
       "weight": "72.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "ground"
@@ -23496,7 +23496,7 @@ export default {
       "height": "1.20 m",
       "weight": "152.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "ground"
@@ -23597,7 +23597,7 @@ export default {
       "height": "2.00 m",
       "weight": "202.0 kg"
     },
-    "pokemon-rarity": "normal",
+    "rarity": "normal",
     "type": [
       "rock",
       "dark"
@@ -23700,7 +23700,7 @@ export default {
       "height": "5.21 m",
       "weight": "216.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "psychic",
       "flying"
@@ -23787,7 +23787,7 @@ export default {
       "height": "3.80 m",
       "weight": "199.0 kg"
     },
-    "pokemon-rarity": "legendary",
+    "rarity": "legendary",
     "type": [
       "fire",
       "flying"
@@ -23876,7 +23876,7 @@ export default {
       "height": "0.61 m",
       "weight": "5.0 kg"
     },
-    "pokemon-rarity": "mythic",
+    "rarity": "mythic",
     "type": [
       "psychic",
       "grass"

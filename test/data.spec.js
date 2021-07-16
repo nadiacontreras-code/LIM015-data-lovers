@@ -3,7 +3,8 @@ import {
   search,
   numericalOrder,
   alphabeticalOrder,
-  typeFilter
+  typeFilter,
+  rarityFilter
 } from '../src/data.js';
 
 //Importando BASE DE DATOS
@@ -24,13 +25,14 @@ describe('search', () => {
   it('is a function', () => {
     expect(typeof search).toBe('function');
   });
-  
-    it('search number or name writting', () => {
-     // expect(search(data.pokemon, "pikachu")).toBe(data.pokemon[24]);
-     search(data.pokemon, "pikachu");
-     expect(data.pokemon[24].name).toBe("pikachu")
-    });
-    
+
+  it('search number or name writting', () => {
+    //(data, searchValue)
+    const searchTest = search(data.pokemon, "pikachu");
+    //Método .toBe verifica identidad referencial expect
+    expect(searchTest[0].num).toBe("025");
+    expect(searchTest[0].name).toBe("pikachu");
+  });
 });
 
 describe('numericalOrder', () => {
@@ -41,7 +43,7 @@ describe('numericalOrder', () => {
   it('sort by lower number', () => {
     //(selectOrder, dataNumber)
     const numericalTest = numericalOrder("lowerNumber", data.pokemon);
-       //al ordenar [0] es primero por default: 001
+    //al ordenar [0] es primero por default: 001
     expect(numericalTest[0].num).toBe('001');
   });
 
@@ -60,7 +62,7 @@ describe('alphabeticalOrder', () => {
 
   it('sort by `az`', () => {
     //(selectOrder, dataName)
-   const alphabeticalTest = alphabeticalOrder("az", data.pokemon);
+    const alphabeticalTest = alphabeticalOrder("az", data.pokemon);
     //al ordenar [0] cambia por primero de letra A
     expect(alphabeticalTest[0].name).toBe('abra');
   });
@@ -77,16 +79,26 @@ describe('typeFilter', () => {
   it('is a function', () => {
     expect(typeof typeFilter).toBe('function');
   });
-  /*
-    it('filter by type chosen', () => {
-      //(selectorType, dataType)
-      typeFilter("grass", data.pokemon);
-      expect(data.pokemon[0].type).toBe('grass');
-    });
-    */
+
   it('filter by type chosen', () => {
-  const filterTest = typeFilter("rock", data.pokemon);
-   expect(filterTest[17].type).not.toHaveLength(3);
-   console.log(filterTest[17].type);
+    //(selectorType, dataType)
+    const filterTest = typeFilter("rock", data.pokemon);
+    //[] numero de cards-1 de un tipo
+    //Mét. .not.toHaveLength(number), verifica que NO tenga tamaño de Array expect
+    expect(filterTest[17].type).not.toHaveLength(3);
+  })
+});
+
+describe('rarityFilter', () => {
+  it('is a function', () => {
+    expect(typeof rarityFilter).toBe('function');
+  });
+
+  it('filter by rarity chosen', () => {
+    //(selectorRarity, dataRarity)
+    const filterTest = rarityFilter("legendary", data.pokemon);
+    //[] numero de cards-1 de una rareza
+    //Método .toHaveLength(number), verifica longitud de String expect
+    expect(filterTest[8].rarity).toHaveLength(9);
   })
 });

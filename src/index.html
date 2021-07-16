@@ -32,7 +32,7 @@
       <img class="icon" src="pic/pikachu.ico" alt="News">
       <label>News</label>
     </a>
-    <a href="#statistics">
+    <a href="#statistics" id="statistics">
       <img class="icon" src="pic/statistics.ico" alt="Statistics">
       <label>Statistics</label>
     </a>
@@ -43,31 +43,33 @@
   </nav>
 
   <main>
-    <h1 class="textSearch">Search your Pokemon by number or name</h1>
-    <section>
-      <input class="inputGeneralSearch" id="inputGeneralSearch" type="search"
-        placeholder="Example: Write 025 or Pikachu">
-      <!--autocomplete puede ser on/off, probar -->
-      <button type="button" id="buttonGeneralSearch">
-        <img class="iconGeneralSearch" src="pic/searchLupa.ico">
-      </button>
+    <section class="generalSearch">
+      <h1 class="textSearch">Search your Pokemon by number or name</h1>
+      <section>
+        <input class="inputGeneralSearch" id="inputGeneralSearch" type="search"
+          placeholder="Example: Write 025 or Pikachu">
+        <!--autocomplete puede ser on/off, probar -->
+        <button type="button" id="buttonGeneralSearch">
+          <img class="iconGeneralSearch" src="pic/searchLupa.ico">
+        </button>
+      </section>
     </section>
 
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
       <ul class="generalAdvancedSearchList">
-        <li>Number:
-          <select class="selectAdvancedSearchList" id="orderByNumber">
-            <option value="" href="" selected disabled>Sort by:</option>
-            <option value="lowerNumber" href="">Lower Number</option>
-            <option value="topNumber" href="">Top Number</option>
-          </select>
-        </li>
         <li>Name:
           <select class="selectAdvancedSearchList" id="orderByName">
             <option selected disabled>Sort By</option>
             <option value="az" href="">A-Z</option>
             <option value="za" href="">Z-A</option>
+          </select>
+        </li>
+        <li>Number:
+          <select class="selectAdvancedSearchList" id="orderByNumber">
+            <option value="" href="" selected disabled>Sort by:</option>
+            <option value="lowerNumber" href="">Lower Number</option>
+            <option value="topNumber" href="">Top Number</option>
           </select>
         </li>
         <li>Type:
@@ -91,6 +93,14 @@
             <option value="fairy" href="">Fairy</option>
             <option value="dark" href="">Dark</option>
             <option value="steel" href="">Steel</option>
+          </select>
+        </li>
+        <li>Rarity:
+          <select class="selectAdvancedSearchList" id="orderByRarity">
+            <option value="" href="" selected disabled>Choose rarity:</option>
+            <option value="normal" href="">Normal</option>
+            <option value="legendary" href="">Legendary</option>
+            <option value="mythic" href="">Mythic</option>
           </select>
         </li>
       </ul>
@@ -124,11 +134,13 @@
       </section>
     </section>
 
+
     <section class="sectionButtonInteractionMain">
       <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
       <button class="buttonInteraction" type="button" id="buttonNext">Next</button>
     </section>
-    <section class="buttonReturnPageMain">
+
+    <section class="buttonReturnPageMain" id="buttonReturnPageMain1">
       <button class="buttonReturnPage" type="button" id="buttonReturnPage"><a href="index.html">Go Home</a></button>
     </section>
 
@@ -145,6 +157,14 @@
       </section>
       <button class="buttonReturnPage" type="button" id="buttonReturnPage2"><a href="index.html">Home</a></button>
     </section>
+
+    <!--Mostrando %pokemones por rareza
+    <section hidden id="rarityStatistics">
+      <h1>Datos curiosos</h1>
+      <h2 id="rarity1"></h2>
+
+
+    </section>-->
   </main>
   <footer>
     <section class="footerListSocialMedia">
