@@ -5,7 +5,6 @@ import data from './data/pokemon/pokemon.js';
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 //Si hay peoblemas en el test llamar a cada funcion como abajo
 
-
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 let searchingPokemon;
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
@@ -24,6 +23,7 @@ buttonGeneralSearch.addEventListener('click', () => {
     document.getElementById("WelcomeToPage").style.display = "none";
     document.getElementById("ExploringPage").style.display = "block";
     document.querySelector(".sectionButtonInteractionMain").style.display = "none";
+
   }
 });
 
@@ -81,8 +81,7 @@ function showData(itemSearch) {
     //Creando nodos rarity
     const rarity = document.createElement('p')
     rarity.textContent = `Rarity: ${itemValue.rarity}`;
-    rarity.className = "pokemonRarity"; 
-
+    rarity.className = "pokemonRarity";
 
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
@@ -106,10 +105,10 @@ function showData(itemSearch) {
   card.append(...pokemonsCard)
 
   return cardInformation
- 
 }
 // Para mostrar los cards en la pantalla
 window.addEventListener('load', showData(allData)); //allData=data.pokemon
+
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 /*import {
@@ -143,7 +142,7 @@ function eachType(elem) {
     createType += `<span class="eachPokemonType ${newElem}"> ${newElem} </span>`;
   });
   return createType;
-  
+
 }
 
 //FILTRAR POR TIPO
@@ -164,48 +163,47 @@ filterByRarity.addEventListener("change", () => {
   showData(dataFilterRarity)
 });
 
+
 //--------------- SECTION STATISTICS, MOSTRANDO PORCENTAJE ------------------//
 
-// StatsPage: mostrando el PORCENTAJE X TIPO //
 const statistics = document.querySelector(".statisticsPage");
-statistics.addEventListener('click', nextPage);
-function nextPage(){
+statistics.addEventListener('click', () => {
   document.getElementById("WelcomeToPage").style.display = "none";
   document.getElementById("ExploringPage").style.display = "block";
+  document.querySelector(".sectionGeneralSearch").style.display = "none";
   document.querySelector(".generalAdvancedSearch").style.display = "none";
   document.querySelector(".sectionButtonInteractionMain").style.display = "none";
   document.querySelector(".buttonReturnPageMain").style.display = "block";
   document.getElementById("displayAllPokemons").style.display = "none";
   document.getElementById("sectionGeneralStats").style.display = "block";
 
-  const chooseStatics = document.getElementById("statsByType");
-  chooseStatics.addEventListener("change",filterStats);
-  function filterStats(){
-    let pruebaStatics = chooseStatics.value;
+  //PORCENTAJE DE POKEMONES POR TIPO
+
+  let waterStatistics;
+  waterStatistics = dataFunctions.getTypeStats(allData, 'water');
+  document.getElementById('typeTop').innerHTML =
+    "Most of the Pokemons are of the water type, which represents " + waterStatistics + " of the total Pokemons.";
+  let dragonStatistics;
+  dragonStatistics = dataFunctions.getTypeStats(allData, 'dragon');
+  document.getElementById('typeBottom').innerHTML =
+    "The ghost, metal, and dragon types are the least numerous of all, representing " + dragonStatistics + " of all Pokemons.";
+
+  const statsByType = document.getElementById("statsByType");
+  statsByType.addEventListener("change", () => {
+    const valueType = statsByType.value;
     //console.log(pruebaStatics);
-    //let showStats = dataFunctions.getStats(allData, pruebaStatics);
-    let showStats =dataFunctions.getTypeStats(allData, pruebaStatics)
+    const showTypeStats = dataFunctions.getTypeStats(allData, valueType)
     //console.log(showStats);
-    let statisticsResults = document.querySelector(".statisticsResults");
-    statisticsResults.innerHTML = showStats;
+    const statisticsTypeResults = document.querySelector(".statisticsTypeResults");
+    statisticsTypeResults.innerHTML = " represent " + showTypeStats + " of all pokemons.";
+  });
 
-    
+  //PORCENTAJE DE POKEMONES POR RAREZA
+  let legendaryStatistics;
+  let mythicStatistics;
+  legendaryStatistics = dataFunctions.getRarityStats(allData, 'legendary');
+  document.getElementById('rarity1').innerHTML = legendaryStatistics + " of Pokemons are Legendary?";
+  mythicStatistics = dataFunctions.getRarityStats(allData, 'mythic');
+  document.getElementById('rarity2').innerHTML = "and only " + mythicStatistics + " of Pokemons are mythical?";
 
-  }
-//PORCENTAJE DE POKEMONES POR RAREZA
-
-let legendaryStatistics;
-
-  document.getElementById('rarityStatistics').style.display = "block";
-
-  legendaryStatistics = dataFunctions.countRarity(allData, 'legendary');
-  document.getElementById('rarity1').innerHTML = legendaryStatistics;
-
-
-}
-
-
-
-
-
-
+});

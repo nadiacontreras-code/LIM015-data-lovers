@@ -330,7 +330,7 @@ main {
    border-radius: 10px;
    padding: 2px;
    margin-top: 4px;
-   color: purple;
+   color: rgb(95, 3, 95);
 }
 .pokemonWeaknesses{
    text-align: left;
@@ -340,6 +340,17 @@ main {
    padding: 2px;
    margin-top: 4px;
    color: blue;
+}
+.pokemonRarity{
+   width: 100px;
+   font-size: 13px;
+   text-align: center;
+   margin-top: 10px;
+   margin-left: 45px;
+   margin-right: 10px;
+   color:white;
+   background-color: rgb(125, 23, 184);
+   border-radius: 10px;
 }
 
 .grass{
@@ -416,6 +427,27 @@ background-color: #8d6b48;
    background-color:#7c7c7c; 
  }
 
+
+/****SECCION DE ESTADISTICAS ****/
+
+/*#sectionGeneralStats{
+   height:475px;
+}*/
+#sectionGeneralStats h1{
+   color: white;
+   font-size: 30px;
+   text-align: center;
+   padding-top: 25px;
+   margin-bottom: 12px;
+   letter-spacing: 0.5px;
+   /*separa letras*/
+}
+
+#statsType li{
+   float: left;
+   list-style: none;
+   margin-right: 20px;
+}
 
 /**********************BUTTON INTERACTION********************/
 .sectionButtonInteractionMain {

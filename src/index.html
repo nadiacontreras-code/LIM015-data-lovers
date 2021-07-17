@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Para hacerlo responsive
+  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
   <!--ícono que aparece en pestaña de navegación-->
   <link rel="icon" href="pic/pikachu.ico">
   <title>Pokedex</title>
@@ -33,7 +35,9 @@
       <img class="icon" src="pic/pikachu.ico" alt="News">
       <label>News</label>
     </a>
+
     <a href="#statistics" class="statisticsPage">
+
       <img class="icon" src="pic/statistics.ico" alt="Statistics">
       <label>Statistics</label>
     </a>
@@ -44,7 +48,9 @@
   </nav>
 
   <main>
+
     <section class="sectionGeneralSearch">
+
       <h1 class="textSearch">Search your Pokemon by number or name</h1>
       <section>
         <input class="inputGeneralSearch" id="inputGeneralSearch" type="search"
@@ -59,18 +65,18 @@
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
       <ul class="generalAdvancedSearchList">
-        <li>Number:
-          <select class="selectAdvancedSearchList" id="orderByNumber">
-            <option value="" href="" selected disabled>Sort by:</option>
-            <option value="lowerNumber" href="">Lower Number</option>
-            <option value="topNumber" href="">Top Number</option>
-          </select>
-        </li>
         <li>Name:
           <select class="selectAdvancedSearchList" id="orderByName">
             <option selected disabled>Sort By</option>
             <option value="az" href="">A-Z</option>
             <option value="za" href="">Z-A</option>
+          </select>
+        </li>
+        <li>Number:
+          <select class="selectAdvancedSearchList" id="orderByNumber">
+            <option value="" href="" selected disabled>Sort by:</option>
+            <option value="lowerNumber" href="">Lower Number</option>
+            <option value="topNumber" href="">Top Number</option>
           </select>
         </li>
         <li>Type:
@@ -99,8 +105,10 @@
         <li>Rarity:
           <select class="selectAdvancedSearchList" id="orderByRarity">
             <option value="" href="" selected disabled>Choose rarity:</option>
+
             <option value="legendary" href="">Legendary</option>
             <option value="normal" href="">Normal</option>
+
             <option value="mythic" href="">Mythic</option>
           </select>
         </li>
@@ -135,17 +143,26 @@
     </section>
     <!------------ Seccion de estadísticas>--------->
     <section hidden id="sectionGeneralStats">
-      <h1>Datos curiosos</h1>
-      <h1>Sabías que ?</h1>
+      <h1>Fun facts</h1>
+
       <!--Mostrando %pokemones por rareza --->
       <section id="rarityStatistics">
-
+        <h2>Did you know...</h2>
         <h2 id="rarity1"></h2>
+        <h2 id="rarity2"></h2>
+        <h2>Legendary and mythical Pokémon are practically deities and their power is very far from their opponents. Not
+          for nothing the only legendary pokemon that have been defeated were by other legendary or mythical pokemon,
+          that is why it is a feat that a normal pokemon can beat them.</h2>
+
 
       </section>
-
+      <!--Mostrando %pokemones por tipo --->
       <section id="statsType" class="stats">
-        <li>los pokemones de tipo :
+        <h2>Also, did you know...</h2>
+        <h2 id="typeTop"></h2>
+        <h2 id="typeBottom"></h2>
+        <h2>If you want to know more about that, choose the box below.</h2>
+        <li>The Pokemons type :
           <select class="selectAdvancedSearchList" id="statsByType">
             <option value="" href="" selected disabled>Choose type:</option>
             <option value="grass" href="">Grass</option>
@@ -168,20 +185,19 @@
             <option value="steel" href="">Steel</option>
           </select>
         </li>
-        <section class="statsResults">
-          <p> represetan el</p>
-          <p class="statisticsResults"></p>
-          <p> de todos los pokemones</p>
-        </section>
+
+        <li class="statisticsTypeResults"></li>
 
       </section>
     </section>
     <!----------- Seccion de botones>-->
+
     <section class="sectionButtonInteractionMain">
       <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
       <button class="buttonInteraction" type="button" id="buttonNext">Next</button>
     </section>
-    <section class="buttonReturnPageMain">
+
+    <section class="buttonReturnPageMain" id="buttonReturnPageMain1">
       <button class="buttonReturnPage" type="button" id="buttonReturnPage"><a href="index.html">Go Home</a></button>
     </section>
 
@@ -196,6 +212,7 @@
       </section>
       <button class="buttonReturnPage" type="button" id="buttonReturnPage2"><a href="index.html">Home</a></button>
     </section>
+
   </main>
   <footer>
     <section class="footerListSocialMedia">
