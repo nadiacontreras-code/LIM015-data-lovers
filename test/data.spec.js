@@ -5,7 +5,8 @@ import {
   alphabeticalOrder,
   typeFilter,
   rarityFilter,
-  getTypeStats
+  getTypeStats,
+  getRarityStats
 } from '../src/data.js';
 //Importando BASE DE DATOS
 import data from '../src/data/pokemon/pokemon.js';
@@ -100,7 +101,19 @@ describe('getTypeStats', () => {
   });
   it('get percents by type', () => {
     const getStats = getTypeStats(data.pokemon, "water");
+    //toBe, espera un valor expect
     expect(getStats).toBe('19.92%')
 
+  })
+});
+
+describe('getRarityStats ', () => {
+  it('is a function', () => {
+    expect(typeof getRarityStats).toBe('function');
+  });
+  it('get percents by rarety', () => {
+    const getStats = getRarityStats(data.pokemon, "legendary");
+    //toBe, espera un valor expect
+    expect(getStats).toBe('3.59%')
   })
 });

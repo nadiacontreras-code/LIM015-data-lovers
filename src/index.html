@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <!--Para hacerlo responsive
+  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
   <!--ícono que aparece en pestaña de navegación-->
   <link rel="icon" href="pic/pikachu.ico">
   <title>Pokedex</title>
@@ -140,17 +143,26 @@
     </section>
     <!------------ Seccion de estadísticas>--------->
     <section hidden id="sectionGeneralStats">
-      <h1>Datos curiosos</h1>
-      <h1>Sabías que ?</h1>
+      <h1>Fun facts</h1>
+
       <!--Mostrando %pokemones por rareza --->
       <section id="rarityStatistics">
-
+        <h2>Did you know...</h2>
         <h2 id="rarity1"></h2>
+        <h2 id="rarity2"></h2>
+        <h2>Legendary and mythical Pokémon are practically deities and their power is very far from their opponents. Not
+          for nothing the only legendary pokemon that have been defeated were by other legendary or mythical pokemon,
+          that is why it is a feat that a normal pokemon can beat them.</h2>
+
 
       </section>
-
+      <!--Mostrando %pokemones por tipo --->
       <section id="statsType" class="stats">
-        <li>los pokemones de tipo :
+        <h2>Also, did you know...</h2>
+        <h2 id="typeTop"></h2>
+        <h2 id="typeBottom"></h2>
+        <h2>If you want to know more about that, choose the box below.</h2>
+        <li>The Pokemons type :
           <select class="selectAdvancedSearchList" id="statsByType">
             <option value="" href="" selected disabled>Choose type:</option>
             <option value="grass" href="">Grass</option>
@@ -173,12 +185,8 @@
             <option value="steel" href="">Steel</option>
           </select>
         </li>
-        <section class="statsResults">
-          <p> represetan el</p>
-          <p class="statisticsResults"></p>
-          <p> de todos los pokemones</p>
-        </section>
 
+        <li class="statisticsTypeResults"></li>
 
       </section>
     </section>
