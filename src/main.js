@@ -188,6 +188,9 @@ function nextPage(){
     //console.log(showStats);
     let statisticsResults = document.querySelector(".statisticsResults");
     statisticsResults.innerHTML = showStats;
+
+    
+
   }
 //PORCENTAJE DE POKEMONES POR RAREZA
 
