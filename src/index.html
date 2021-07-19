@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mukta:wght@300&display=swap"
     rel="stylesheet">
 
-
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
@@ -118,6 +118,7 @@
     </section>
 
     <!--------- Seccion de todos los pokemones>------>
+
     <section id="displayAllPokemons">
       <h1>Pokemons List</h1>
       <section class="displayCard" id="displayCard">
@@ -192,8 +193,13 @@
 
         <section class="chart" id="piechart_3d2"></section>
 
+        <section>
+          <div id="barchart_values" style="width:900px; height:300px;"></div>
+        </section>
       </section>
+
     </section>
+
     <!----------- Seccion de botones>-->
 
     <section class=" sectionButtonInteractionMain">
@@ -218,6 +224,7 @@
     </section>
 
   </main>
+
   <footer>
     <section class="footerListSocialMedia">
       <a href="https://es-la.facebook.com/PokemonGO/" alt="FacebookPokemonGo">
@@ -234,12 +241,12 @@
   </footer>
 
   <script src="main.js" type="module"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
+  <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+  <!--<script type="text/javascript">
     google.charts.load("current", {
       packages: ["corechart"]
     });
-
+ 
     //PRIMER GRAFICO
     google.charts.setOnLoadCallback(drawChart);
 
@@ -284,9 +291,10 @@
       chart.draw(data, options);
     }
 
+  </script> -->
+
+
   </script>
-
-
 </body>
 
 </html>
