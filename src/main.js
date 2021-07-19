@@ -1,11 +1,25 @@
 //DOM
 //Importando BASE DE DATOS
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
 //Importando todas las funciones
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 //Si hay peoblemas en el test llamar a cada funcion como abajo
 
+// HERRAMIENTA O MECANISMO??? FETCH: Usando API pokemon.json
+let allData= "";
+fetch('data/pokemon/pokemon.json',{
+})
+.then(pokemon=>{
+  return pokemon.json();
+})
+.then(data => {
+  allData = data.pokemon;
+ // console.log(allData);
+  return showData(allData);
+});
+
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
+
 let searchingPokemon;
 const buttonGeneralSearch = document.getElementById('buttonGeneralSearch');
 buttonGeneralSearch.addEventListener('click', () => {
@@ -29,12 +43,16 @@ buttonGeneralSearch.addEventListener('click', () => {
 
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
-const allData = data.pokemon;
+
+//const allData = data.pokemon; // Comentado para usar pokemon.json (FETCH)
+
 //Para guardar los items dentro de array
 let pokemonsCard = [];
 //let pokemonsCard2 = [];
 //Para ubicar items dentro de una section
 let card = document.querySelector('#card');
+
+
 
 //FUNCION para extraer información de base de datos
 function showData(itemSearch) {
@@ -44,7 +62,8 @@ function showData(itemSearch) {
   //pokemonsCard2 = [];
 
   // Extrayendo información de Num, Img, Name y Type independiente
-  let cardInformation = itemSearch.forEach(itemValue => { // forEach === map
+  let cardInformation = [];
+  itemSearch.forEach(itemValue => {
     //Creando nodos numero
     const number = document.createElement('p')
     number.textContent = itemValue.num;
@@ -62,6 +81,7 @@ function showData(itemSearch) {
     const type = document.createElement('p')
     type.innerHTML = eachType(itemValue.type);
     type.className = "pokemonType";
+    
     //Creando nodos about
     const about = document.createElement('p')
     about.textContent = `About: ${itemValue.about}`;
@@ -107,7 +127,7 @@ function showData(itemSearch) {
   return cardInformation
 }
 // Para mostrar los cards en la pantalla
-window.addEventListener('load', showData(allData)); //allData=data.pokemon
+//window.addEventListener('load', showData(allData));  //Comentado para usar pokemon.json (FETCH)
 
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
@@ -152,6 +172,7 @@ filterByType.addEventListener("change", () => {
   let typeFilterSelect = filterByType.value;
   let dataFilterType = dataFunctions.typeFilter(typeFilterSelect, allData);
   showData(dataFilterType)
+//  console.log(dataFilterType)
 });
 
 //FILTRAR POR RAREZA
@@ -176,6 +197,7 @@ statistics.addEventListener('click', () => {
   document.querySelector(".buttonReturnPageMain").style.display = "block";
   document.getElementById("displayAllPokemons").style.display = "none";
   document.getElementById("sectionGeneralStats").style.display = "block";
+  //document.getElementById("donut_single").style.display = "block";
 
   //PORCENTAJE DE POKEMONES POR TIPO
 
@@ -193,7 +215,7 @@ statistics.addEventListener('click', () => {
     const valueType = statsByType.value;
     //console.log(pruebaStatics);
     const showTypeStats = dataFunctions.getTypeStats(allData, valueType)
-    //console.log(showStats);
+    //console.log(showTypeStats);
     const statisticsTypeResults = document.querySelector(".statisticsTypeResults");
     statisticsTypeResults.innerHTML = " represent " + showTypeStats + " of all pokemons.";
   });
@@ -207,3 +229,6 @@ statistics.addEventListener('click', () => {
   document.getElementById('rarity2').innerHTML = "and only " + mythicStatistics + " of Pokemons are mythical?";
 
 });
+
+
+
