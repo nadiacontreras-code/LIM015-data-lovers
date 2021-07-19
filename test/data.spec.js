@@ -111,7 +111,7 @@ describe('getRarityStats ', () => {
   it('is a function', () => {
     expect(typeof getRarityStats).toBe('function');
   });
-  it('get percents by rarety', () => {
+  it('get percents by rarity', () => {
     const getStats = getRarityStats(data.pokemon, "legendary");
     //toBe, espera un valor expect
     expect(getStats).toBe('3.59%')

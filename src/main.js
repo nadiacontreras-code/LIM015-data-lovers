@@ -1,9 +1,23 @@
 //DOM
 //Importando BASE DE DATOS
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js'; //comentado para FETCH
 //Importando todas las funciones
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 //Si hay peoblemas en el test llamar a cada funcion como abajo
+
+
+// HERRAMIENTA O MECANISMO??? FETCH: Usando API pokemon.json
+let allData = "";
+fetch('data/pokemon/pokemon.json', {})
+  .then(pokemon => {
+    return pokemon.json();
+  })
+  .then(data => {
+    allData = data.pokemon;
+    // console.log(allData);
+    return showData(allData);
+  });
+
 
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 let searchingPokemon;
@@ -29,10 +43,11 @@ buttonGeneralSearch.addEventListener('click', () => {
 
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
-const allData = data.pokemon;
+//const allData = data.pokemon; //comentado para FETCH
+
 //Para guardar los items dentro de array
 let pokemonsCard = [];
-//let pokemonsCard2 = [];
+
 //Para ubicar items dentro de una section
 let card = document.querySelector('#card');
 
@@ -41,7 +56,6 @@ function showData(itemSearch) {
   // Para limpiar la pagina de las cards
   card.innerHTML = "";
   pokemonsCard = [];
-  //pokemonsCard2 = [];
 
   // Extrayendo información de Num, Img, Name y Type independiente
   let cardInformation = itemSearch.forEach(itemValue => { // forEach === map
@@ -93,7 +107,7 @@ function showData(itemSearch) {
 
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
-    section.append(number, pic, name, type); //*appendChild solo acepta uno
+    section.append(number, pic, name, type); //*appendChild solo acepta uno a la vez
     section2.append(about, size, resistant, weaknesses, rarity);
 
     //Incluimos los items dentro de array
@@ -107,7 +121,9 @@ function showData(itemSearch) {
   return cardInformation
 }
 // Para mostrar los cards en la pantalla
-window.addEventListener('load', showData(allData)); //allData=data.pokemon
+//Evento load 
+//window.addEventListener('load', showData(allData));//comentado para FETCH
+
 
 
 //MOSTRANDO POR ORDEN NUMERICO ASCENDENTE/DESCENDENTE
@@ -195,7 +211,7 @@ statistics.addEventListener('click', () => {
     const showTypeStats = dataFunctions.getTypeStats(allData, valueType)
     //console.log(showStats);
     const statisticsTypeResults = document.querySelector(".statisticsTypeResults");
-    statisticsTypeResults.innerHTML = " represent " + showTypeStats + " of all pokemons.";
+    statisticsTypeResults.innerHTML = " represents " + showTypeStats + " of all pokemons.";
   });
 
   //PORCENTAJE DE POKEMONES POR RAREZA
@@ -207,3 +223,12 @@ statistics.addEventListener('click', () => {
   document.getElementById('rarity2').innerHTML = "and only " + mythicStatistics + " of Pokemons are mythical?";
 
 });
+
+
+
+//NAV NEWS
+/*const news = document.querySelector(".news");
+news.addEventListener('click', () => {
+  location.href = "chart.html";
+});
+*/

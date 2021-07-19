@@ -15,6 +15,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mukta:wght@300&display=swap"
     rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -31,7 +33,7 @@
       <img class="icon" src="pic/pokeball.ico" alt="Home">
       <label>Home</label>
     </a>
-    <a href="#news">
+    <a href="#news" class="news">
       <img class="icon" src="pic/pikachu.ico" alt="News">
       <label>News</label>
     </a>
@@ -148,20 +150,21 @@
       <!--Mostrando %pokemones por rareza --->
       <section id="rarityStatistics">
         <h2>Did you know...</h2>
-        <h2 id="rarity1"></h2>
-        <h2 id="rarity2"></h2>
-        <h2>Legendary and mythical Pokémon are practically deities and their power is very far from their opponents. Not
+        <h3 id="rarity1"></h3>
+        <h3 id="rarity2"></h3>
+        <p>Legendary and mythical Pokémon are practically deities and their power is very far from their opponents. Not
           for nothing the only legendary pokemon that have been defeated were by other legendary or mythical pokemon,
-          that is why it is a feat that a normal pokemon can beat them.</h2>
+          that is why it is a feat that a normal pokemon can beat them.</p>
 
+        <section class="chart" id="piechart_3d"></section>
 
       </section>
-      <!--Mostrando %pokemones por tipo --->
+      <!--selec tipo --->
       <section id="statsType" class="stats">
         <h2>Also, did you know...</h2>
-        <h2 id="typeTop"></h2>
-        <h2 id="typeBottom"></h2>
-        <h2>If you want to know more about that, choose the box below.</h2>
+        <h3 id="typeTop"></h3>
+        <h3 id="typeBottom"></h3>
+        <p>If you want to know more about that, choose the box below.</p>
         <li>The Pokemons type :
           <select class="selectAdvancedSearchList" id="statsByType">
             <option value="" href="" selected disabled>Choose type:</option>
@@ -185,14 +188,15 @@
             <option value="steel" href="">Steel</option>
           </select>
         </li>
+        <p class="statisticsTypeResults"></p>
 
-        <li class="statisticsTypeResults"></li>
+        <section class="chart" id="piechart_3d2"></section>
 
       </section>
     </section>
     <!----------- Seccion de botones>-->
 
-    <section class="sectionButtonInteractionMain">
+    <section class=" sectionButtonInteractionMain">
       <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
       <button class="buttonInteraction" type="button" id="buttonNext">Next</button>
     </section>
@@ -230,6 +234,58 @@
   </footer>
 
   <script src="main.js" type="module"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {
+      packages: ["corechart"]
+    });
+
+    //PRIMER GRAFICO
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Rarity', '%'],
+        ['Legendary Pokemons ', 3.59],
+        ['Mythic Pokemons', 0.80],
+        ['Normal Pokemons', 95.61],
+      ]);
+
+      var options = {
+        title: 'Pokemons Rarity',
+        is3D: true,
+        backgroundColor: '#E4E4E4',
+
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+
+
+    //SEGUNDO GRAFICO
+    google.charts.setOnLoadCallback(drawChart2);
+
+    function drawChart2() {
+      var data = google.visualization.arrayToDataTable([
+        ['Type', '%'],
+        ['water ', 19.92],
+        ['others', 80.08],
+      ]);
+
+      var options = {
+        title: 'Pokemons Type water',
+        is3D: true,
+        backgroundColor: '#E4E4E4',
+
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
+      chart.draw(data, options);
+    }
+
+  </script>
+
 
 </body>
 
