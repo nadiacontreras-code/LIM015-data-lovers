@@ -8,17 +8,18 @@ import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 
 
 // HERRAMIENTA O MECANISMO??? FETCH: Usando API pokemon.json
-/*let allData = "";
+/*let allData = "" ;
 fetch('data/pokemon/pokemon.json', {})
   .then(pokemon => {
     return pokemon.json();
   })
   .then(data => {
     allData = data.pokemon;
-    // console.log(allData);
+   //console.log(allData);
     return showData(allData);
-  });*/
-
+    
+  });
+ */
 
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 
@@ -102,14 +103,15 @@ function showData(itemSearch) {
     const rarity = document.createElement('p')
     rarity.textContent = `Rarity: ${itemValue.rarity}`;
     rarity.className = "pokemonRarity";
-
+   
     //Creando nodo section (parent) para num, pic, name, type (append)
     const section = document.createElement('section');
     section.className = "pokemonCard";
     section.id = `${itemValue.num}`; //id
 
     const section2 = document.createElement('section');
-    section2.className = "pokemonCardBack"
+    section2.className = "pokemonCardBack";
+
 
     //section agrega  num, pic, name, type
     //append: para agregar mas de una característica
@@ -127,7 +129,7 @@ function showData(itemSearch) {
   return cardInformation
 }
 // Para mostrar los cards en la pantalla
-//Evento load 
+//Evento load
 window.addEventListener('load', showData(allData));//comentado para FETCH
 
 
@@ -205,6 +207,7 @@ statistics.addEventListener('click', () => {
 
   let waterStatistics;
   waterStatistics = dataFunctions.getTypeStats(allData, 'water');
+  //console.log(waterStatistics);
   document.getElementById('typeTop').innerHTML =
     "Most of the Pokemons are of the water type, which represents " + waterStatistics + " of the total Pokemons.";
   let dragonStatistics;
@@ -216,8 +219,9 @@ statistics.addEventListener('click', () => {
   statsByType.addEventListener("change", () => {
     const valueType = statsByType.value;
     //console.log(pruebaStatics);
-    const showTypeStats = dataFunctions.getTypeStats(allData, valueType)
+    let showTypeStats = dataFunctions.getTypeStats(allData, valueType)
     //console.log(showTypeStats);
+    
     const statisticsTypeResults = document.querySelector(".statisticsTypeResults");
     statisticsTypeResults.innerHTML = " represents " + showTypeStats + " of all pokemons.";
   });
@@ -234,16 +238,18 @@ statistics.addEventListener('click', () => {
 
 
 
+
 /* eslint-disable */
 
 google.charts.load('current', {
       packages: ['corechart']
     });
     google.charts.setOnLoadCallback(drawChart);
-   
+   //function prueba (){
     
       function drawChart() {
-        const data = google.visualization.arrayToDataTable([
+        let data = google.visualization.arrayToDataTable([
+         // let stats = 
           ['Rarity', '%'],
           ['Legendary Pokemons ', 3.59],
           ['Mythic Pokemons', 0.80],
@@ -260,9 +266,10 @@ google.charts.load('current', {
         let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
 
-     // }
+      }
     
-    }
+   // }
+    
       google.charts.setOnLoadCallback(drawChart2);
 
       function drawChart2() {
@@ -289,3 +296,4 @@ google.charts.load('current', {
              drawChart();
              drawChart2();
           });*/
+
