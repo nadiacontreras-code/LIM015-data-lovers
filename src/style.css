@@ -440,7 +440,7 @@ background-color: #8d6b48;
 }
 #sectionGeneralStats h1{
    color: #ffbe0b;
-   font-size: 30px;
+   font-size: 45px;
    text-align: center;
    padding-top: 25px;
    margin-bottom: 12px;
@@ -450,18 +450,18 @@ background-color: #8d6b48;
 
 #sectionGeneralStats h2{
    color: #ffbe0b;
-   font-size: 22px;
+   font-size: 30px;
    padding: 5px 0px 5px 0px;
    *line-height: 5px;
 }
 #sectionGeneralStats h3{
-   font-size: 18px;
+   font-size: 22px;
    padding: 5px 0px 5px 0px;
    *line-height: 5px;
    margin-left: 0px;
 }
 #sectionGeneralStats p {
-   font-size: 18px;
+   font-size: 22px;
    padding: 0px 0px 8px 0px;
    line-height: 30px;
 }
@@ -487,6 +487,10 @@ background-color: #8d6b48;
    float: right;
    list-style: none;
    margin-right: 20px;
+}
+
+.statisticsTypeResults{
+   color: #ffbe0b;
 }
 
 .chart{
