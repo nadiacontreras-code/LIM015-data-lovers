@@ -107,7 +107,7 @@ export const getTypeStats = (data, valor) => {
       individual
       if (individual === valor) {
         point += 1
-        porcentaje = ((point / data.length) * 100).toFixed(2) + "%";
+        porcentaje = ((point / data.length) * 100).toFixed(2);
       }
     })
   })
@@ -125,7 +125,7 @@ export const getRarityStats = (data, value) => {
 
     if (item.rarity === value) {
       point += 1
-      porcentaje = ((point / data.length) * 100).toFixed(2) + "%";
+      porcentaje = ((point / data.length) * 100).toFixed(2);
     }
   })
 

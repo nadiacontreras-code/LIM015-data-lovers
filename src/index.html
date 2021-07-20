@@ -43,7 +43,7 @@
       <img class="icon" src="pic/statistics.ico" alt="Statistics">
       <label>Statistics</label>
     </a>
-    <a href="#follow_us">
+    <a href="" id="followUs">
       <img class="icon" src="pic/like.ico" alt="Follow_us">
       <label>Follow us</label>
     </a>
@@ -146,7 +146,7 @@
     </section>
     <!------------ Seccion de estadísticas>--------->
     <section hidden id="sectionGeneralStats">
-      <h1>Fun facts</h1>
+      <h1>Fun Facts</h1>
 
       <!--Mostrando %pokemones por rareza --->
       <section id="rarityStatistics">
@@ -158,6 +158,9 @@
           that is why it is a feat that a normal pokemon can beat them.</p>
 
         <section class="chart" id="piechart_3d"></section>
+
+        <section class="chart" id="barchart_values"></section>
+
 
       </section>
       <!--selec tipo --->
@@ -193,9 +196,6 @@
 
         <section class="chart" id="piechart_3d2"></section>
 
-        <section>
-          <div id="barchart_values" style="width:900px; height:300px;"></div>
-        </section>
       </section>
 
     </section>
@@ -241,60 +241,7 @@
   </footer>
 
   <script src="main.js" type="module"></script>
-  <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
-  <!--<script type="text/javascript">
-    google.charts.load("current", {
-      packages: ["corechart"]
-    });
- 
-    //PRIMER GRAFICO
-    google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Rarity', '%'],
-        ['Legendary Pokemons ', 3.59],
-        ['Mythic Pokemons', 0.80],
-        ['Normal Pokemons', 95.61],
-      ]);
-
-      var options = {
-        title: 'Pokemons Rarity',
-        is3D: true,
-        backgroundColor: '#E4E4E4',
-
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-      chart.draw(data, options);
-    }
-
-
-    //SEGUNDO GRAFICO
-    google.charts.setOnLoadCallback(drawChart2);
-
-    function drawChart2() {
-      var data = google.visualization.arrayToDataTable([
-        ['Type', '%'],
-        ['water ', 19.92],
-        ['others', 80.08],
-      ]);
-
-      var options = {
-        title: 'Pokemons Type water',
-        is3D: true,
-        backgroundColor: '#E4E4E4',
-
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
-      chart.draw(data, options);
-    }
-
-  </script> -->
-
-
-  </script>
 </body>
 
 </html>
