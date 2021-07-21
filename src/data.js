@@ -1,6 +1,7 @@
-//FUNCIONALIDAD
+//FUNCIONES
 
-//BUSCAR POR NAME  O NUM
+//FUNCION BUSCAR POR NAME  O NUM
+
 export const search = (data, searchValue) => {
   const resultOfSearch = data.filter((pok) => {
 
@@ -11,66 +12,47 @@ export const search = (data, searchValue) => {
   });
  // console.log(resultOfSearch)
   return resultOfSearch;
-  
 };
 
 
-
-/*SACAR INFORMACION
-export const information = (dataPok) => {
-
-}
-*/
-
 //FUNCION ORDEN NUMERICO ASCENDENTE/DESCENDENTE
+
 export const numericalOrder = (selectOrder, dataNumber) => {
   let pokemonNumberOrder;
   if (selectOrder == "lowerNumber") {
     pokemonNumberOrder = dataNumber.sort((pok1, pok2) => {
-      return (pok1.num - pok2.num)
-    })
+      return (pok1.num - pok2.num);
+    });
   } else if (selectOrder == "topNumber") {
     pokemonNumberOrder = dataNumber.sort((pok1, pok2) => {
-      return (pok2.num - pok1.num)
-    })
+      return (pok2.num - pok1.num);
+    });
   }
   //console.log(pokemonNumberOrder);
   return pokemonNumberOrder;
-}
-
+};
 
 //FUNCION ORDEN ALFABETICO A-Z / Z-A
+
 export const alphabeticalOrder = (selectOrder, dataName) => {
 
   let pokemonNameOrder;
-  /*switch (selectOrder ) {
-    case "za":
-      dataName.sort((pok1, pok2) => {
-      return (pok1.name > pok2.name) ? -1 : 1
-    })
-   break;
-    case "az":
-      dataName.sort((pok1, pok2) => {
-      return (pok1.name < pok2.name) ? -1 : 1
-    })
-  break; }
-  return true }*/
   if (selectOrder == "az") {
     pokemonNameOrder = dataName.sort((pok1, pok2) => {
-      return (pok1.name < pok2.name) ? -1 : 1
-    })
+      return (pok1.name < pok2.name) ? -1 : 1;
+    });
   } else if (selectOrder == "za") {
     pokemonNameOrder = dataName.sort((pok1, pok2) => {
-      return (pok1.name > pok2.name) ? -1 : 1
-    })
+      return (pok1.name > pok2.name) ? -1 : 1;
+    });
   }
   //console.log(pokemonNameOrder);
   return pokemonNameOrder;
-}
-//console.log(pokemonOrder);
+};
 
 
 //FUNCION FILTRAR POR TIPO
+
 export const typeFilter = (selectorType, dataType) => {
   const pokemonTypeFilter = dataType.filter((pok) => {
     //indexOf()método devuelve posición de primera aparición valor especificado
@@ -82,9 +64,10 @@ export const typeFilter = (selectorType, dataType) => {
   });
   return pokemonTypeFilter;
   //console.log(pokemonTypeFilter);
-}
+};
 
 //FUNCION FILTRAR POR RAREZA
+
 export const rarityFilter = (selectorRarity, dataRarity) => {
   const pokemonRarityFilter = dataRarity.filter((pok) => {
     //indexOf()método devuelve posición de primera aparición valor especificado
@@ -96,9 +79,10 @@ export const rarityFilter = (selectorRarity, dataRarity) => {
   });
   return pokemonRarityFilter;
   //console.log(pokemonTypeFilter);
-}
+};
 
-// FUNCION PORCENTAJE X TIPO
+// FUNCION % por TIPO
+
 export const getTypeStats = (data, valor) => {
   let porcentaje = "";
   let point = 0;
@@ -111,82 +95,25 @@ export const getTypeStats = (data, valor) => {
         point += 1
         porcentaje = ((point / data.length) * 100).toFixed(2);
       }
-    })
-  })
+    });
+  });
   return porcentaje;
   //console.log(porcentaje);
-}
+};
 
-//FUNCION PORCENTAJE X RAREZA 
+//FUNCION % por RAREZA
+
 export const getRarityStats = (data, value) => {
-
   let porcentaje = "";
   let point = 0;
   data.forEach((item) => {
     item.rarity;
 
     if (item.rarity === value) {
-      point += 1
+      point += 1;
       porcentaje = ((point / data.length) * 100).toFixed(2);
     }
-  })
-
+  });
   return porcentaje;
   //console.log(porcentaje);
-}
-
-// INTENTANDO  STATS //
-
-export const getStatsAttack = (data, valor) =>{
-
-  let suma = [];
-  data.map((item) =>{
-  suma.push(item.stats);
-  return suma
-})
-//console.log(suma);
-    let attack = [];
-    suma.forEach((item2)=>{
-      attack.push(item2.baseAttack);
-      return attack;
-    })
-      //console.log(attack);
-        let final = attack[valor-1]
-        return final;
-}
-
-export const getStatsDefense = (data, valor) =>{
-
-  let suma = [];
-  data.map((item) =>{
-  suma.push(item.stats);
-  return suma
-})
-//console.log(suma);
-    let defense = [];
-    suma.forEach((item2)=>{
-      defense.push(item2.baseDefense);
-      return defense;
-    })
-      //console.log(defense);
-        let final = defense[valor-1]
-        return final;
-}
-export const getStatStamina = (data, valor) =>{
-
-  let suma = [];
-  data.map((item) =>{
-  suma.push(item.stats);
-  return suma
-})
-//console.log(suma);
-    let stamina = [];
-    suma.forEach((item2)=>{
-      stamina.push(item2.baseStamina);
-      return stamina;
-    })
-      //console.log(defense);
-        let final = stamina[valor-1]
-        return final;
-}
-
+};
