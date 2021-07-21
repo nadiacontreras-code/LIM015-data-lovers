@@ -271,10 +271,7 @@ let pruebaStatsDefense =dataFunctions.getStatsDefense(allData, 5 );
 //console.log(pruebaStatsDefense);
 let pruebaStatStamina =dataFunctions.getStatStamina(allData, 5 );
 //console.log(pruebaStatStamina);
-let pruebaStatMaxCp =dataFunctions.getStatMaxCp(allData, 5 );
-///console.log(pruebaStatMaxCp);
-let pruebaStatMaxHp =dataFunctions.getStatMaxHp(allData, 5 );
-//console.log(pruebaStatMaxHp);
+
 /*
 async function obtInfo() {
 
@@ -374,81 +371,49 @@ async function drawChart2() {
   let chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
   chart.draw(data, options);
 }
-google.charts.load('current', {'packages':['bar']});
-google.charts.setOnLoadCallback(drawChart3);
-//------------- INTENTO DE MOSTRAR GRAFICO -------------//
-function drawChart3() {
-  var data = google.visualization.arrayToDataTable([
-            
-['Pokemon', 'Stats'],
-    ['base-attack', pruebaStatsAttack ],
-    ['base-defense', pruebaStatsDefense],
-    ['base-stamina', pruebaStatStamina],
-    ['max-cp', pruebaStatMaxCp],
-    ['max-hp', pruebaStatMaxHp],
-  ]);
 
-  var options = {
-    chart: {
-      title: 'Company Performance',
-      legend:{ position: "labeled"},
-      bar: {groupWidth: "95%"},
-        legend: { position: "top" },
-      
-    }
-  };
+//------------- INTENTO DE MOSTRAR GRAFICO -------------//
+
   //PROBANDO GRAFICOS //
 
-  var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
-  chart.draw(data, google.charts.Bar.convertOptions(options));
-}
-google.charts.load('current',{packages:['corechart']});
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawRightY);
 
-google.charts.setOnLoadCallback(drawChart4);
-function drawChart4() {
+function drawRightY() {
+      var data = google.visualization.arrayToDataTable([
+                ['Pokemon', 'Stats'],
+                ['base-attack', Number(pruebaStatsAttack) ],
+                ['base-defense', Number(pruebaStatsDefense)],
+                ['base-stamina', Number(pruebaStatStamina)],
+   
+      ]);
 
-  var data = google.visualization.arrayToDataTable([
-    ['Contry', 'Mhl'],
-    ['Italy', 55],
-    ['France', 49],
-    ['Spain', 44],
-    ['USA', 24],
-    ['Argentina', 15]
-  ]);
-  
-  var options = {
-    title: 'World Wide Wine Production',
-    legend:{ position: "labeled"},
-  };
-  
-  var chart = new google.visualization.BarChart(document.getElementById('myChart'));
-  chart.draw(data, options);
-  
-  }
-
-  var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
+      var materialOptions = {
+        chart: {
+          title: 'Pokemon Stats',
+          subtitle: 'Based on Pokemon Go',
+          high: 900
+        },
+        hAxis: {
+          title: 'Pokemon Stats',
+          minValue: 200,
+        },
+        vAxis: {
+          title: 'Stat'
+        },
+        bars: 'vertical',
+        axes: {
+          y: {
+            0: {side: 'top'}
+          }
+        }
+      };
+      var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+      materialChart.draw(data, materialOptions);
     }
-  }
 
-});
+ 
 //AQUI EMPIEZA
 /*
 google.charts.load('current', {

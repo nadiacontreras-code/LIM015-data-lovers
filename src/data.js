@@ -144,7 +144,7 @@ export const getStatsAttack = (data, valor) =>{
   suma.push(item.stats);
   return suma
 })
-console.log(suma);
+//console.log(suma);
     let attack = [];
     suma.forEach((item2)=>{
       attack.push(item2.baseAttack);
@@ -189,37 +189,4 @@ export const getStatStamina = (data, valor) =>{
         let final = stamina[valor-1]
         return final;
 }
-export const getStatMaxCp = (data, valor) =>{
 
-  let suma = [];
-  data.map((item) =>{
-  suma.push(item.stats);
-  return suma
-})
-//console.log(suma);
-    let maxCp = [];
-    suma.forEach((item2)=>{
-      maxCp.push(item2.maxCp);
-      return maxCp;
-    })
-      //console.log(defense);
-        let final = maxCp[valor-1]
-        return final;
-}
-export const getStatMaxHp = (data, valor) =>{
-
-  let suma = [];
-  data.map((item) =>{
-  suma.push(item.stats);
-  return suma
-})
-//console.log(suma);
-    let maxHp = [];
-    suma.forEach((item2)=>{
-      maxHp.push(item2.maxHp);
-      return maxHp;
-    })
-      //console.log(defense);
-        let final = maxHp[valor-1]
-        return final;
-}
