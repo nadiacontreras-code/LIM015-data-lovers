@@ -102,7 +102,7 @@ describe('getTypeStats', () => {
   it('get percents by type', () => {
     const getStats = getTypeStats(data.pokemon, "water");
     //toBe, espera un valor expect
-    expect(getStats).toBe('19.92%')
+    expect(getStats).toBe('19.92')
 
   })
 });
@@ -114,6 +114,6 @@ describe('getRarityStats ', () => {
   it('get percents by rarity', () => {
     const getStats = getRarityStats(data.pokemon, "legendary");
     //toBe, espera un valor expect
-    expect(getStats).toBe('3.59%')
+    expect(getStats).toBe('3.59')
   })
 });
