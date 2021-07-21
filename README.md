@@ -150,7 +150,7 @@ Como mínimo, tu implementación debe:
 
 ## 7. Check List
 
-* [ ] Usa VanillaJS.
+* [x] Usa VanillaJS.
 * [ ] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
 * [ ] Pasa tests (`npm test`)

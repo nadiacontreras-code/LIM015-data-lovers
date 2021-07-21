@@ -1,6 +1,6 @@
 //DOM
 //Importando BASE DE DATOS
-//import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
+import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
 //import data from './data/pokemon/pokemon.js'; //comentado para FETCH
 //Importando todas las funciones
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
@@ -8,7 +8,7 @@ import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 
 
 // HERRAMIENTA O MECANISMO??? FETCH: Usando API pokemon.json
-let allData = "";
+/*let allData = "";
 fetch('data/pokemon/pokemon.json', {})
   .then(pokemon => {
     return pokemon.json();
@@ -18,7 +18,7 @@ fetch('data/pokemon/pokemon.json', {})
     //console.log(allData);
     return showData(allData);
   });
-
+*/
 
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 
@@ -47,8 +47,8 @@ buttonGeneralSearch.addEventListener('click', () => {
 
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
-//const allData = data.pokemon; //comentado para FETCH
-
+const allData = data.pokemon; //comentado para FETCH
+//console.log(allData);
 //Para guardar los items dentro de array
 let pokemonsCard = [];
 
@@ -127,12 +127,14 @@ function showData(itemSearch) {
   //operador spread (...), genera una LISTA de valores a partir de un array
   card.append(...pokemonsCard)
 
-  return cardInformation
+  return cardInformation;
+  
 }
-// Para mostrar los cards en la pantalla
-//Evento load 
-//window.addEventListener('load', showData(allData)); //comentado para FETCH
 
+// Para mostrar los cards en la pantalla
+//Evento load
+window.addEventListener('load', showData(allData)); //comentado para FETCH
+//console.log(pokemonsCard);
 
 
 //FOLLOW US
@@ -246,7 +248,33 @@ statistics.addEventListener('click', () => {
   document.getElementById('rarity2').innerHTML = "and only " + mythicStatistics + "% of Pokemons are mythical?";
 
 });
+/*function showData2 (item, valor){
+  let prueba5=[];
+let pokemonDos=[];
+item.map((item2)=>{
+  pokemonDos.push(item2.num);
+  return pokemonDos
+  
+})
+console.log(pokemonDos);
+ prueba5 = parseInt(pokemonDos[valor-1]);
+return prueba5;
+}
+//console.log(prueba5);
+console.log(showData2(allData,6));*/
 
+let pruebaStatsAttack =dataFunctions.getStatsAttack(allData, 5 );
+//console.log(showData2(pruebaStats));
+//console.log(pruebaStatsAttack);
+
+let pruebaStatsDefense =dataFunctions.getStatsDefense(allData, 5 );
+//console.log(pruebaStatsDefense);
+let pruebaStatStamina =dataFunctions.getStatStamina(allData, 5 );
+//console.log(pruebaStatStamina);
+let pruebaStatMaxCp =dataFunctions.getStatMaxCp(allData, 5 );
+///console.log(pruebaStatMaxCp);
+let pruebaStatMaxHp =dataFunctions.getStatMaxHp(allData, 5 );
+//console.log(pruebaStatMaxHp);
 /*
 async function obtInfo() {
 
@@ -346,11 +374,81 @@ async function drawChart2() {
   let chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
   chart.draw(data, options);
 }
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart3);
+//------------- INTENTO DE MOSTRAR GRAFICO -------------//
+function drawChart3() {
+  var data = google.visualization.arrayToDataTable([
+            
+['Pokemon', 'Stats'],
+    ['base-attack', pruebaStatsAttack ],
+    ['base-defense', pruebaStatsDefense],
+    ['base-stamina', pruebaStatStamina],
+    ['max-cp', pruebaStatMaxCp],
+    ['max-hp', pruebaStatMaxHp],
+  ]);
 
+  var options = {
+    chart: {
+      title: 'Company Performance',
+      legend:{ position: "labeled"},
+      bar: {groupWidth: "95%"},
+        legend: { position: "top" },
+      
+    }
+  };
+  //PROBANDO GRAFICOS //
 
+  var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+google.charts.load('current',{packages:['corechart']});
 
+google.charts.setOnLoadCallback(drawChart4);
+function drawChart4() {
 
+  var data = google.visualization.arrayToDataTable([
+    ['Contry', 'Mhl'],
+    ['Italy', 55],
+    ['France', 49],
+    ['Spain', 44],
+    ['USA', 24],
+    ['Argentina', 15]
+  ]);
+  
+  var options = {
+    title: 'World Wide Wine Production',
+    legend:{ position: "labeled"},
+  };
+  
+  var chart = new google.visualization.BarChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+  
+  }
+
+  var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+
+});
 //AQUI EMPIEZA
 /*
 google.charts.load('current', {

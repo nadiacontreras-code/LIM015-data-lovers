@@ -9,9 +9,11 @@ export const search = (data, searchValue) => {
     }
     return false;
   });
+ // console.log(resultOfSearch)
   return resultOfSearch;
-  //console.log(prueba)
+  
 };
+
 
 
 /*SACAR INFORMACION
@@ -131,4 +133,93 @@ export const getRarityStats = (data, value) => {
 
   return porcentaje;
   //console.log(porcentaje);
+}
+
+// INTENTANDO  STATS //
+
+export const getStatsAttack = (data, valor) =>{
+
+  let suma = [];
+  data.map((item) =>{
+  suma.push(item.stats);
+  return suma
+})
+console.log(suma);
+    let attack = [];
+    suma.forEach((item2)=>{
+      attack.push(item2.baseAttack);
+      return attack;
+    })
+      //console.log(attack);
+        let final = attack[valor-1]
+        return final;
+}
+
+export const getStatsDefense = (data, valor) =>{
+
+  let suma = [];
+  data.map((item) =>{
+  suma.push(item.stats);
+  return suma
+})
+//console.log(suma);
+    let defense = [];
+    suma.forEach((item2)=>{
+      defense.push(item2.baseDefense);
+      return defense;
+    })
+      //console.log(defense);
+        let final = defense[valor-1]
+        return final;
+}
+export const getStatStamina = (data, valor) =>{
+
+  let suma = [];
+  data.map((item) =>{
+  suma.push(item.stats);
+  return suma
+})
+//console.log(suma);
+    let stamina = [];
+    suma.forEach((item2)=>{
+      stamina.push(item2.baseStamina);
+      return stamina;
+    })
+      //console.log(defense);
+        let final = stamina[valor-1]
+        return final;
+}
+export const getStatMaxCp = (data, valor) =>{
+
+  let suma = [];
+  data.map((item) =>{
+  suma.push(item.stats);
+  return suma
+})
+//console.log(suma);
+    let maxCp = [];
+    suma.forEach((item2)=>{
+      maxCp.push(item2.maxCp);
+      return maxCp;
+    })
+      //console.log(defense);
+        let final = maxCp[valor-1]
+        return final;
+}
+export const getStatMaxHp = (data, valor) =>{
+
+  let suma = [];
+  data.map((item) =>{
+  suma.push(item.stats);
+  return suma
+})
+//console.log(suma);
+    let maxHp = [];
+    suma.forEach((item2)=>{
+      maxHp.push(item2.maxHp);
+      return maxHp;
+    })
+      //console.log(defense);
+        let final = maxHp[valor-1]
+        return final;
 }
