@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <div id="root"></div>
+
   <header>
     <section>
       <img id="WelcomeToPage" src="pic/welcome.png" alt="WelcomeToPage" />
@@ -37,33 +37,30 @@
       <img class="icon" src="pic/pikachu.ico" alt="News">
       <label>News</label>
     </a>
-
     <a href="#statistics" class="statisticsPage">
-
       <img class="icon" src="pic/statistics.ico" alt="Statistics">
       <label>Statistics</label>
     </a>
-    <a href="" id="followUs">
+    <a href="#followUs">
       <img class="icon" src="pic/like.ico" alt="Follow_us">
       <label>Follow us</label>
     </a>
   </nav>
 
   <main>
-
+    <!-- Seccion Busqueda gneral x name o num-->
     <section class="sectionGeneralSearch">
-
       <h1 class="textSearch">Search your Pokemon by number or name</h1>
       <section>
         <input class="inputGeneralSearch" id="inputGeneralSearch" type="search"
           placeholder="Example: Write 025 or Pikachu">
-        <!--autocomplete puede ser on/off, probar -->
         <button type="button" id="buttonGeneralSearch">
           <img class="iconGeneralSearch" src="pic/searchLupa.ico">
         </button>
       </section>
     </section>
-    <!-- Seccion de elección de filtrado>-->
+
+    <!-- Seccion Busqueda avanzada-->
     <section class="generalAdvancedSearch">
       <h1>Advanced Search</h1>
       <ul class="generalAdvancedSearchList">
@@ -118,7 +115,6 @@
     </section>
 
     <!--------- Seccion de todos los pokemones>------>
-
     <section id="displayAllPokemons">
       <h1>Pokemons List</h1>
       <section class="displayCard" id="displayCard">
@@ -139,11 +135,13 @@
               <p class = "pokemonSize"> </p>
               <p class = "pokemonResistant"> </p>
               <p class = "pokemonWeaknesses"> </p>
+              <p class = "pokemonRarity"> </p>
             </section>-->
           </section>
         </section>
       </section>
     </section>
+
     <!------------ Seccion de estadísticas>--------->
     <section hidden id="sectionGeneralStats">
       <h1>Fun Facts</h1>
@@ -156,14 +154,11 @@
         <p>Legendary and mythical Pokémon are practically deities and their power is very far from their opponents. Not
           for nothing the only legendary pokemon that have been defeated were by other legendary or mythical pokemon,
           that is why it is a feat that a normal pokemon can beat them.</p>
-
+        <!--Grafico Google charts --->
         <section class="chart" id="piechart_3d"></section>
-
-        <section class="chart" id="barchart_values"></section>
-
-
       </section>
-      <!--selec tipo --->
+
+      <!--Mostrando %pokemones por tipo --->
       <section id="statsType" class="stats">
         <h2>Also, did you know...</h2>
         <h3 id="typeTop"></h3>
@@ -193,34 +188,20 @@
           </select>
         </li>
         <p class="statisticsTypeResults"></p>
-
+        <!--Grafico Google charts --->
         <section class="chart" id="piechart_3d2"></section>
-
       </section>
-
     </section>
 
-    <!----------- Seccion de botones>-->
-
-    <section class=" sectionButtonInteractionMain">
+    <!------Seccion de botones------>
+    <!--<section class=" sectionButtonInteractionMain">
       <button class="buttonInteraction" type="button" id="buttonBack">Back </button>
       <button class="buttonInteraction" type="button" id="buttonNext">Next</button>
-    </section>
+    </section>-->
 
     <section class="buttonReturnPageMain" id="buttonReturnPageMain1">
-      <button class="buttonReturnPage" type="button" id="buttonReturnPage"><a href="index.html">Go Home</a></button>
-    </section>
-
-    <!--Mostrando pokemon buscado en otra ventana-->
-    <section hidden id="sectionShowResult">
-      <section>
-        <h1>Pokemon Chose</h1>
-        <!-- <h3 id="equis">x</h3> -->
-        <section id="pokemonChose">
-        </section>
-
-      </section>
-      <button class="buttonReturnPage" type="button" id="buttonReturnPage2"><a href="index.html">Home</a></button>
+      <button class="buttonReturnPage" type="button" id="buttonReturnPage">
+        <a href="index.html">Go Home</a></button>
     </section>
 
   </main>
@@ -236,6 +217,7 @@
       <a href="https://twitter.com/pokemongoapp?lang=es" alt="TwitterPokemonGo">
         <i class="bx bxl-twitter"></i>
       </a>
+
       <p>©2021 Developed by Nadia Contreras and Maritza Rodriguez</p>
     </section>
   </footer>

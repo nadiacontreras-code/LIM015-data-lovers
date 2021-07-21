@@ -1,12 +1,12 @@
-/*********************************BODY******************/
+/*************BODY**************/
 * {
    margin: 0;
    padding: 0;
    font-family: 'Lato', sans-serif;
-   box-sizing: border-box; /*NUEVO*/
+   box-sizing: border-box;
 }
 
-/*-- HEADER */
+/*HEADER */
 header {
    background-color: #ffbe0b;
    height: 50px;
@@ -174,7 +174,7 @@ main {
    /*separa letras*/
 }
 
-/*****CARDS INTENTO 5 ******/
+/*****CARDS ******/
 
 .cardSection {
    padding: 0px;
@@ -191,7 +191,6 @@ main {
    transform-style: preserve-3d;
  /*-moz-transform: perspective(10000px);
  transform: perspective(10000px);*/
-
 }
 .pokemonCard, .pokemonCardBack{
    width: 230px;
@@ -219,7 +218,8 @@ main {
    margin-top: 25px;
    margin-left: -255px;
    padding: 15px;
-   transform: rotateY(-180deg);/*back se va atrás*/
+   transform: rotateY(-180deg);
+   /*back se va atrás*/
 }
 .pokemonCardBack:hover{
    transform:scale(1.3);
@@ -472,6 +472,7 @@ background-color: #8d6b48;
    margin: 0px 40px 0px 40px;
    *font-weight: lighter;
 }
+
 .stats{
    text-align: justify;
    *padding-top: 25px;
@@ -479,16 +480,11 @@ background-color: #8d6b48;
    margin: 0px 40px 0px 40px;
    *font-weight: lighter;
 }
-/*
-#statsType{
-   padding: 0px;
-}*/
 .statsType li{
    float: right;
    list-style: none;
    margin-right: 20px;
 }
-
 .statisticsTypeResults{
    color: #ffbe0b;
 }
@@ -499,7 +495,7 @@ background-color: #8d6b48;
    align-items: center;
 }
 
-/**********************BUTTON INTERACTION********************/
+/********BUTTON INTERACTION***********/
 .sectionButtonInteractionMain {
    display: flex;
    align-items: center;
@@ -508,7 +504,6 @@ background-color: #8d6b48;
    padding: 0px;
    margin: 0px;
 }
-
 .buttonInteraction {
    background-color: #da0808da;
    border-radius: 12px;
@@ -522,12 +517,11 @@ background-color: #8d6b48;
    cursor: pointer;
    margin: 50px;
 }
-
 .buttonInteraction:hover {
    background: #ffbe0b;
    color: black;
 }
-/**********************BUTTON RETURN PAGE********************/
+/*****BUTTON RETURN PAGE*****/
 .buttonReturnPageMain {
    display: flex;
    align-items: center;
@@ -536,7 +530,6 @@ background-color: #8d6b48;
    padding: 0px;
    cursor: pointer;
 }
-
 .buttonReturnPage {
    background-color: #da0808da;
    border-radius: 12px;
@@ -548,16 +541,11 @@ background-color: #8d6b48;
    padding: 10px;
    margin-right: 0px;
    cursor: pointer;
-   /*display: flex;
-   /* align-items: center;
-   flex-direction: row;
-   float: right;*/
 }
 .buttonReturnPage a {
    color: white;
    text-decoration: none;
 }
-
 .buttonReturnPage:hover{
    background: #ffbe0b;
 }
@@ -566,18 +554,18 @@ color: black;
 }
 
 
-/**********************FOOTER********************/
+/********* FOOTER *********/
 footer {
    background-color: #da0808da;
    display: flex;
    padding-top: 5px;
    padding-bottom: 5px;
    height: 40px;
-   /*justify-content: center; /*alineamiento horizontal*/
+   *justify-content: center;
+   /*alineamiento horizontal*/
    color: white;
    font-size: 12px;
 }
-
 .footerListSocialMedia i {
    padding: 3px 10px;
    font-size: 25px;
@@ -586,11 +574,7 @@ footer {
 }
 
 .footerListSocialMedia p {
-   /*list-style: none;*/
-   /* float: right;*/
+   *list-style: none;
+   *float: right;
    text-align: center;
-
-   /* padding: 5px 0px 0px 450px;*/
-   /***con padding  5px 0px 0px 400px, genera espacioen blanco*/
-   /*display: flex;*/
 }

@@ -21,13 +21,13 @@ Este usuario busca información general sobre pokemones, basicamente para conoce
 #### 3.1.1. Criterios de aceptación:
 
 -  Pantalla de bienvenida
--  Buscador por número y nombre de pokémon (muestra una tarjeta con imagen y descripción breve del pokemon buscado ).
+-  Buscador por número y nombre de pokémon (muestra una tarjeta con imagen y descripción breve del pokemon buscado).
 -  Se muestra imágenes de pokemones por numero de orden.
 -  Botón "go home" que lleva a pantalla principal.
 
 ### 3.2. Historia de Usuario DOS:
 -  Como: Jugador del juego PokemonGo.
--  Quiero: Clasificar los pokemones (por tipo, orden alfabético, numérico y por rareza)
+-  Quiero: Clasificar los pokemones (por tipo, orden alfabético, numérico y por rareza).
 -  Para: Armar una mejor estrategia de batalla y formar equipos.
 
 #### 3.2.1. Criterios de aceptación:
@@ -55,7 +55,7 @@ Creación de nuestros prototipos:
    ![Prototipo papel](/src/pic/PrototipoPapel2.jpg)
 
 2. Diseño final en figma
-   ![Prototipo lineal Figma](/src/pic/Prototipofinal.png)
+   ![Prototipo lineal Figma](/src/pic/prototipofinal.png)
 
 ## 5. Testeos de usabilidad: (describir la experiencia de el uso de la pagina en DEMO de tres compañeras)
 
@@ -87,7 +87,7 @@ Creación de nuestros prototipos:
 -  [x] Diseñar la aplicación pensando y entendiendo al usuario.
 -  [x] Crear prototipos para obtener feedback e iterar.
 -  [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
--  [x]Planear y ejecutar tests de usabilidad.
+-  [x] Planear y ejecutar tests de usabilidad.
 
 ### HTML Y CSS
 

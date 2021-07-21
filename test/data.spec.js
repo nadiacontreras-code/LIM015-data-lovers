@@ -1,5 +1,4 @@
 import {
-  //example,
   search,
   numericalOrder,
   alphabeticalOrder,
@@ -8,18 +7,12 @@ import {
   getTypeStats,
   getRarityStats
 } from '../src/data.js';
+
 //Importando BASE DE DATOS
 import data from '../src/data/pokemon/pokemon.js';
-/*
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-*/
+
+
+//FUNCION BUSCAR POR NAME  O NUM
 describe('search', () => {
   it('is a function', () => {
     expect(typeof search).toBe('function');
@@ -33,6 +26,9 @@ describe('search', () => {
     expect(searchTest[0].name).toBe("pikachu");
   });
 });
+
+
+//FUNCION ORDEN NUMERICO ASCENDENTE/DESCENDENTE
 describe('numericalOrder', () => {
   it('is a function', () => {
     expect(typeof numericalOrder).toBe('function');
@@ -50,6 +46,9 @@ describe('numericalOrder', () => {
     expect(numericalTest[0].num).toBe('251');
   });
 });
+
+
+//FUNCION ORDEN ALFABETICO A-Z / Z-A
 describe('alphabeticalOrder', () => {
   it('is a function', () => {
     expect(typeof alphabeticalOrder).toBe('function');
@@ -67,6 +66,9 @@ describe('alphabeticalOrder', () => {
     expect(alphabeticalTest[0].name).toBe('zubat');
   });
 });
+
+
+//FUNCION FILTRAR POR TIPO
 describe('typeFilter', () => {
   it('is a function', () => {
     expect(typeof typeFilter).toBe('function');
@@ -78,9 +80,11 @@ describe('typeFilter', () => {
     //[] numero de cards-1 de un tipo
     //Mét. .not.toHaveLength(number), verifica que NO tenga tamaño de Array expect
     expect(filterTest[17].type).not.toHaveLength(3);
-  })
+  });
 });
 
+
+//FUNCION FILTRAR POR RAREZA
 describe('rarityFilter', () => {
   it('is a function', () => {
     expect(typeof rarityFilter).toBe('function');
@@ -92,9 +96,11 @@ describe('rarityFilter', () => {
     //[] numero de cards-1 de una rareza
     //Método .toHaveLength(number), verifica longitud de String expect
     expect(filterTest[8].rarity).toHaveLength(9);
-
-  })
+  });
 });
+
+
+// FUNCION % por TIPO
 describe('getTypeStats', () => {
   it('is a function', () => {
     expect(typeof getTypeStats).toBe('function');
@@ -102,11 +108,12 @@ describe('getTypeStats', () => {
   it('get percents by type', () => {
     const getStats = getTypeStats(data.pokemon, "water");
     //toBe, espera un valor expect
-    expect(getStats).toBe('19.92')
-
-  })
+    expect(getStats).toBe('19.92');
+  });
 });
 
+
+//FUNCION PORCENTAJE X RAREZA
 describe('getRarityStats ', () => {
   it('is a function', () => {
     expect(typeof getRarityStats).toBe('function');
@@ -114,6 +121,6 @@ describe('getRarityStats ', () => {
   it('get percents by rarity', () => {
     const getStats = getRarityStats(data.pokemon, "legendary");
     //toBe, espera un valor expect
-    expect(getStats).toBe('3.59')
-  })
+    expect(getStats).toBe('3.59');
+  });
 });
