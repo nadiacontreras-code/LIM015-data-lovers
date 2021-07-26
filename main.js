@@ -1,23 +1,13 @@
 //DOM
 //Importando BASE DE DATOS
-<<<<<<< HEAD
-import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
-//import data from './data/pokemon/pokemon.js'; //comentado para FETCH
-=======
 //import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
 
->>>>>>> upstream/main
 //Importando todas las funciones
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 
 
-<<<<<<< HEAD
-// HERRAMIENTA O MECANISMO??? FETCH: Usando API pokemon.json
-/*let allData = "";
-=======
 //HERRAMIENTA FETCH: Usando API pokemon.json
 let allData = "";
->>>>>>> upstream/main
 fetch('data/pokemon/pokemon.json', {})
   .then(pokemon => {
     return pokemon.json();
@@ -27,7 +17,7 @@ fetch('data/pokemon/pokemon.json', {})
     //console.log(allData);
     return showData(allData);
   });
-*/
+
 
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 
@@ -51,7 +41,7 @@ buttonGeneralSearch.addEventListener('click', () => {
 });
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
-const allData = data.pokemon; //comentado para FETCH
+//const allData = data.pokemon; //comentado para FETCH
 //console.log(allData);
 //Para guardar los items dentro de array
 let pokemonsCard = [];
@@ -106,24 +96,15 @@ function showData(itemSearch) {
     const rarity = document.createElement('p');
     rarity.textContent = `Rarity: ${itemValue.rarity}`;
     rarity.className = "pokemonRarity";
-<<<<<<< HEAD
-   
-    //Creando nodo section (parent) para num, pic, name, type (append)
-=======
 
     //Creando nodo sections (parent) para num, pic, name, type... (append)
     //Front cards
->>>>>>> upstream/main
     const section = document.createElement('section');
     section.className = "pokemonCard";
     section.id = `${itemValue.num}`; //id
     //Back cards
     const section2 = document.createElement('section');
     section2.className = "pokemonCardBack";
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/main
 
     //section agrega  num, pic, name, type... etc
     //append: para agregar mas de una característica
@@ -139,20 +120,10 @@ function showData(itemSearch) {
   card.append(...pokemonsCard);
 
   return cardInformation;
-<<<<<<< HEAD
-  
-}
-=======
 }
 // Para mostrar los cards en la pantalla
 //Evento load
 //window.addEventListener('load', showData(allData)); //comentado para FETCH
->>>>>>> upstream/main
-
-// Para mostrar los cards en la pantalla
-//Evento load
-window.addEventListener('load', showData(allData)); //comentado para FETCH
-//console.log(pokemonsCard);
 
 
 //ORDEN NUMERICO ASCENDENTE/DESCENDENTE
@@ -218,14 +189,7 @@ statistics.addEventListener('click', () => {
   document.getElementById("sectionGeneralStats").style.display = "block";
 
   //PORCENTAJE DE POKEMONES POR TIPO
-<<<<<<< HEAD
-
-  let waterStatistics;
-  waterStatistics = dataFunctions.getTypeStats(allData, 'water');
-  //console.log(waterStatistics);
-=======
   const waterStatistics = dataFunctions.getTypeStats(allData, 'water');
->>>>>>> upstream/main
   document.getElementById('typeTop').innerHTML =
     "Most of the Pokemons are of the water type, which represents " +
     waterStatistics + "% of all Pokemons.";
@@ -240,12 +204,6 @@ statistics.addEventListener('click', () => {
   statsByType.addEventListener("change", () => {
     const valueType = statsByType.value;
     const showTypeStats = dataFunctions.getTypeStats(allData, valueType);
-<<<<<<< HEAD
-
-    //console.log(showTypeStats);
-    
-=======
->>>>>>> upstream/main
     const statisticsTypeResults = document.querySelector(".statisticsTypeResults");
     statisticsTypeResults.innerHTML = " represents " + showTypeStats + "% of all pokemons.";
   });
@@ -260,29 +218,6 @@ statistics.addEventListener('click', () => {
   document.getElementById('rarity2').innerHTML = "and only " + mythicStatistics +
     "% of Pokemons are mythical?";
 });
-/*function showData2 (item, valor){
-  let prueba5=[];
-let pokemonDos=[];
-item.map((item2)=>{
-  pokemonDos.push(item2.num);
-  return pokemonDos
-  
-})
-console.log(pokemonDos);
- prueba5 = parseInt(pokemonDos[valor-1]);
-return prueba5;
-}
-//console.log(prueba5);
-console.log(showData2(allData,6));*/
-
-let pruebaStatsAttack =dataFunctions.getStatsAttack(allData, 5 );
-//console.log(showData2(pruebaStats));
-//console.log(pruebaStatsAttack);
-
-let pruebaStatsDefense =dataFunctions.getStatsDefense(allData, 5 );
-//console.log(pruebaStatsDefense);
-let pruebaStatStamina =dataFunctions.getStatStamina(allData, 5 );
-//console.log(pruebaStatStamina);
 
 
 //*****Deshabilitando slint, DESDE AQUI
@@ -314,7 +249,7 @@ async function drawChart() {
   const json = await obtInfo();
   //console.log(json)
   const data = google.visualization.arrayToDataTable(json);
-  console.log(data);
+  //console.log(data);
   const options = {
     title: 'Pokemons Rarity',
     is3D: true,
@@ -345,7 +280,7 @@ async function drawChart2() {
   const json = await obtInfo();
   //console.log(json)
   const data = google.visualization.arrayToDataTable(json);
-  console.log(data);
+  //console.log(data);
   const options = {
     title: 'Pokemons Type water',
     is3D: true,
@@ -356,100 +291,5 @@ async function drawChart2() {
   chart.draw(data, options);
 };
 
-<<<<<<< HEAD
-//------------- INTENTO DE MOSTRAR GRAFICO -------------//
-
-  //PROBANDO GRAFICOS //
-
-
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawRightY);
-
-function drawRightY() {
-      var data = google.visualization.arrayToDataTable([
-                ['Pokemon', 'Stats'],
-                ['base-attack', Number(pruebaStatsAttack) ],
-                ['base-defense', Number(pruebaStatsDefense)],
-                ['base-stamina', Number(pruebaStatStamina)],
-   
-      ]);
-
-      var materialOptions = {
-        chart: {
-          title: 'Pokemon Stats',
-          subtitle: 'Based on Pokemon Go',
-          high: 900
-        },
-        hAxis: {
-          title: 'Pokemon Stats',
-          minValue: 200,
-        },
-        vAxis: {
-          title: 'Stat'
-        },
-        bars: 'vertical',
-        axes: {
-          y: {
-            0: {side: 'top'}
-          }
-        }
-      };
-      var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
-      materialChart.draw(data, materialOptions);
-    }
-
- 
-//AQUI EMPIEZA
-/*
-google.charts.load('current', {
-  packages: ['corechart']
-});
-google.charts.setOnLoadCallback(drawChart);
-
-
-function drawChart() {
-  const data = google.visualization.arrayToDataTable([
-    ['Rarity', '%'],
-    ['Legendary Pokemons ', 3.59],
-    ['Mythic Pokemons', 0.80],
-    ['Normal Pokemons', 95.61],
-  ]);
-
-  let options = {
-    title: 'Pokemons Rarity',
-    is3D: true,
-    backgroundColor: '#E4E4E4',
-
-  };
-
-  let chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-  chart.draw(data, options);
-
-  // }
-
-}
-google.charts.setOnLoadCallback(drawChart2);
-
-function drawChart2() {
-  var data = google.visualization.arrayToDataTable([
-    ['Type', '%'],
-    ['water ', 19.92],
-    ['others', 80.08],
-  ]);
-
-  var options = {
-    title: 'Pokemons Type water',
-    is3D: true,
-    backgroundColor: '#E4E4E4',
-
-  };
-
-  var chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
-  chart.draw(data, options);
-}
-
-*/
-=======
 //Habilitando slint, DESDE AQUI
->>>>>>> upstream/main
 /* eslint-enable */
