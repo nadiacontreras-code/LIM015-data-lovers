@@ -1,13 +1,13 @@
 //DOM
 //Importando BASE DE DATOS
-//import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
+import data from './data/pokemon/pokemon.js'; // Comentado para usar pokemon.json (FETCH)
 
 //Importando todas las funciones
 import * as dataFunctions from './data.js'; // (*)Importa todo de data.js
 
 
 //HERRAMIENTA FETCH: Usando API pokemon.json
-let allData = "";
+/*let allData = "";
 fetch('data/pokemon/pokemon.json', {})
   .then(pokemon => {
     return pokemon.json();
@@ -17,7 +17,7 @@ fetch('data/pokemon/pokemon.json', {})
     //console.log(allData);
     return showData(allData);
   });
-
+*/
 
 //BUSQUEDA GENERAL POKEMONES (ingresando nombre o número)
 
@@ -41,7 +41,7 @@ buttonGeneralSearch.addEventListener('click', () => {
 });
 
 //MOSTRAR POKEMONES EN PANTALLA BIENVENIDA
-//const allData = data.pokemon; //comentado para FETCH
+const allData = data.pokemon; //comentado para FETCH
 //console.log(allData);
 //Para guardar los items dentro de array
 let pokemonsCard = [];
@@ -123,7 +123,7 @@ function showData(itemSearch) {
 }
 // Para mostrar los cards en la pantalla
 //Evento load
-//window.addEventListener('load', showData(allData)); //comentado para FETCH
+window.addEventListener('load', showData(allData)); //comentado para FETCH
 
 
 //ORDEN NUMERICO ASCENDENTE/DESCENDENTE

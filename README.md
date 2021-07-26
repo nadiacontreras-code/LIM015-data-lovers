@@ -55,7 +55,7 @@ Creación de nuestros prototipos:
    ![Prototipo papel](/src/pic/PrototipoPapel2.jpg)
 
 2. Diseño final en figma
-   ![Prototipo lineal Figma](/src/pic/prototipofinal.png)
+   ![Prototipo lineal Figma](/src/pic/prototipofinal.PNG)
 
 ## 5. Testeos de usabilidad: (describir la experiencia de el uso de la pagina en DEMO de tres compañeras)
 
